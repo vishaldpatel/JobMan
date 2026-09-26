@@ -54,16 +54,6 @@
   th:hover {
     background: color-mix(in srgb, Canvas 90%, CanvasText);
   }
-  td.description {
-    max-width: 420px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  td.description.expanded {
-    white-space: normal;
-  }
   a {
     color: inherit;
   }
@@ -146,7 +136,6 @@ const COLUMNS = [
   { key: "min_amount", label: "Min $" },
   { key: "max_amount", label: "Max $" },
   { key: "date_posted", label: "Posted" },
-  { key: "description", label: "Description" },
 ];
 
 // Fields already shown as their own table column, or used internally, so
@@ -161,7 +150,6 @@ let jobs = [];
 let sortKey = null;
 let sortAsc = true;
 let expandedKeys = new Set();
-let expandedDescKeys = new Set();
 
 function jobKey(job) {
   return job.job_url || job.job_url_direct || JSON.stringify(job);
@@ -169,17 +157,6 @@ function jobKey(job) {
 
 function formatLabel(key) {
   return key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-// Strips common markdown syntax down to plain text for the compact table preview.
-function stripMarkdown(text) {
-  return text
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/^#{1,6}\s+/gm, "")
-    .replace(/[*_`>#-]/g, "")
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
 }
 
 const statusEl = document.getElementById("status");
@@ -244,18 +221,7 @@ function renderRows() {
     for (const col of COLUMNS) {
       const td = document.createElement("td");
       const value = job[col.key];
-      if (col.key === "description") {
-        td.className = "description" + (expandedDescKeys.has(key) ? " expanded" : "");
-        td.textContent = value ? stripMarkdown(value) : "";
-        td.addEventListener("dblclick", () => {
-          if (expandedDescKeys.has(key)) {
-            expandedDescKeys.delete(key);
-          } else {
-            expandedDescKeys.add(key);
-          }
-          renderRows();
-        });
-      } else if (col.key === "title") {
+      if (col.key === "title") {
         const externalUrl = job.job_url_direct || job.job_url;
         if (externalUrl) {
           const a = document.createElement("a");
