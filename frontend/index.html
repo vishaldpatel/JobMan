@@ -19,6 +19,12 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: Canvas;
+    padding-block: 0.25rem;
   }
   h1 {
     font-size: 1.4rem;
@@ -29,9 +35,40 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
   }
+  button:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
   #status {
     color: var(--muted);
     font-size: 0.9rem;
+  }
+  #resume-status {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  nav button {
+    background: none;
+    border: 1px solid var(--border);
+  }
+  nav button.active {
+    background: color-mix(in srgb, Canvas 85%, CanvasText);
+    font-weight: 600;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    position: sticky;
+    z-index: 20;
+    background: Canvas;
+    padding-block: 0.5rem;
   }
   table {
     border-collapse: collapse;
@@ -48,16 +85,20 @@
     cursor: pointer;
     user-select: none;
     position: sticky;
-    top: 0;
+    top: var(--thead-top, 0px);
+    z-index: 10;
     background: Canvas;
   }
   th:hover {
     background: color-mix(in srgb, Canvas 90%, CanvasText);
   }
+  th.no-sort {
+    cursor: default;
+  }
   a {
     color: inherit;
   }
-  td.expand-toggle {
+  td.expand-toggle, th.expand-toggle {
     width: 1.5rem;
     text-align: center;
     cursor: pointer;
@@ -110,14 +151,49 @@
     font-size: 1rem;
     margin: 0.8rem 0 0.3rem;
   }
+  .status-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    background: color-mix(in srgb, Canvas 85%, CanvasText);
+    white-space: nowrap;
+  }
+  .status-badge-error {
+    background: color-mix(in srgb, #d33 25%, Canvas);
+  }
+  .generation-error {
+    color: #c33;
+    font-size: 0.85rem;
+  }
+  .doc-links a {
+    margin-right: 0.7rem;
+  }
 </style>
 </head>
 <body>
 <header>
   <h1>JobMan</h1>
   <button id="scrape-btn">Scrape today's jobs</button>
+  <label for="resume-input" style="cursor:pointer;">
+    <button type="button" id="resume-btn">Attach resume</button>
+  </label>
+  <input type="file" id="resume-input" accept=".md,.markdown,.txt" style="display:none;">
+  <span id="resume-status"></span>
   <span id="status"></span>
 </header>
+
+<nav>
+  <button id="nav-rejected" title="Rejected">🗑️</button>
+  <button id="nav-new" class="active">New Jobs</button>
+  <button id="nav-applications">Applications</button>
+</nav>
+
+<div class="toolbar" id="new-jobs-toolbar">
+  <button id="reject-btn" disabled>Reject</button>
+  <button id="apply-btn" disabled>Start Application</button>
+  <span id="selection-status"></span>
+</div>
 
 <table id="jobs-table">
   <thead>
@@ -127,32 +203,51 @@
 </table>
 
 <script>
-const COLUMNS = [
+const NEW_JOB_COLUMNS = [
   { key: "title", label: "Title" },
   { key: "company", label: "Company" },
   { key: "location", label: "Location" },
   { key: "is_remote", label: "Remote" },
-  { key: "job_type", label: "Type" },
   { key: "min_amount", label: "Min $" },
   { key: "max_amount", label: "Max $" },
   { key: "date_posted", label: "Posted" },
 ];
 
+const APPLICATION_COLUMNS = [
+  { key: "title", label: "Title" },
+  { key: "company", label: "Company" },
+  { key: "location", label: "Location" },
+  { key: "date_posted", label: "Posted" },
+  { key: "application_status", label: "Status" },
+  { key: "documents", label: "Resume / Cover Letter" },
+];
+
+const APPLICATION_STATUS_LABELS = {
+  started: "Started",
+  resume_created: "Resume and Cover Letter Created",
+  error: "Generation Failed",
+};
+
 // Fields already shown as their own table column, or used internally, so
 // they're skipped when rendering the "extra details" panel for a row.
-const MAIN_FIELD_KEYS = new Set([
+const HIDDEN_DETAIL_KEYS = new Set([
   "title", "company", "location", "is_remote", "job_type",
   "min_amount", "max_amount", "date_posted", "description",
-  "job_url", "job_url_direct",
+  "job_url", "job_url_direct", "status", "application_status",
+  "resume_path", "cover_letter_path", "generation_error",
 ]);
 
+const STATUS_FOR_VIEW = { new: "new", applications: "applied", rejected: "rejected" };
+
+let view = "new"; // "new" | "applications" | "rejected"
 let jobs = [];
 let sortKey = null;
 let sortAsc = true;
 let expandedKeys = new Set();
+let selectedKeys = new Set();
 
 function jobKey(job) {
-  return job.job_url || job.job_url_direct || JSON.stringify(job);
+  return job.id || job.job_url || job.job_url_direct || JSON.stringify(job);
 }
 
 function formatLabel(key) {
@@ -160,28 +255,135 @@ function formatLabel(key) {
 }
 
 const statusEl = document.getElementById("status");
+const resumeStatusEl = document.getElementById("resume-status");
 const bodyEl = document.getElementById("jobs-body");
 const headerRowEl = document.getElementById("header-row");
 const scrapeBtn = document.getElementById("scrape-btn");
+const resumeInput = document.getElementById("resume-input");
+const navNewBtn = document.getElementById("nav-new");
+const navApplicationsBtn = document.getElementById("nav-applications");
+const navRejectedBtn = document.getElementById("nav-rejected");
+const newJobsToolbar = document.getElementById("new-jobs-toolbar");
+const rejectBtn = document.getElementById("reject-btn");
+const applyBtn = document.getElementById("apply-btn");
+const selectionStatusEl = document.getElementById("selection-status");
+const pageHeaderEl = document.querySelector("header");
+
+// Keeps the floating toolbar and the sticky table header stacked directly
+// below the page header, accounting for header/toolbar height changing
+// (flex-wrap on narrow windows, toolbar hidden outside the New Jobs tab).
+function updateStickyOffsets() {
+  const headerHeight = pageHeaderEl.getBoundingClientRect().height;
+  const toolbarVisible = newJobsToolbar.style.display !== "none";
+  newJobsToolbar.style.top = `${headerHeight}px`;
+  const toolbarHeight = toolbarVisible ? newJobsToolbar.getBoundingClientRect().height : 0;
+  document.documentElement.style.setProperty("--thead-top", `${headerHeight + toolbarHeight}px`);
+}
+
+window.addEventListener("resize", updateStickyOffsets);
+
+function currentColumns() {
+  return view === "applications" ? APPLICATION_COLUMNS : NEW_JOB_COLUMNS;
+}
 
 function renderHeader() {
   headerRowEl.innerHTML = "";
-  headerRowEl.appendChild(document.createElement("th"));
-  for (const col of COLUMNS) {
-    const th = document.createElement("th");
-    th.textContent = col.label + (sortKey === col.key ? (sortAsc ? " ▲" : " ▼") : "");
-    th.addEventListener("click", () => {
-      if (sortKey === col.key) {
-        sortAsc = !sortAsc;
+
+  if (view === "new") {
+    const selectTh = document.createElement("th");
+    selectTh.className = "no-sort";
+    const selectAll = document.createElement("input");
+    selectAll.type = "checkbox";
+    selectAll.addEventListener("change", () => {
+      if (selectAll.checked) {
+        for (const job of jobs) selectedKeys.add(jobKey(job));
       } else {
-        sortKey = col.key;
-        sortAsc = true;
+        selectedKeys.clear();
       }
-      renderHeader();
       renderRows();
+      updateToolbar();
     });
+    selectTh.appendChild(selectAll);
+    headerRowEl.appendChild(selectTh);
+  }
+
+  const expandTh = document.createElement("th");
+  expandTh.className = "no-sort expand-toggle";
+  headerRowEl.appendChild(expandTh);
+
+  for (const col of currentColumns()) {
+    const th = document.createElement("th");
+    const sortable = col.key !== "documents";
+    if (!sortable) th.className = "no-sort";
+    th.textContent = col.label + (sortKey === col.key ? (sortAsc ? " ▲" : " ▼") : "");
+    if (sortable) {
+      th.addEventListener("click", () => {
+        if (sortKey === col.key) {
+          sortAsc = !sortAsc;
+        } else {
+          sortKey = col.key;
+          sortAsc = true;
+        }
+        renderHeader();
+        renderRows();
+      });
+    }
     headerRowEl.appendChild(th);
   }
+}
+
+function renderStatusCell(td, job) {
+  const label = APPLICATION_STATUS_LABELS[job.application_status] || job.application_status || "";
+  const span = document.createElement("span");
+  span.className = "status-badge";
+  if (job.application_status === "error") span.classList.add("status-badge-error");
+  span.textContent = label;
+  td.appendChild(span);
+}
+
+async function retryGeneration(jobId) {
+  await fetch("/api/jobs/retry", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ids: [jobId] }),
+  });
+  loadJobs();
+}
+
+function renderDocumentsCell(td, job) {
+  if (job.application_status === "error") {
+    const errText = document.createElement("span");
+    errText.className = "generation-error";
+    errText.textContent = job.generation_error ? `Failed: ${job.generation_error}` : "Failed";
+    const retryBtn = document.createElement("button");
+    retryBtn.textContent = "Retry";
+    retryBtn.addEventListener("click", () => retryGeneration(job.id));
+    td.appendChild(errText);
+    td.appendChild(document.createElement("br"));
+    td.appendChild(retryBtn);
+    return;
+  }
+  if (!job.resume_path && !job.cover_letter_path) {
+    td.textContent = job.application_status === "started" ? "Generating…" : "—";
+    return;
+  }
+  const wrap = document.createElement("span");
+  wrap.className = "doc-links";
+  if (job.resume_path) {
+    const a = document.createElement("a");
+    a.href = `/files/${job.resume_path}`;
+    a.target = "_blank";
+    a.textContent = "Resume";
+    wrap.appendChild(a);
+  }
+  if (job.cover_letter_path) {
+    const a = document.createElement("a");
+    a.href = `/files/${job.cover_letter_path}`;
+    a.target = "_blank";
+    a.textContent = "Cover Letter";
+    wrap.appendChild(a);
+  }
+  td.appendChild(wrap);
 }
 
 function renderRows() {
@@ -199,26 +401,39 @@ function renderRows() {
   }
 
   bodyEl.innerHTML = "";
+  const columns = currentColumns();
+
   for (const job of rows) {
     const key = jobKey(job);
     const isExpanded = expandedKeys.has(key);
 
     const tr = document.createElement("tr");
 
+    if (view === "new") {
+      const selectTd = document.createElement("td");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = selectedKeys.has(key);
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) selectedKeys.add(key);
+        else selectedKeys.delete(key);
+        updateToolbar();
+      });
+      selectTd.appendChild(checkbox);
+      tr.appendChild(selectTd);
+    }
+
     const toggleTd = document.createElement("td");
     toggleTd.className = "expand-toggle";
     toggleTd.textContent = isExpanded ? "▼" : "▸";
     toggleTd.addEventListener("click", () => {
-      if (expandedKeys.has(key)) {
-        expandedKeys.delete(key);
-      } else {
-        expandedKeys.add(key);
-      }
+      if (expandedKeys.has(key)) expandedKeys.delete(key);
+      else expandedKeys.add(key);
       renderRows();
     });
     tr.appendChild(toggleTd);
 
-    for (const col of COLUMNS) {
+    for (const col of columns) {
       const td = document.createElement("td");
       const value = job[col.key];
       if (col.key === "title") {
@@ -233,6 +448,10 @@ function renderRows() {
         } else {
           td.textContent = value ?? "";
         }
+      } else if (col.key === "application_status") {
+        renderStatusCell(td, job);
+      } else if (col.key === "documents") {
+        renderDocumentsCell(td, job);
       } else {
         td.textContent = value ?? "";
       }
@@ -244,7 +463,7 @@ function renderRows() {
       const detailTr = document.createElement("tr");
       detailTr.className = "detail-row";
       const detailTd = document.createElement("td");
-      detailTd.colSpan = COLUMNS.length + 1;
+      detailTd.colSpan = columns.length + (view === "new" ? 2 : 1);
 
       if (job.description) {
         const descBlock = document.createElement("div");
@@ -262,10 +481,10 @@ function renderRows() {
       const dl = document.createElement("dl");
       dl.className = "detail-grid";
       const extraKeys = Object.keys(job).filter(
-        (k) => !MAIN_FIELD_KEYS.has(k) && job[k] != null && job[k] !== ""
+        (k) => !HIDDEN_DETAIL_KEYS.has(k) && job[k] != null && job[k] !== ""
       );
       if (extraKeys.length === 0 && !job.description) {
-        detailTd.textContent = "No additional details available.";
+        detailTd.appendChild(document.createTextNode("No additional details available."));
       } else {
         for (const k of extraKeys) {
           const dt = document.createElement("dt");
@@ -283,12 +502,45 @@ function renderRows() {
   }
 }
 
+function updateToolbar() {
+  const count = selectedKeys.size;
+  rejectBtn.disabled = count === 0;
+  applyBtn.disabled = count === 0;
+  selectionStatusEl.textContent = count > 0 ? `${count} selected` : "";
+}
+
+let pollTimer = null;
+
 async function loadJobs() {
-  const res = await fetch("/api/jobs");
+  const res = await fetch(`/api/jobs?status=${STATUS_FOR_VIEW[view]}`);
   const data = await res.json();
   jobs = data.jobs;
-  statusEl.textContent = `${data.count} job(s) loaded`;
+  selectedKeys = new Set([...selectedKeys].filter((k) => jobs.some((j) => jobKey(j) === k)));
+  statusEl.textContent = `${data.count} job(s)`;
+  renderHeader();
   renderRows();
+  updateToolbar();
+  updatePolling();
+  updateStickyOffsets();
+}
+
+// Keeps the Applications tab live while documents are still being generated,
+// without polling forever once every job has settled into a final state.
+function updatePolling() {
+  if (pollTimer) {
+    clearInterval(pollTimer);
+    pollTimer = null;
+  }
+  const stillGenerating = view === "applications" && jobs.some((j) => j.application_status === "started");
+  if (stillGenerating) {
+    pollTimer = setInterval(loadJobs, 3000);
+  }
+}
+
+async function loadResumeStatus() {
+  const res = await fetch("/api/resume");
+  const data = await res.json();
+  resumeStatusEl.textContent = data.uploaded ? "Resume attached" : "No resume attached";
 }
 
 async function triggerScrape() {
@@ -297,9 +549,11 @@ async function triggerScrape() {
   try {
     const res = await fetch("/api/scrape", { method: "POST" });
     const data = await res.json();
-    jobs = data.jobs;
-    statusEl.textContent = `${data.count} job(s) found`;
-    renderRows();
+    if (view === "new") {
+      jobs = data.jobs;
+      renderRows();
+    }
+    statusEl.textContent = `${data.count} new job(s) found`;
   } catch (err) {
     statusEl.textContent = "Scrape failed: " + err;
   } finally {
@@ -307,10 +561,70 @@ async function triggerScrape() {
   }
 }
 
+async function uploadResume(file) {
+  const formData = new FormData();
+  formData.append("file", file);
+  resumeStatusEl.textContent = "Uploading…";
+  const res = await fetch("/api/resume", { method: "POST", body: formData });
+  const data = await res.json();
+  resumeStatusEl.textContent = data.uploaded ? `Resume attached (${data.filename})` : "Upload failed";
+}
+
+async function rejectSelected() {
+  const ids = [...selectedKeys];
+  if (ids.length === 0) return;
+  rejectBtn.disabled = true;
+  await fetch("/api/jobs/reject", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ids }),
+  });
+  selectedKeys.clear();
+  await loadJobs();
+}
+
+async function applySelected() {
+  const ids = [...selectedKeys];
+  if (ids.length === 0) return;
+  applyBtn.disabled = true;
+  statusEl.textContent = "Starting application(s)… generating tailored resumes/cover letters can take a minute";
+  selectedKeys.clear();
+  const res = await fetch("/api/jobs/apply", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ids }),
+  });
+  const data = await res.json();
+  statusEl.textContent = `${data.applied} job(s) moved to Applications`;
+  await loadJobs();
+}
+
+function setView(newView) {
+  view = newView;
+  navNewBtn.classList.toggle("active", view === "new");
+  navApplicationsBtn.classList.toggle("active", view === "applications");
+  navRejectedBtn.classList.toggle("active", view === "rejected");
+  newJobsToolbar.style.display = view === "new" ? "flex" : "none";
+  selectedKeys.clear();
+  sortKey = null;
+  expandedKeys.clear();
+  loadJobs();
+}
+
 scrapeBtn.addEventListener("click", triggerScrape);
+navNewBtn.addEventListener("click", () => setView("new"));
+navApplicationsBtn.addEventListener("click", () => setView("applications"));
+navRejectedBtn.addEventListener("click", () => setView("rejected"));
+rejectBtn.addEventListener("click", rejectSelected);
+applyBtn.addEventListener("click", applySelected);
+document.getElementById("resume-btn").addEventListener("click", () => resumeInput.click());
+resumeInput.addEventListener("change", () => {
+  if (resumeInput.files.length > 0) uploadResume(resumeInput.files[0]);
+});
 
 renderHeader();
 loadJobs();
+loadResumeStatus();
 </script>
 </body>
 </html>
