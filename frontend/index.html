@@ -166,15 +166,89 @@
     color: #c33;
     font-size: 0.85rem;
   }
+  .greenhouse-title,
+  .greenhouse-title a {
+    color: #3eb489;
+  }
+  .workday-title,
+  .workday-title a {
+    color: #ffb570;
+  }
+  .fit-score {
+    display: inline-block;
+    min-width: 2.2rem;
+    text-align: center;
+    padding: 0.15rem 0.4rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .fit-high { background: color-mix(in srgb, #3eb489 35%, Canvas); }
+  .fit-mid { background: color-mix(in srgb, #e6b422 30%, Canvas); }
+  .fit-low { background: color-mix(in srgb, #d33 25%, Canvas); }
+  .fit-pending { color: var(--muted); }
+  .fit-block ul {
+    margin: 0.2rem 0 0.6rem;
+    padding-left: 1.3rem;
+  }
+  .fit-block h5 {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+  }
   .doc-links a {
     margin-right: 0.7rem;
+  }
+  #profile-form {
+    max-width: 640px;
+  }
+  #profile-form .profile-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    max-width: 60ch;
+  }
+  #profile-form fieldset {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.8rem 1rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  #profile-form legend {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    padding: 0 0.4rem;
+  }
+  #profile-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+  #profile-form input,
+  #profile-form select,
+  #profile-form textarea {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: Canvas;
+    color: CanvasText;
+  }
+  #profile-status {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-left: 0.6rem;
   }
 </style>
 </head>
 <body>
 <header>
   <h1>JobMan</h1>
-  <button id="scrape-btn">Scrape today's jobs</button>
+  <button id="scrape-btn">Scrape LinkedIn</button>
+  <button id="scrape-ats-btn">Scrape Greenhouse and Workday</button>
   <label for="resume-input" style="cursor:pointer;">
     <button type="button" id="resume-btn">Attach resume</button>
   </label>
@@ -187,6 +261,7 @@
   <button id="nav-rejected" title="Rejected">🗑️</button>
   <button id="nav-new" class="active">New Jobs</button>
   <button id="nav-applications">Applications</button>
+  <button id="nav-profile">Profile</button>
 </nav>
 
 <div class="toolbar" id="new-jobs-toolbar">
@@ -202,8 +277,119 @@
   <tbody id="jobs-body"></tbody>
 </table>
 
+<form id="profile-form" style="display:none;">
+  <p class="profile-note">
+    Stored locally in <code>data/profile.json</code> and only ever used to fill in your
+    applications. The citizenship / veteran / disability / ethnicity questions are the
+    voluntary self-identification questions many applications ask — leave any of them
+    blank if you'd rather not answer.
+  </p>
+
+  <fieldset>
+    <legend>Contact Info</legend>
+    <label>Full Name <input type="text" name="full_name"></label>
+    <label>Email <input type="email" name="email"></label>
+    <label>Phone <input type="tel" name="phone"></label>
+    <label>Address <input type="text" name="address_line1" placeholder="Street address"></label>
+    <label>City <input type="text" name="city"></label>
+    <label>State <input type="text" name="state"></label>
+    <label>ZIP Code <input type="text" name="zip_code"></label>
+    <label>Country <input type="text" name="country"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Professional Links</legend>
+    <label>LinkedIn URL <input type="url" name="linkedin_url"></label>
+    <label>Portfolio / Website <input type="url" name="portfolio_url"></label>
+    <label>GitHub URL <input type="url" name="github_url"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Work Eligibility &amp; Voluntary Self-Identification</legend>
+    <label>Citizenship Status
+      <select name="citizenship_status">
+        <option value=""></option>
+        <option>U.S. Citizen</option>
+        <option>Permanent Resident / Green Card</option>
+        <option>Visa Holder</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Requires Sponsorship
+      <select name="requires_sponsorship">
+        <option value=""></option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    <label>Veteran Status
+      <select name="veteran_status">
+        <option value=""></option>
+        <option>Not a Veteran</option>
+        <option>Veteran</option>
+        <option>Disabled Veteran</option>
+        <option>Prefer not to answer</option>
+      </select>
+    </label>
+    <label>Disability Status
+      <select name="disability_status">
+        <option value=""></option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Prefer not to answer</option>
+      </select>
+    </label>
+    <label>Gender
+      <select name="gender">
+        <option value=""></option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Non-binary</option>
+        <option>Prefer not to answer</option>
+      </select>
+    </label>
+    <label>Ethnicity / Race
+      <select name="ethnicity">
+        <option value=""></option>
+        <option>Hispanic or Latino</option>
+        <option>White</option>
+        <option>Black or African American</option>
+        <option>Native Hawaiian or Other Pacific Islander</option>
+        <option>Asian</option>
+        <option>American Indian or Alaska Native</option>
+        <option>Two or More Races</option>
+        <option>Prefer not to answer</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Other</legend>
+    <label>Desired Salary <input type="text" name="desired_salary" placeholder="e.g. $120,000"></label>
+    <label>Earliest Start Date <input type="text" name="earliest_start_date"></label>
+    <label>Notice Period <input type="text" name="notice_period" placeholder="e.g. 2 weeks"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Job Preferences</legend>
+    <p class="profile-note">
+      Used when Claude scores each new job against your resume. Describe what you're
+      looking for and any dealbreakers, e.g. target level, industries you want or want to
+      avoid, on-site/hybrid/remote limits, minimum salary. Already-scored jobs keep their
+      score.
+    </p>
+    <label>What I'm looking for
+      <textarea name="job_preferences" rows="6"></textarea>
+    </label>
+  </fieldset>
+
+  <button type="submit">Save Profile</button>
+  <span id="profile-status"></span>
+</form>
+
 <script>
 const NEW_JOB_COLUMNS = [
+  { key: "fit_score", label: "Fit" },
   { key: "title", label: "Title" },
   { key: "company", label: "Company" },
   { key: "location", label: "Location" },
@@ -220,12 +406,17 @@ const APPLICATION_COLUMNS = [
   { key: "date_posted", label: "Posted" },
   { key: "application_status", label: "Status" },
   { key: "documents", label: "Resume / Cover Letter" },
+  { key: "autofill", label: "Applied" },
 ];
 
 const APPLICATION_STATUS_LABELS = {
   started: "Started",
   resume_created: "Resume and Cover Letter Created",
   error: "Generation Failed",
+};
+
+const AUTOFILL_STATUS_LABELS = {
+  submitted: "Applied",
 };
 
 // Fields already shown as their own table column, or used internally, so
@@ -235,14 +426,17 @@ const HIDDEN_DETAIL_KEYS = new Set([
   "min_amount", "max_amount", "date_posted", "description",
   "job_url", "job_url_direct", "status", "application_status",
   "resume_path", "cover_letter_path", "generation_error",
+  "autofill_status", "autofill_message",
+  "fit_score", "fit_summary", "fit_strengths", "fit_gaps", "fit_dealbreakers",
+  "fit_error", "auto_rejected",
 ]);
 
 const STATUS_FOR_VIEW = { new: "new", applications: "applied", rejected: "rejected" };
 
 let view = "new"; // "new" | "applications" | "rejected"
 let jobs = [];
-let sortKey = null;
-let sortAsc = true;
+let sortKey = "fit_score";
+let sortAsc = false;
 let expandedKeys = new Set();
 let selectedKeys = new Set();
 
@@ -259,11 +453,16 @@ const resumeStatusEl = document.getElementById("resume-status");
 const bodyEl = document.getElementById("jobs-body");
 const headerRowEl = document.getElementById("header-row");
 const scrapeBtn = document.getElementById("scrape-btn");
+const scrapeAtsBtn = document.getElementById("scrape-ats-btn");
 const resumeInput = document.getElementById("resume-input");
 const navNewBtn = document.getElementById("nav-new");
 const navApplicationsBtn = document.getElementById("nav-applications");
 const navRejectedBtn = document.getElementById("nav-rejected");
+const navProfileBtn = document.getElementById("nav-profile");
 const newJobsToolbar = document.getElementById("new-jobs-toolbar");
+const jobsTable = document.getElementById("jobs-table");
+const profileForm = document.getElementById("profile-form");
+const profileStatusEl = document.getElementById("profile-status");
 const rejectBtn = document.getElementById("reject-btn");
 const applyBtn = document.getElementById("apply-btn");
 const selectionStatusEl = document.getElementById("selection-status");
@@ -332,6 +531,58 @@ function renderHeader() {
   }
 }
 
+function renderFitCell(td, job) {
+  const span = document.createElement("span");
+  span.className = "fit-score";
+  if (job.fit_score != null) {
+    span.textContent = job.fit_score;
+    span.classList.add(job.fit_score >= 65 ? "fit-high" : job.fit_score >= 40 ? "fit-mid" : "fit-low");
+    if (job.fit_summary) span.title = job.fit_summary;
+  } else if (job.fit_error) {
+    span.textContent = "!";
+    span.classList.add("fit-low");
+    span.title = `Scoring failed: ${job.fit_error}`;
+  } else {
+    span.textContent = "…";
+    span.classList.add("fit-pending");
+    span.title = "Scoring…";
+  }
+  td.appendChild(span);
+}
+
+function renderFitDetails(job) {
+  const block = document.createElement("div");
+  block.className = "description-block fit-block";
+  const heading = document.createElement("h4");
+  heading.textContent = job.auto_rejected
+    ? `Fit: ${job.fit_score} (auto-rejected)`
+    : `Fit: ${job.fit_score}`;
+  block.appendChild(heading);
+  if (job.fit_summary) {
+    const p = document.createElement("p");
+    p.textContent = job.fit_summary;
+    block.appendChild(p);
+  }
+  for (const [label, items] of [
+    ["Strengths", job.fit_strengths],
+    ["Gaps", job.fit_gaps],
+    ["Dealbreakers", job.fit_dealbreakers],
+  ]) {
+    if (!items || items.length === 0) continue;
+    const h = document.createElement("h5");
+    h.textContent = label;
+    const ul = document.createElement("ul");
+    for (const item of items) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
+    }
+    block.appendChild(h);
+    block.appendChild(ul);
+  }
+  return block;
+}
+
 function renderStatusCell(td, job) {
   const label = APPLICATION_STATUS_LABELS[job.application_status] || job.application_status || "";
   const span = document.createElement("span");
@@ -386,6 +637,35 @@ function renderDocumentsCell(td, job) {
   td.appendChild(wrap);
 }
 
+async function markApplied(jobId) {
+  await fetch("/api/jobs/mark-applied", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ids: [jobId] }),
+  });
+  loadJobs();
+}
+
+function renderAutofillCell(td, job) {
+  if (job.application_status !== "resume_created") {
+    td.textContent = "—";
+    return;
+  }
+
+  if (job.autofill_status === "submitted") {
+    const label = document.createElement("span");
+    label.className = "status-badge";
+    label.textContent = "✅ " + AUTOFILL_STATUS_LABELS.submitted;
+    td.appendChild(label);
+    return;
+  }
+
+  const markBtn = document.createElement("button");
+  markBtn.textContent = "Mark as Applied";
+  markBtn.addEventListener("click", () => markApplied(job.id));
+  td.appendChild(markBtn);
+}
+
 function renderRows() {
   let rows = [...jobs];
   if (sortKey) {
@@ -437,6 +717,8 @@ function renderRows() {
       const td = document.createElement("td");
       const value = job[col.key];
       if (col.key === "title") {
+        if (job.site === "greenhouse") td.className = "greenhouse-title";
+        else if (job.site === "workday") td.className = "workday-title";
         const externalUrl = job.job_url_direct || job.job_url;
         if (externalUrl) {
           const a = document.createElement("a");
@@ -448,10 +730,14 @@ function renderRows() {
         } else {
           td.textContent = value ?? "";
         }
+      } else if (col.key === "fit_score") {
+        renderFitCell(td, job);
       } else if (col.key === "application_status") {
         renderStatusCell(td, job);
       } else if (col.key === "documents") {
         renderDocumentsCell(td, job);
+      } else if (col.key === "autofill") {
+        renderAutofillCell(td, job);
       } else {
         td.textContent = value ?? "";
       }
@@ -464,6 +750,10 @@ function renderRows() {
       detailTr.className = "detail-row";
       const detailTd = document.createElement("td");
       detailTd.colSpan = columns.length + (view === "new" ? 2 : 1);
+
+      if (job.fit_score != null) {
+        detailTd.appendChild(renderFitDetails(job));
+      }
 
       if (job.description) {
         const descBlock = document.createElement("div");
@@ -509,8 +799,6 @@ function updateToolbar() {
   selectionStatusEl.textContent = count > 0 ? `${count} selected` : "";
 }
 
-let pollTimer = null;
-
 async function loadJobs() {
   const res = await fetch(`/api/jobs?status=${STATUS_FOR_VIEW[view]}`);
   const data = await res.json();
@@ -520,21 +808,29 @@ async function loadJobs() {
   renderHeader();
   renderRows();
   updateToolbar();
-  updatePolling();
   updateStickyOffsets();
 }
 
-// Keeps the Applications tab live while documents are still being generated,
-// without polling forever once every job has settled into a final state.
-function updatePolling() {
-  if (pollTimer) {
-    clearInterval(pollTimer);
-    pollTimer = null;
-  }
-  const stillGenerating = view === "applications" && jobs.some((j) => j.application_status === "started");
-  if (stillGenerating) {
-    pollTimer = setInterval(loadJobs, 3000);
-  }
+// Live updates: the backend pushes a "jobs_changed" notification over this
+// socket whenever a job is scraped, applied, rejected, or finishes generating
+// its resume/cover letter -- so the Applications tab (etc.) refreshes itself
+// instead of polling. Reconnects automatically if the connection drops (e.g.
+// the backend restarting under --reload).
+function connectJobsSocket() {
+  const protocol = location.protocol === "https:" ? "wss:" : "ws:";
+  const ws = new WebSocket(`${protocol}//${location.host}/ws/jobs`);
+
+  ws.addEventListener("message", (event) => {
+    const data = JSON.parse(event.data);
+    if (data.type === "jobs_changed" && view !== "profile") {
+      loadJobs();
+    }
+  });
+
+  ws.addEventListener("close", () => {
+    setTimeout(connectJobsSocket, 2000);
+  });
+  ws.addEventListener("error", () => ws.close());
 }
 
 async function loadResumeStatus() {
@@ -543,21 +839,28 @@ async function loadResumeStatus() {
   resumeStatusEl.textContent = data.uploaded ? "Resume attached" : "No resume attached";
 }
 
-async function triggerScrape() {
+async function triggerScrape(endpoint) {
   scrapeBtn.disabled = true;
+  scrapeAtsBtn.disabled = true;
   statusEl.textContent = "Scraping… this can take a minute";
   try {
-    const res = await fetch("/api/scrape", { method: "POST" });
+    const res = await fetch(endpoint, { method: "POST" });
     const data = await res.json();
     if (view === "new") {
       jobs = data.jobs;
       renderRows();
     }
-    statusEl.textContent = `${data.count} new job(s) found`;
+    const skipped = [];
+    if (data.filtered_out) skipped.push(`${data.filtered_out} filtered out`);
+    if (data.duplicates) skipped.push(`${data.duplicates} duplicate(s) skipped`);
+    statusEl.textContent =
+      `${data.count} new job(s)` + (skipped.length ? ` (${skipped.join(", ")})` : "") +
+      " — scoring…";
   } catch (err) {
     statusEl.textContent = "Scrape failed: " + err;
   } finally {
     scrapeBtn.disabled = false;
+    scrapeAtsBtn.disabled = false;
   }
 }
 
@@ -599,24 +902,59 @@ async function applySelected() {
   await loadJobs();
 }
 
+async function loadProfile() {
+  const res = await fetch("/api/profile");
+  const profile = await res.json();
+  for (const el of profileForm.elements) {
+    if (el.name && profile[el.name] != null) el.value = profile[el.name];
+  }
+}
+
+async function saveProfile(event) {
+  event.preventDefault();
+  const profile = Object.fromEntries(new FormData(profileForm).entries());
+  profileStatusEl.textContent = "Saving…";
+  const res = await fetch("/api/profile", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(profile),
+  });
+  profileStatusEl.textContent = res.ok ? "Saved" : "Failed to save";
+}
+
 function setView(newView) {
   view = newView;
   navNewBtn.classList.toggle("active", view === "new");
   navApplicationsBtn.classList.toggle("active", view === "applications");
   navRejectedBtn.classList.toggle("active", view === "rejected");
+  navProfileBtn.classList.toggle("active", view === "profile");
+
+  const isProfile = view === "profile";
+  jobsTable.style.display = isProfile ? "none" : "table";
+  profileForm.style.display = isProfile ? "block" : "none";
   newJobsToolbar.style.display = view === "new" ? "flex" : "none";
+
   selectedKeys.clear();
-  sortKey = null;
+  sortKey = view === "applications" ? null : "fit_score";
+  sortAsc = false;
   expandedKeys.clear();
-  loadJobs();
+
+  if (isProfile) {
+    loadProfile();
+  } else {
+    loadJobs();
+  }
 }
 
-scrapeBtn.addEventListener("click", triggerScrape);
+scrapeBtn.addEventListener("click", () => triggerScrape("/api/scrape"));
+scrapeAtsBtn.addEventListener("click", () => triggerScrape("/api/scrape/ats"));
 navNewBtn.addEventListener("click", () => setView("new"));
 navApplicationsBtn.addEventListener("click", () => setView("applications"));
 navRejectedBtn.addEventListener("click", () => setView("rejected"));
+navProfileBtn.addEventListener("click", () => setView("profile"));
 rejectBtn.addEventListener("click", rejectSelected);
 applyBtn.addEventListener("click", applySelected);
+profileForm.addEventListener("submit", saveProfile);
 document.getElementById("resume-btn").addEventListener("click", () => resumeInput.click());
 resumeInput.addEventListener("change", () => {
   if (resumeInput.files.length > 0) uploadResume(resumeInput.files[0]);
@@ -625,6 +963,7 @@ resumeInput.addEventListener("change", () => {
 renderHeader();
 loadJobs();
 loadResumeStatus();
+connectJobsSocket();
 </script>
 </body>
 </html>

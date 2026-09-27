@@ -1,15 +1,18 @@
+import asyncio
 import queue
 import threading
 from pathlib import Path
 
 import pandas as pd
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 import store
 from generator import generate_cover_letter, generate_resume
-from scrapers import scrape_daily_jobs
+from pdf import markdown_to_pdf
+from scorer import AUTO_REJECT_BELOW, score_job
+from scrapers import apply_prefilters, scrape_ats_jobs, scrape_daily_jobs
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 
@@ -18,10 +21,73 @@ store.DATA_DIR.mkdir(parents=True, exist_ok=True)
 app = FastAPI(title="JobMan")
 
 generation_queue: "queue.Queue[str]" = queue.Queue()
+scoring_queue: "queue.Queue[str]" = queue.Queue()
+
+# Pushes "something changed, refetch" over WebSocket instead of the frontend
+# polling. The generation worker runs on a plain thread, not the asyncio event
+# loop, so it hops onto the loop via run_coroutine_threadsafe.
+_ws_clients: set[WebSocket] = set()
+_ws_loop: asyncio.AbstractEventLoop | None = None
+
+
+@app.on_event("startup")
+async def _capture_event_loop():
+    global _ws_loop
+    _ws_loop = asyncio.get_running_loop()
+
+
+async def _broadcast_jobs_changed():
+    for ws in list(_ws_clients):
+        try:
+            await ws.send_json({"type": "jobs_changed"})
+        except Exception:
+            _ws_clients.discard(ws)
+
+
+def notify_jobs_changed():
+    if _ws_loop is not None:
+        asyncio.run_coroutine_threadsafe(_broadcast_jobs_changed(), _ws_loop)
+
+
+@app.websocket("/ws/jobs")
+async def jobs_ws(websocket: WebSocket):
+    await websocket.accept()
+    _ws_clients.add(websocket)
+    try:
+        while True:
+            await websocket.receive_text()
+    except WebSocketDisconnect:
+        pass
+    finally:
+        _ws_clients.discard(websocket)
 
 
 class JobIds(BaseModel):
     ids: list[str]
+
+
+class Profile(BaseModel):
+    full_name: str | None = None
+    email: str | None = None
+    phone: str | None = None
+    address_line1: str | None = None
+    city: str | None = None
+    state: str | None = None
+    zip_code: str | None = None
+    country: str | None = None
+    linkedin_url: str | None = None
+    portfolio_url: str | None = None
+    github_url: str | None = None
+    citizenship_status: str | None = None
+    requires_sponsorship: str | None = None
+    veteran_status: str | None = None
+    disability_status: str | None = None
+    gender: str | None = None
+    ethnicity: str | None = None
+    desired_salary: str | None = None
+    earliest_start_date: str | None = None
+    notice_period: str | None = None
+    job_preferences: str | None = None
 
 
 def _jobs_from_df(df: pd.DataFrame) -> list[dict]:
@@ -50,10 +116,10 @@ def _generate_documents(job_id: str) -> None:
 
     app_dir = store.APPLICATIONS_DIR / job_id
     app_dir.mkdir(parents=True, exist_ok=True)
-    resume_path = app_dir / "resume.md"
-    cover_letter_path = app_dir / "cover_letter.md"
-    resume_path.write_text(resume_md)
-    cover_letter_path.write_text(cover_letter_md)
+    resume_path = app_dir / "resume.pdf"
+    cover_letter_path = app_dir / "cover_letter.pdf"
+    resume_path.write_bytes(markdown_to_pdf(resume_md))
+    cover_letter_path.write_bytes(markdown_to_pdf(cover_letter_md))
 
     with store.LOCK:
         jobs = store.load_jobs()
@@ -64,6 +130,7 @@ def _generate_documents(job_id: str) -> None:
             job["application_status"] = "resume_created"
             job.pop("generation_error", None)
         store.save_jobs(jobs)
+    notify_jobs_changed()
 
 
 def _generation_worker() -> None:
@@ -79,6 +146,7 @@ def _generation_worker() -> None:
                     job["application_status"] = "error"
                     job["generation_error"] = str(exc)
                 store.save_jobs(jobs)
+            notify_jobs_changed()
         finally:
             generation_queue.task_done()
 
@@ -95,22 +163,99 @@ def _enqueue_pending_jobs() -> None:
             generation_queue.put(job["id"])
 
 
+def _score(job_id: str) -> None:
+    """Rates one job against the resume; jobs below AUTO_REJECT_BELOW go
+    straight to Rejected (flagged auto_rejected so you can tell them apart)."""
+    resume_text = store.read_resume()
+    if not resume_text:
+        return
+
+    with store.LOCK:
+        job_snapshot = _find_job(store.load_jobs(), job_id)
+    if job_snapshot is None or job_snapshot.get("fit_score") is not None:
+        return  # already scored -- avoids duplicate work if a job got queued twice
+
+    preferences = store.load_profile().get("job_preferences")
+    try:
+        fit = score_job(resume_text, preferences, job_snapshot)
+    except Exception as exc:  # keep the worker alive across bad jobs/network blips
+        updates = {"fit_error": str(exc)}
+    else:
+        updates = {
+            "fit_score": fit.fit_score,
+            "fit_summary": fit.summary,
+            "fit_strengths": fit.strengths,
+            "fit_gaps": fit.gaps,
+            "fit_dealbreakers": fit.dealbreakers,
+            "fit_error": None,
+        }
+
+    with store.LOCK:
+        jobs = store.load_jobs()
+        job = _find_job(jobs, job_id)
+        if job is not None:
+            job.update(updates)
+            score = job.get("fit_score")
+            if job["status"] == "new" and score is not None and score < AUTO_REJECT_BELOW:
+                job["status"] = "rejected"
+                job["auto_rejected"] = True
+        store.save_jobs(jobs)
+    notify_jobs_changed()
+
+
+def _scoring_worker() -> None:
+    while True:
+        job_id = scoring_queue.get()
+        try:
+            _score(job_id)
+        finally:
+            scoring_queue.task_done()
+
+
+def _enqueue_unscored_jobs() -> None:
+    """Enqueues every new job without a score -- used after a scrape, on server
+    start (resuming a run cut short by a restart), and after a resume upload."""
+    with store.LOCK:
+        jobs = store.load_jobs()
+    for job in jobs:
+        if job["status"] == "new" and job.get("fit_score") is None:
+            scoring_queue.put(job["id"])
+
+
 threading.Thread(target=_generation_worker, daemon=True).start()
+threading.Thread(target=_scoring_worker, daemon=True).start()
 _enqueue_pending_jobs()
+_enqueue_unscored_jobs()
+
+
+def _store_scraped(jobs_df: pd.DataFrame) -> dict:
+    kept_df, filtered_out = apply_prefilters(jobs_df)
+    scraped = _jobs_from_df(kept_df)
+
+    with store.LOCK:
+        jobs = store.load_jobs()
+        jobs, duplicates = store.merge_scraped_jobs(jobs, scraped)
+        store.save_jobs(jobs)
+    notify_jobs_changed()
+    _enqueue_unscored_jobs()
+
+    new_jobs = [job for job in jobs if job["status"] == "new"]
+    return {
+        "count": len(new_jobs),
+        "jobs": new_jobs,
+        "filtered_out": filtered_out,
+        "duplicates": duplicates,
+    }
 
 
 @app.post("/api/scrape")
 def trigger_scrape():
-    jobs_df = scrape_daily_jobs()
-    scraped = _jobs_from_df(jobs_df)
+    return _store_scraped(scrape_daily_jobs())
 
-    with store.LOCK:
-        jobs = store.load_jobs()
-        jobs = store.merge_scraped_jobs(jobs, scraped)
-        store.save_jobs(jobs)
 
-    new_jobs = [job for job in jobs if job["status"] == "new"]
-    return {"count": len(new_jobs), "jobs": new_jobs}
+@app.post("/api/scrape/ats")
+def trigger_ats_scrape():
+    return _store_scraped(scrape_ats_jobs())
 
 
 @app.get("/api/jobs")
@@ -129,6 +274,7 @@ def reject_jobs(body: JobIds):
             if job["id"] in ids:
                 job["status"] = "rejected"
         store.save_jobs(jobs)
+    notify_jobs_changed()
     return {"rejected": len(ids)}
 
 
@@ -143,6 +289,7 @@ def apply_to_jobs(body: JobIds):
             job["application_status"] = "started"
             job.pop("generation_error", None)
         store.save_jobs(jobs)
+    notify_jobs_changed()
 
     if store.has_resume():
         for job in selected:
@@ -159,8 +306,11 @@ def retry_jobs(body: JobIds):
         selected = [job for job in jobs if job["id"] in ids]
         for job in selected:
             job["application_status"] = "started"
+            job["resume_path"] = None
+            job["cover_letter_path"] = None
             job.pop("generation_error", None)
         store.save_jobs(jobs)
+    notify_jobs_changed()
 
     if store.has_resume():
         for job in selected:
@@ -169,11 +319,26 @@ def retry_jobs(body: JobIds):
     return {"retried": len(selected)}
 
 
+@app.post("/api/jobs/mark-applied")
+def mark_applied(body: JobIds):
+    ids = set(body.ids)
+    with store.LOCK:
+        jobs = store.load_jobs()
+        selected = [job for job in jobs if job["id"] in ids]
+        for job in selected:
+            job["autofill_status"] = "submitted"
+            job.pop("autofill_message", None)
+        store.save_jobs(jobs)
+    notify_jobs_changed()
+    return {"marked": len(selected)}
+
+
 @app.post("/api/resume")
 async def upload_resume(file: UploadFile):
     content = (await file.read()).decode("utf-8")
     store.save_resume(content)
     _enqueue_pending_jobs()
+    _enqueue_unscored_jobs()
     return {"uploaded": True, "filename": file.filename, "length": len(content)}
 
 
@@ -181,6 +346,17 @@ async def upload_resume(file: UploadFile):
 def get_resume_status():
     resume_text = store.read_resume()
     return {"uploaded": resume_text is not None, "text": resume_text}
+
+
+@app.get("/api/profile")
+def get_profile():
+    return store.load_profile()
+
+
+@app.post("/api/profile")
+def update_profile(profile: Profile):
+    store.save_profile(profile.model_dump())
+    return {"saved": True}
 
 
 app.mount("/files", StaticFiles(directory=store.DATA_DIR), name="files")

@@ -1,6 +1,6 @@
 import anthropic
 
-MODEL = "claude-opus-5"
+MODEL = "claude-sonnet-5"
 
 client = anthropic.Anthropic()
 

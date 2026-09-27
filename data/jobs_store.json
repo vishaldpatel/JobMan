@@ -76,8 +76,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4470792179/resume.md",
-    "cover_letter_path": "applications/li-4470792179/cover_letter.md"
+    "resume_path": "applications/li-4470792179/resume.pdf",
+    "cover_letter_path": "applications/li-4470792179/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4472247196",
@@ -116,8 +117,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4472247196/resume.md",
-    "cover_letter_path": "applications/li-4472247196/cover_letter.md"
+    "resume_path": "applications/li-4472247196/resume.pdf",
+    "cover_letter_path": "applications/li-4472247196/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4471032718",
@@ -157,7 +159,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong program management and cross-functional leadership experience, but lacks demonstrated hands-on expertise with modern cloud data platforms and enterprise data architecture that the role emphasizes heavily.",
+    "fit_strengths": [
+      "Multi-year program leadership at scale (15+ person teams, complex stakeholders across business and technology)",
+      "Proven ability to manage large transformation initiatives from inception through delivery and operationalization",
+      "Extensive cross-functional coordination experience spanning product, engineering, design, data, compliance, and business functions",
+      "Located in San Diego, CA meeting the office-based requirement"
+    ],
+    "fit_gaps": [
+      "Limited demonstrated experience with modern cloud data platforms (Databricks, lakehouse architecture, Delta Lake, Unity Catalog) or enterprise data hubs",
+      "No explicit background in data architecture, data modeling, data governance, or data integration disciplines",
+      "No mentioned experience with enterprise applications (CRM, HCM, ERP, PLM) or their data integration patterns",
+      "Technical fluency with SQL, Python, or data analysis appears minimal despite being beneficial for the role"
+    ],
+    "fit_dealbreakers": [
+      "Not eligible for visa sponsorship and candidate location is San Diego, CA (aligns with requirement)",
+      "No other explicit dealbreakers identified in candidate profile"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4444735638",
@@ -194,10 +215,11 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4444735638/resume.pdf",
+    "cover_letter_path": "applications/li-4444735638/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4463712446",
@@ -274,10 +296,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 32,
+    "fit_summary": "Poor match. While Vishal has strong project management and cross-functional leadership experience, he lacks the required 8+ years of semiconductor industry expertise and technical depth in analog/digital IP design flows that are core to this role.",
+    "fit_strengths": [
+      "Proven technical project manager with multi-year, complex program experience",
+      "Strong track record managing cross-functional global teams and stakeholders",
+      "Experience owning schedules, deliverables, and customer communication",
+      "Ability to identify risks and drive mitigation in technical environments"
+    ],
+    "fit_gaps": [
+      "No semiconductor or IP design industry background (career is primarily software/web/startup)",
+      "Lacks understanding of semiconductor design flows, chip tape out processes, and IP integration challenges",
+      "No proven experience with analog IP, digital IP, or SoC design work",
+      "Missing the 8+ years semiconductor industry requirement stated in posting"
+    ],
+    "fit_dealbreakers": [
+      "On-site role in San Diego; resume shows remote work preference and no indication of relocation flexibility",
+      "Deep semiconductor domain expertise is a non-negotiable core requirement; software project management does not transfer credibly to this specialized technical domain"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4471008435",
@@ -314,10 +356,11 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4471008435/resume.pdf",
+    "cover_letter_path": "applications/li-4471008435/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4470772232",
@@ -357,7 +400,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong technical program management and cross-functional delivery experience, but lacks explicit healthcare/regulated industry background and some preferred technical depth in healthcare systems.",
+    "fit_strengths": [
+      "8+ years of technical program management leading multi-team, multi-stakeholder projects from inception through launch",
+      "Proven ability to manage complex dependencies, coordinate across engineering, product, and non-technical stakeholders, and establish clarity in ambiguous environments",
+      "Experience translating ambiguous requirements into executable plans, managing sprints with Jira, and mentoring team members",
+      "Full-stack technical fluency across software architecture, APIs, and cloud platforms from engineering background"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience delivering in healthcare, life sciences, or other highly regulated environments with formal approval processes",
+      "Limited visibility into managing healthcare-specific dependencies like EHR systems, HIPAA/PHI compliance, clinical workflows, or AI governance in healthcare",
+      "No explicit experience with healthcare interoperability standards (FHIR, HL7, CDS Hooks) or clinical validation methodologies (shadow mode, controlled rollout)",
+      "Unclear experience managing regulatory approval gates, audit evidence, or clinical-administrative workflows like prior authorization or discharge planning"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4471031744",
@@ -396,8 +455,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4471031744/resume.md",
-    "cover_letter_path": "applications/li-4471031744/cover_letter.md"
+    "resume_path": "applications/li-4471031744/resume.pdf",
+    "cover_letter_path": "applications/li-4471031744/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4433120847",
@@ -436,8 +496,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4433120847/resume.md",
-    "cover_letter_path": "applications/li-4433120847/cover_letter.md"
+    "resume_path": "applications/li-4433120847/resume.pdf",
+    "cover_letter_path": "applications/li-4433120847/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4472212984",
@@ -517,7 +578,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong technical program management and cross-functional leadership experience, but lacks explicit hardware coordination and AI/ML infrastructure depth that the role emphasizes.",
+    "fit_strengths": [
+      "5+ years of technical program management leading multi-disciplinary teams (Riviera Partners, PLoS)",
+      "Proven ability to deliver large-scale projects from inception through launch and iteration",
+      "Strong stakeholder management across engineering, product, design, and non-technical teams",
+      "Full-stack technical background enables credible engagement with engineering and research teams"
+    ],
+    "fit_gaps": [
+      "No stated experience coordinating hardware-software programs or hardware domain knowledge",
+      "Limited demonstrated familiarity with AI/ML infrastructure, GPU systems, or ML workload optimization",
+      "No background in cloud platform operations, cost optimization, or distributed systems infrastructure",
+      "Startup experience is dated (2009-2011, 2018-2019); current work is personal projects rather than high-growth environments"
+    ],
+    "fit_dealbreakers": [
+      "Location stated as 'None' with Remote: False\u2014posting appears incomplete on logistics, unclear if remote is negotiable or required in-office"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4471057570",
@@ -554,10 +633,11 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4471057570/resume.pdf",
+    "cover_letter_path": "applications/li-4471057570/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4417317565",
@@ -596,8 +676,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4417317565/resume.md",
-    "cover_letter_path": "applications/li-4417317565/cover_letter.md"
+    "resume_path": "applications/li-4417317565/resume.pdf",
+    "cover_letter_path": "applications/li-4417317565/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4408289649",
@@ -634,10 +715,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4408289649/resume.pdf",
+    "cover_letter_path": "applications/li-4408289649/cover_letter.pdf"
   },
   {
     "id": "li-4463659773",
@@ -677,7 +758,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match overall\u2014strong project management and technical leadership experience aligns well with core responsibilities, but lacks specific Pricefx and ITSM expertise that would make this a stronger fit.",
+    "fit_strengths": [
+      "Multi-year experience managing complex projects end-to-end with cross-functional teams",
+      "Proven track record leading and mentoring technical teams up to 15 members",
+      "Strong background in software project delivery, sprint management, and stakeholder collaboration",
+      "Located in San Diego, CA with on-site work preference evident from resume"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with Pricefx platform or pricing/revenue management domain",
+      "No explicit IT Service Management (ITSM) certification or experience mentioned",
+      "Limited evidence of design workshop facilitation or user story creation at scale",
+      "Career gap since August 2022 with only freelance/personal projects (no consulting delivery experience)"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472289570",
@@ -717,7 +814,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong project management and technical foundation, but lacks the required IT systems implementation depth, federal/Medicaid experience, PMP certification, and 7+ years of large-budget project leadership in external customer contexts.",
+    "fit_strengths": [
+      "Multi-year project delivery experience managing teams and cross-functional stakeholders",
+      "Proficiency with Jira and agile/waterfall methodologies",
+      "Full-stack technical background enabling credible engagement with engineering and architects",
+      "Demonstrated ability to translate requirements, manage scope, and coordinate vendors"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience managing large-budget IT projects ($500K+) or federal/state system implementations",
+      "Missing PMP certification and formal agile certifications (CSM, PMI-ACP, SAFe)",
+      "No Medicaid, HHS, or health systems domain experience (MMIS, eligibility platforms)",
+      "Only 3 years of dedicated project/program management in external client contexts; roles were often dual technical-PM hybrid rather than pure PM leadership"
+    ],
+    "fit_dealbreakers": [
+      "Location not specified in posting; candidate is San Diego-based and posting shows remote: false with no location listed\u2014unclear if remote work or relocation expected",
+      "No explicit salary range stated; cannot assess compensation expectations"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4364708639",
@@ -794,10 +910,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4444658791/resume.pdf",
+    "cover_letter_path": "applications/li-4444658791/cover_letter.pdf"
   },
   {
     "id": "li-4453726628",
@@ -836,8 +952,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4453726628/resume.md",
-    "cover_letter_path": "applications/li-4453726628/cover_letter.md"
+    "resume_path": "applications/li-4453726628/resume.pdf",
+    "cover_letter_path": "applications/li-4453726628/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4242864623",
@@ -917,7 +1034,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 68,
+    "fit_summary": "Good match with solid project management and technical leadership experience, but lacks explicit M&A background and some healthcare/vendor management context that the role emphasizes.",
+    "fit_strengths": [
+      "8+ years managing multi-year projects and sprints with teams across functions using Jira, Trello, and waterfall/agile methodologies",
+      "Proven track record managing complex stakeholder landscapes including executives, engineers, product, design, and external customers",
+      "Technical depth as full-stack engineer enables credible communication with development teams and infrastructure discussions",
+      "Demonstrated ability to balance scope, timeline, quality, and budget across high-stakes initiatives"
+    ],
+    "fit_gaps": [
+      "No stated M&A or acquisition integration experience, which is explicitly required",
+      "Limited healthcare industry exposure; background primarily in tech/SaaS startups",
+      "No mention of budget management, invoicing, or financial forecasting responsibilities",
+      "Certifications (PMP, PMI-ACP, CSM) not listed; current project management maturity level unclear"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4454559861",
@@ -957,7 +1090,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong product management and cross-functional leadership experience, but lacks the domain expertise in HVAC, building controls, data center infrastructure, and the required technical engineering background that are core to this role.",
+    "fit_strengths": [
+      "Senior-level product management experience managing multi-year projects and portfolios",
+      "Proven ability to lead cross-functional teams, coordinate stakeholders, and influence without direct authority",
+      "Track record of developing go-to-market strategies, business cases, and driving new product introductions",
+      "Located in San Diego, CA\u2014one of the listed job locations"
+    ],
+    "fit_gaps": [
+      "No experience in HVAC, building automation systems (BAS), controls, or data center infrastructure markets",
+      "Missing required bachelor's degree in Mechanical/Electrical Engineering or Building Automation Systems (holds CS degree)",
+      "No demonstrated expertise in mission-critical infrastructure, thermal management, or data center cooling solutions",
+      "Limited exposure to cloud-connected platforms, IoT architecture, AI/ML, or digital services at the level required for this strategic role"
+    ],
+    "fit_dealbreakers": [
+      "Posting explicitly states 'Work visa sponsorship is not available'\u2014unclear if candidate requires sponsorship, but this is a hard constraint in the posting"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4422554061",
@@ -997,7 +1148,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 42,
+    "fit_summary": "Vishal's technical project management and full-stack engineering background provide some foundation, but he lacks the deep AI/ML platform expertise, regulated industry experience, and 10+ years in enterprise IT environments that this principal-level role requires.",
+    "fit_strengths": [
+      "Strong technical program management experience managing multi-year, multi-team projects at Riviera Partners",
+      "Experience with Agile/Scrum, sprint management, and cross-functional stakeholder coordination",
+      "Full-stack engineering background demonstrates technical depth to understand platform architecture",
+      "Proven ability to drive end-to-end project lifecycles from strategy through execution and adoption"
+    ],
+    "fit_gaps": [
+      "No demonstrated expertise in AI/ML platforms, RAG pipelines, LLM orchestration, or emerging AI technologies",
+      "Limited enterprise IT infrastructure or platform engineering experience; background is primarily startup/SaaS web applications",
+      "No regulated industry experience (pharma, biotech, healthcare) or compliance/governance framework management",
+      "Lacks formal program management certification (PMP strongly preferred) and falls short of 10+ years enterprise IT requirement"
+    ],
+    "fit_dealbreakers": [
+      "Role is explicitly onsite San Diego HQ; while Vishal is in Carlsbad nearby, the posting shows Remote: False which may conflict depending on his flexibility",
+      "This is a principal-level strategic AI platform role requiring deep domain expertise Vishal has not developed; represents a significant level and domain jump from his core experience"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4451283073",
@@ -1077,7 +1247,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: strong project management and cross-functional team leadership experience, but significant gaps in required SPM domain expertise, enterprise IT delivery at scale, and the specific technical tools (SAP, Vericent, Anaplan) that are central to the role.",
+    "fit_strengths": [
+      "Multi-year project management of large teams and complex stakeholders (up to 15 members)",
+      "Cross-functional collaboration across engineering, product, design, QA, and business teams",
+      "Requirements gathering, sprint management, and Agile methodologies",
+      "Executive-level communication and program delivery from inception to launch"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with SPM (Sales Performance Management) platforms or incentive compensation processes",
+      "Lacks 10+ years IT delivery experience; background is primarily product-focused software engineering and startup projects",
+      "No hands-on experience with SAP, Vericent, Anaplan, or similar enterprise SPM tools",
+      "Missing enterprise cloud platform and API integration expertise at the scale required for global delivery programs"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472241224",
@@ -1117,7 +1303,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: Strong product/project management background and agile expertise, but lacks the required 8+ years as a dedicated Product Owner/Senior PM and has no payments or financial services experience.",
+    "fit_strengths": [
+      "Extensive project and product management across multi-year, complex initiatives with large teams",
+      "Deep experience with agile methodologies, sprint management, and cross-functional stakeholder coordination",
+      "Proven ability to stabilize and improve delivery (e.g., full system redesigns, automation projects)",
+      "Remote work experience and demonstrated comfort operating in ambiguous environments with diverse stakeholders"
+    ],
+    "fit_gaps": [
+      "No explicit payments or financial services industry background",
+      "Career progression shows technical engineering roots rather than pure product owner track\u2014only ~3 years explicitly in PM/TPM roles at the level needed",
+      "No mention of managing large backlogs or backlog grooming at enterprise scale",
+      "Experience is primarily with smaller teams and organizations, not large financial services enterprises"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4459853469",
@@ -1157,7 +1359,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project/product management experience and Agile background, though lacking specific insurance domain expertise and some certifications that are preferred.",
+    "fit_strengths": [
+      "5+ years managing complex projects and product backlogs across multiple stakeholder environments",
+      "Proven experience facilitating Agile ceremonies, sprint planning, and delivery coordination with cross-functional teams",
+      "Track record translating business requirements into actionable work and managing full lifecycle projects from inception to launch",
+      "Comfortable with hands-on technical problem-solving and working alongside engineering teams"
+    ],
+    "fit_gaps": [
+      "No stated experience in insurance, risk services, loss control, or field operations platforms",
+      "Missing preferred certifications (CSM, PSM, CSPO, PSPO) though Agile experience is strong",
+      "Limited evidence of supporting enterprise SaaS or cloud-hosted applications at scale",
+      "No mention of application modernization or platform transformation initiatives"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4428120454",
@@ -1194,10 +1412,27 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 35,
+    "fit_summary": "Vishal's project and product management experience doesn't align with the deep AML/compliance domain expertise and regulatory knowledge this role demands; he lacks the required full-stack AML product shipping experience and financial crimes background.",
+    "fit_strengths": [
+      "Technical and data fluency\u2014background as full-stack engineer with SQL, Rails, and data exposure",
+      "Project and product management experience across multiple stakeholders and cross-functional teams",
+      "Demonstrated ability to learn complex domains and manage multi-year initiatives",
+      "Remote-first work experience aligned with company culture"
+    ],
+    "fit_gaps": [
+      "No demonstrated AML, compliance, or financial crimes product experience",
+      "No regulatory literacy in BSA, FinCEN, OFAC, or examiner-facing work",
+      "No exposure to transaction monitoring, KYC/KYB, screening, or SAR filing workflows",
+      "Limited evidence of AI-native PM practices or using AI tools as core workflow multipliers"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4427055858",
@@ -1237,7 +1472,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: Strong project management and technical leadership background, but lacks the deep infrastructure-as-code, DevOps, and cloud platform expertise (Kubernetes, Terraform, CI/CD automation) that are core requirements for this role.",
+    "fit_strengths": [
+      "6+ years of technical project and program management experience managing multi-year projects and cross-functional teams",
+      "Full lifecycle project delivery experience from inception through launch and iteration",
+      "Requirements gathering, stakeholder communication, and cross-team collaboration across engineering, product, and business stakeholders",
+      "Jira proficiency and agile/sprint management experience"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with CI/CD pipeline design, optimization, or automation (6+ years required)",
+      "No experience with containerization, orchestration platforms (Kubernetes, Docker, ECS/EKS) or infrastructure-as-code (Terraform)",
+      "No hands-on cloud infrastructure experience (AWS, Azure, GCP) or DevOps/DevSecOps background",
+      "Limited recent software engineering hands-on work; most recent technical depth is older (pre-2018) or personal projects"
+    ],
+    "fit_dealbreakers": [
+      "50% travel requirement may conflict with San Diego location preference, though not explicit in resume",
+      "Requires US work authorization without sponsorship, which cannot be verified from resume"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4445297253",
@@ -1277,7 +1531,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match for a product manager role with relevant experience managing complex technical projects and cross-functional teams, though insurance domain expertise and specific platform knowledge are gaps.",
+    "fit_strengths": [
+      "3+ years managing complex initiatives end-to-end with agile processes and tools (Jira, Trello)",
+      "Proven track record defining product strategy, roadmaps, and requirements across multiple technical products",
+      "Strong cross-functional collaboration with engineering, design, analytics, and stakeholders at Riviera Partners and PLoS",
+      "Experience conducting user research, identifying problems, and prioritizing solutions in fast-moving environments"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in P&C insurance, rating platforms, or rules engines (preferred qualifications)",
+      "Limited exposure to Guidewire or insurance-specific technology stack",
+      "No background in building insurance platforms for rating, underwriting, or policy configuration workflows",
+      "Unclear if product metrics definition and tracking was a core responsibility vs. supporting function in past roles"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4441553330",
@@ -1317,7 +1587,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management experience and remote flexibility, but lacks Commercial Real Estate industry background and formal PMP certification that the role emphasizes.",
+    "fit_strengths": [
+      "Multi-year technical project management at scale (up to 15 people, diverse stakeholders)",
+      "Proven track record delivering complex, multi-phase projects from inception through launch",
+      "Executive communication and stakeholder management across technical and non-technical teams",
+      "Remote work experience and familiarity with project management tools (Jira, Trello)"
+    ],
+    "fit_gaps": [
+      "No Commercial Real Estate, mortgage, lending, or financial services industry experience",
+      "No PMP certification (listed as preferred but increasingly expected for senior roles)",
+      "Limited evidence of Information Security, Infrastructure, or Data Analytics project leadership",
+      "No explicit experience with enterprise-level program portfolio management or large-scale change management initiatives"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470730696",
@@ -1357,7 +1643,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: strong product/project management and technical delivery background, but significant gaps in pharma/biotech domain expertise, regulated data governance, and customer engagement platform specifics required for this role.",
+    "fit_strengths": [
+      "8+ years progressive experience in product/project management and technical delivery",
+      "Hands-on delivery leadership across multi-year projects with complex stakeholder management",
+      "Experience managing platforms, integrations, and cross-functional team coordination in shared operating models",
+      "Located in San Diego with remote flexibility matching the role's location and travel expectations"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in pharmaceutical, biotech, or life sciences industries",
+      "No background in regulated customer data management, compliance, privacy governance, or promotional/medical review processes",
+      "Limited exposure to pharma-specific platforms (Veeva, Salesforce CRM in pharma context) and commercial engagement domain",
+      "No evidence of field enablement, product launch, or customer engagement strategy experience in regulated environments"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4453724615",
@@ -1394,10 +1696,28 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. While Patel has strong product and project management experience, this Principal PM role requires deep specialized expertise in production voice products (IVR, voice bots, contact center automation) that his resume does not demonstrate.",
+    "fit_strengths": [
+      "Extensive product/project management experience across startups and mid-size organizations",
+      "Proven ability to manage complex multi-year projects with diverse stakeholders and cross-functional teams",
+      "Hands-on technical background with full-stack software engineering and prototyping capability"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with voice-based conversational products, IVR systems, or voice automation\u2014a stated required skillset",
+      "No background in enterprise/regulated industry sales or partner management at scale",
+      "No evidence of design tool proficiency (Figma) or design-centric product leadership",
+      "Missing ASR/TTS, latency budgets, turn-taking, and voice-specific product knowledge"
+    ],
+    "fit_dealbreakers": [
+      "The role explicitly requires hands-on production voice product experience; Patel's background is in web applications, SaaS, and chat-based tools, not voice AI or contact center automation"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4461185293",
@@ -1436,8 +1756,9 @@
     "work_from_home_type": null,
     "status": "applied",
     "application_status": "resume_created",
-    "resume_path": "applications/li-4461185293/resume.md",
-    "cover_letter_path": "applications/li-4461185293/cover_letter.md"
+    "resume_path": "applications/li-4461185293/resume.pdf",
+    "cover_letter_path": "applications/li-4461185293/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4470767600",
@@ -1477,7 +1798,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong project management and enterprise software background, but lacks the 15+ years required post-sales implementation experience and deep supply chain domain expertise that are core to this role.",
+    "fit_strengths": [
+      "Multi-year enterprise project management experience with large teams and diverse stakeholders",
+      "Proven ability to manage sprints, track progress, and deliver on customer requirements using Jira",
+      "Technical background as full-stack engineer enables credibility navigating product and technical teams",
+      "Track record mentoring and managing technical team members in complex environments"
+    ],
+    "fit_gaps": [
+      "Only ~6 years of explicit post-sales software implementation project leadership (Riviera Partners 3 years, PLoS 2 years); role explicitly requires 15+ years",
+      "No demonstrated deep supply chain domain knowledge or experience with supply chain-specific software (SAP, JDA, Kinaxis, etc.)",
+      "Limited evidence of proposal writing, SOW creation, or pre-sales subject matter expert contributions at scale",
+      "No stated experience in pharmaceutical or CPG verticals, and global travel availability unstated"
+    ],
+    "fit_dealbreakers": [
+      "Location not specified in posting but implies non-remote work; candidate is based in San Diego with no indication of willingness to relocate or travel globally"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4454815141",
@@ -1517,7 +1856,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong technical project management and product ownership experience, but lacks hands-on integration platform expertise (Workato, iPaaS) and domain-specific RevOps/fintech background that the role heavily emphasizes.",
+    "fit_strengths": [
+      "Technical project manager with multi-year experience managing complex cross-functional projects and stakeholders",
+      "Proven product management skills including requirements gathering, roadmapping, and feature prioritization",
+      "Full-stack software engineer background provides credibility in understanding APIs, data models, and system architecture",
+      "Strong stakeholder management across engineering, product, and non-technical teams in previous roles"
+    ],
+    "fit_gaps": [
+      "No demonstrated hands-on experience with iPaaS platforms (Workato, Zapier, MuleSoft) or integration architecture design",
+      "Limited Salesforce-specific experience; resume shows general software engineering but not Salesforce admin or configuration work",
+      "No explicit Revenue Operations, Sales Operations, or fintech/financial services domain experience mentioned",
+      "Missing specific technical skills: SQL proficiency, advanced Excel, API testing tools, and data platform experience (Snowflake, etc.) not clearly demonstrated"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472229576",
@@ -1557,7 +1912,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match. Strong project and stakeholder management background with proven enterprise delivery experience, but limited explicit B2B SaaS and professional services depth compared to the 7+ year requirement.",
+    "fit_strengths": [
+      "Extensive complex project management across multiple years and large teams",
+      "Proven ability to translate technical requirements into business solutions and manage cross-functional stakeholders",
+      "Experience in agile delivery, scope management, and sprint governance with tools like Jira",
+      "Track record mentoring junior team members and improving delivery processes"
+    ],
+    "fit_gaps": [
+      "No explicit B2B SaaS professional services or implementation management background in resume",
+      "Limited demonstrated experience in discovery, solution design, and pre-sales/solutions consulting",
+      "No background in regulated industries (background screening, HR tech, compliance, financial services, healthcare)",
+      "Unclear depth of executive presence and formal customer-facing implementation leadership at enterprise scale"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4444351273",
@@ -1597,7 +1968,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match\u2014Vishal's extensive program and project management experience across technical implementations aligns well with the role's core requirements, though he lacks explicit fintech/payments domain experience and the posting doesn't specify remote eligibility or location flexibility.",
+    "fit_strengths": [
+      "7+ years managing complex technical programs and enterprise implementations (Riviera Partners, PLoS)",
+      "Proven cross-functional stakeholder coordination across engineering, product, customer success, and external partners",
+      "Strong experience with Jira, agile methodologies, and structured program delivery for multi-phase projects",
+      "Track record improving processes, capturing lessons learned, and optimizing delivery frameworks"
+    ],
+    "fit_gaps": [
+      "No stated fintech or payments industry experience; unfamiliar with payment orchestration, tokenization, PCI DSS, or 3D Secure",
+      "Location not specified in posting; Carlsbad, CA base may not align if role requires relocation or specific office presence",
+      "No PMP or formal project management certification mentioned on resume",
+      "Limited recent hands-on program management (last PM role ended August 2022; since then focused on software development)"
+    ],
+    "fit_dealbreakers": [
+      "Posting shows 'Remote: False' with no location listed\u2014unclear if role is on-site, hybrid, or requires relocation; this ambiguity is a potential conflict for a CA-based candidate without clarity on expectations"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4454570774",
@@ -1637,7 +2026,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match: strong technical product management background and full-stack engineering skills align well with the hands-on prototyping role, but limited AI/ML depth and no demonstrated experience with agentic AI systems create meaningful gaps.",
+    "fit_strengths": [
+      "5+ years managing complex technical products from concept to production",
+      "Full-stack software engineer capable of building prototypes and working with APIs",
+      "Proven ability to translate business problems into shipped products across diverse stakeholders",
+      "Experience prioritizing ruthlessly and measuring business outcomes in product delivery"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with AI/ML, agents, or modern LLM tooling (Claude, Cursor, vector databases)",
+      "Limited background in data science or engineering-first technical depth compared to stated preference",
+      "No examples of working with AI-native products or agentic coding workflows",
+      "Remote work from California conflicts with stated East Coast preference and EST hours requirement"
+    ],
+    "fit_dealbreakers": [
+      "Location: candidate is San Diego-based; role strongly prefers East Coast (New York or Charlotte) with mandatory EST hours, making timezone alignment problematic"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4472227551",
@@ -1677,7 +2084,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with relevant project management experience and cross-functional leadership skills, but lacks the specific CPG industry background and Stage-Gate process expertise the role emphasizes.",
+    "fit_strengths": [
+      "Multi-year experience managing complex cross-functional projects with up to 15 team members",
+      "Proven ability to manage multiple simultaneous initiatives and drive stakeholder alignment",
+      "Strong background in sprint management, task prioritization, and team coordination using Jira",
+      "Remote work experience and track record mentoring junior team members"
+    ],
+    "fit_gaps": [
+      "No CPG or consumer goods industry experience; background is primarily SaaS and recruitment tech",
+      "Limited demonstrated expertise with Stage-Gate product development methodology",
+      "Experience is primarily in tech/software projects rather than commercial product launches and inventory/manufacturing coordination",
+      "No explicit mention of budget management or resource allocation at the scale this role requires"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4462361235",
@@ -1714,10 +2137,28 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 35,
+    "fit_summary": "Poor match. Vishal lacks the 10+ years of healthcare payer technology experience and 5+ years of Facets-specific leadership this role requires; his background is primarily SaaS and general software project management.",
+    "fit_strengths": [
+      "Project and program management experience across multi-year initiatives",
+      "Leadership of cross-functional, geographically distributed teams up to 15 members",
+      "Enterprise implementation and platform transformation delivery experience",
+      "Strong governance, sprint management, and executive reporting skills"
+    ],
+    "fit_gaps": [
+      "No healthcare payer industry experience or domain knowledge",
+      "No Facets platform or configuration management background",
+      "Missing 10+ years healthcare technology requirement (has ~3 years relevant PM experience)",
+      "No claims administration, product management, or healthcare operations knowledge",
+      "No experience with healthcare-specific tools (Facets, NetworX, EDI, CMU)"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4451279684",
@@ -1754,10 +2195,29 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. This is a specialized SAP consulting role requiring deep hands-on expertise in S/4HANA, SAP BTP, and enterprise system integrations\u2014areas not present in Vishal's background, which centers on general project/product management and full-stack web development without ERP or consulting experience.",
+    "fit_strengths": [
+      "Project and program management experience across multi-year engagements",
+      "Proven ability to work with diverse stakeholders and manage complex deliverables",
+      "Background in technical team leadership and mentoring"
+    ],
+    "fit_gaps": [
+      "No SAP, S/4HANA, or enterprise ERP system implementation experience",
+      "No hands-on SAP BTP, FICO, supply chain, or analytics module expertise",
+      "No consulting or professional services firm experience",
+      "Limited evidence of client management in high-stakes enterprise settings"
+    ],
+    "fit_dealbreakers": [
+      "40-60% travel requirement not addressed in preferences",
+      "Role demands 5-7 years SAP-specific consulting experience; Vishal's experience is in startup/scale-up web product management and software engineering"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4470552580",
@@ -1797,7 +2257,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match with strong project management fundamentals but significant gaps in required enterprise IT operations depth, cloud platform experience, and ServiceNow/ITIL expertise.",
+    "fit_strengths": [
+      "8+ years of technical project management across diverse teams and stakeholders",
+      "Experience managing multi-year, complex projects with structured governance and sprint-based execution",
+      "Proven ability to translate strategy into execution and manage cross-functional teams",
+      "Located in California with relevant software engineering and infrastructure background"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in enterprise IT operations, cloud infrastructure, or disaster recovery programs",
+      "No stated experience with Azure, GCP, or cloud platform management (3+ years required)",
+      "No background in ServiceNow implementations or ITIL frameworks",
+      "Missing AIOps exposure; no monitoring, observability, or managed service provider experience mentioned"
+    ],
+    "fit_dealbreakers": [
+      "Requires 4 days/week onsite in San Francisco; candidate is in San Diego with no indication of willingness to commute",
+      "No Bachelor's degree in CS, IT, or related field stated on resume (holds diplomas from Canadian colleges, not a 4-year degree)"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4453281414",
@@ -1837,7 +2316,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 45,
+    "fit_summary": "Partial match with strong PM experience but missing domain expertise in construction/infrastructure projects and required certifications (PMP, PE).",
+    "fit_strengths": [
+      "8+ years direct project management experience managing complex multi-year projects",
+      "Proven budget and resource planning across multiple stakeholder environments",
+      "Experience with project management tools (Jira, Trello) and agile methodologies",
+      "Located in San Diego with demonstrated ability to manage medium-complexity initiatives"
+    ],
+    "fit_gaps": [
+      "No construction, electrical, gas, substation, transmission, or civil infrastructure project experience",
+      "No PMP certification mentioned; only agile/general PM experience",
+      "No California PE license or IEEE/IEC membership",
+      "Unfamiliar with Primavera (P6) or construction-specific project management tools"
+    ],
+    "fit_dealbreakers": [
+      "PMP certification is explicitly required, not stated as preferred",
+      "5-6+ years construction project management is a core requirement, not a nice-to-have"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4463673374",
@@ -1877,7 +2375,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match with strong product management foundation and startup experience, but significant gaps in required retail/consumer domain expertise, data science background, and merchandising-specific knowledge create meaningful stretch areas.",
+    "fit_strengths": [
+      "Proven technical product manager with 7+ years experience managing full product lifecycles from strategy to launch",
+      "Strong cross-functional collaboration experience with engineering, design, and stakeholders across multiple roles",
+      "Hands-on agile expertise with Jira, sprint management, and user story development demonstrated across multiple roles",
+      "Located in San Diego, CA matching the job location"
+    ],
+    "fit_gaps": [
+      "No demonstrated retail, merchandising, or consumer products domain knowledge despite this being core to the role",
+      "Limited data science, analytics, or optimization technology experience relative to role emphasis on data-driven assortment solutions",
+      "No clear background in merchant-facing products or understanding of merchandising business challenges",
+      "Product management experience primarily in B2B/recruiting and publishing, not consumer retail or e-commerce"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4450844207",
@@ -1917,7 +2431,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and technical background, but lacks the specific Kubernetes and cloud infrastructure depth the role prioritizes.",
+    "fit_strengths": [
+      "7+ years in technical PM and engineering leadership across multiple companies",
+      "Hands-on validation and customer-facing experience with platform engineers and stakeholders",
+      "Proven ability to translate technical direction into executable specs and ship complex products",
+      "Cross-functional leadership bridging engineering, sales, and support teams"
+    ],
+    "fit_gaps": [
+      "No demonstrated Kubernetes fluency or cloud infrastructure platform experience mentioned",
+      "Background is primarily in recruitment/HR tech and general web applications, not cloud-native or infrastructure domains",
+      "Missing AI/MLOps, GPU scheduling, or Kubernetes-as-a-Service experience",
+      "No evidence of working with infrastructure or platform engineering customers at scale"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4471043742",
@@ -1994,10 +2524,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 32,
+    "fit_summary": "Poor match\u2014while Vishal has solid project management and some technical leadership experience, he lacks the 7+ years of hands-on Adobe Experience Manager (AEM) expertise and the 10+ years of IT/digital application development required for this senior platform manager role.",
+    "fit_strengths": [
+      "Technical project management experience managing multi-year projects and cross-functional teams",
+      "Full-stack software engineering background with web application development",
+      "Experience leading teams, mentoring junior members, and managing sprints with Jira"
+    ],
+    "fit_gaps": [
+      "No demonstrated Adobe Experience Manager (AEM) or Adobe Experience Cloud platform experience",
+      "Missing 7+ years of hands-on enterprise AEM solution delivery and operations",
+      "Limited evidence of leading global system integrator partnerships or hybrid offshore/onshore models",
+      "No background in regulated industries (medical device, life sciences, healthcare) or related compliance frameworks (SOX, CSV, privacy)"
+    ],
+    "fit_dealbreakers": [
+      "The role explicitly requires 7+ years of AEM experience; Vishal's resume shows zero AEM expertise",
+      "Requires 10+ years of IT/digital application development\u2014Vishal's timeline (starting 2004) is borderline and heavily weighted toward startups and freelance work rather than enterprise IT",
+      "Requires advanced Adobe Experience Cloud and regulatory compliance expertise entirely absent from his background"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4463655964",
@@ -2034,10 +2584,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. Vishal's expertise is in product/project management and web software development, not enterprise asset management systems (Maximo) or utilities sector consulting.",
+    "fit_strengths": [
+      "Project management experience across multi-year initiatives with diverse stakeholders",
+      "Leadership and team mentoring skills demonstrated at multiple roles",
+      "Experience managing implementation and training for software systems"
+    ],
+    "fit_gaps": [
+      "No experience with IBM Maximo or enterprise asset management software",
+      "No background in utilities, energy, or mining sectors",
+      "No consulting experience at scale (PwC is a large consulting firm with different practices)",
+      "Technical expertise is in web development (Rails, JavaScript, Python), not EAM systems"
+    ],
+    "fit_dealbreakers": [
+      "Role requires deep Maximo expertise which is entirely absent from resume",
+      "Specialized domain knowledge in utilities/energy/mining not demonstrated",
+      "Career trajectory shows product/startup focus, not enterprise software consulting"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4470765574",
@@ -2077,7 +2647,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 42,
+    "fit_summary": "Vishal has strong product and project management credentials but lacks the specialized thermal/cooling domain expertise and hardware NPI experience this role explicitly requires.",
+    "fit_strengths": [
+      "Proven product manager and technical project manager experience at scale",
+      "Experience managing complex supplier and stakeholder relationships across multiple teams",
+      "Remote work background and self-directed execution capability",
+      "Familiarity with Jira-based agile processes and cross-functional coordination"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with liquid cooling systems or thermal products for data centers",
+      "Missing hardware/physical product NPI background\u2014background is primarily software (web apps, SaaS)",
+      "No clear evidence of OEM/supplier management for physical products or long lead-time hardware cycles",
+      "No degree in Mechanical Engineering, Thermal Engineering, or related field; background is Computer Science"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470760737",
@@ -2114,10 +2700,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 35,
+    "fit_summary": "Poor match. While Vishal has solid project and product management experience, this role requires 5+ years in orthopedic medical-device development with deep clinical and regulatory expertise he doesn't demonstrate, plus domain knowledge of foot/ankle surgery and device design that appears absent from his background.",
+    "fit_strengths": [
+      "Multi-year cross-functional project leadership across diverse stakeholders",
+      "Experience managing complex product development workflows and phase-gate processes",
+      "Demonstrated ability to translate user research into product requirements and design inputs",
+      "Strong analytical and presentation skills with executive influence without direct authority"
+    ],
+    "fit_gaps": [
+      "No orthopedic medical devices or regulated medical-device development experience stated",
+      "No demonstrated clinical research, user needs validation, or design-control methodology background",
+      "Lack of foot/ankle domain expertise and surgeon relationships",
+      "No healthcare compliance, quality management systems, or regulatory pathway experience mentioned"
+    ],
+    "fit_dealbreakers": [
+      "Location not specified in posting but resume is San Diego, CA and role does not list remote as option\u2014unclear if this is a dealbreaker without explicit location statement in posting",
+      "5+ years required in orthopedic/regulated-device field; Vishal's background is primarily software/web applications and general PM, not medical devices"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4462898778",
@@ -2157,7 +2763,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: strong product and cross-functional management background, but lacks explicit consumer product and AI/LLM experience that the role emphasizes.",
+    "fit_strengths": [
+      "Multi-year product and technical project management experience managing complex, cross-functional teams",
+      "Proven ability to own end-to-end product strategy from conception through launch and iteration",
+      "Extensive stakeholder management across engineering, design, operations, and non-technical teams",
+      "Remote work experience and comfort operating independently in fast-moving environments"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience building consumer product experiences or working with consumer user bases",
+      "Limited evidence of deep engagement with AI, LLMs, or agentic systems beyond general software work",
+      "No healthcare or regulated industry experience mentioned",
+      "Experience is primarily B2B SaaS and internal tools rather than patient-facing product design"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472218752",
@@ -2197,7 +2819,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 62,
+    "fit_summary": "Partial match: Strong program management and delivery background with relevant enterprise experience, but lacks demonstrated information security domain expertise and financial services context that the role emphasizes.",
+    "fit_strengths": [
+      "7+ years of program/project management across multi-year, complex initiatives",
+      "Proven ability to work with senior stakeholders and cross-functional teams in enterprise settings",
+      "Experience establishing governance frameworks, defining scope, and driving execution across distributed teams",
+      "Demonstrated consultative approach to ambiguous mandates and tactical problem-solving"
+    ],
+    "fit_gaps": [
+      "No stated information security or cybersecurity domain experience across any of the four pillars (incident management, AppSec, IAM, security tooling)",
+      "No background in financial services, investment management, or regulated industry environments",
+      "Limited evidence of working directly with security or compliance functions in prior roles",
+      "No mention of security frameworks, standards (NIST, CSIRT/SOC), or security-specific tools mentioned in the role"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4461192497",
@@ -2237,7 +2875,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management background and cross-functional stakeholder experience, but lacks regulated medical/pharmaceutical domain expertise and nuclear manufacturing familiarity.",
+    "fit_strengths": [
+      "Extensive multi-year project management experience managing complex, multi-stakeholder initiatives from inception through launch",
+      "Proven ability to manage multiple concurrent projects and coordinate across diverse internal and external teams",
+      "Experience using Jira for sprint management and familiarity with agile methodologies from multiple roles",
+      "Track record delivering projects on time and within scope at startup and medium-sized organizations"
+    ],
+    "fit_gaps": [
+      "No stated experience in regulated industries (FDA, NRC, DOT) or pharmaceutical/medical manufacturing environments",
+      "Limited exposure to nuclear or radiopharmaceutical manufacturing contexts",
+      "No mention of PMP, CSM, or formal project management certifications",
+      "Unclear familiarity with data analytics and reporting tools beyond basic Excel"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472254742",
@@ -2274,10 +2928,28 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. While Vishal has strong product/project management and agile expertise, the role demands 5+ years of specialized hands-on experience with Empower mortgage systems and compliance domain knowledge that his resume does not demonstrate.",
+    "fit_strengths": [
+      "Extensive product owner and project management experience across multiple organizations",
+      "Proven ability to manage backlogs, sprints, and stakeholder communication using Jira",
+      "Strong background translating complex requirements into actionable deliverables for technical teams"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with Empower Mortgage/HELOC loan origination systems or vendor ecosystem (Dark Matter, Docutech)",
+      "No evidence of mortgage, HELOC, or financial services domain knowledge",
+      "Missing compliance requirements expertise specific to loan origination workflows",
+      "No history working in regulated financial services or banking industry"
+    ],
+    "fit_dealbreakers": [
+      "Role explicitly requires 5+ years hands-on Empower system experience; resume shows no fintech/mortgage lending background"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4382166904",
@@ -2317,7 +2989,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and technical project leadership experience, though tactical wireless communications domain expertise is a notable gap.",
+    "fit_strengths": [
+      "Extensive product management and technical project management background across multiple organizations",
+      "Deep experience managing multi-disciplinary teams (engineering, design, QA, data scientists, sales) and diverse stakeholders",
+      "Full product lifecycle ownership demonstrated\u2014from strategy and requirements through development, launch, and sustainment",
+      "Strong technical foundation as a full-stack software engineer with ability to communicate across technical and non-technical audiences"
+    ],
+    "fit_gaps": [
+      "No stated experience with wireless communications, tactical radio systems, or software-defined radio (SDR) architectures\u2014core domain for this role",
+      "Limited evidence of market analysis, competitive landscape assessment, or product positioning/pricing strategy work",
+      "No clear background in defense, military, public safety, or industrial sector applications",
+      "Unclear depth of experience with user experience design and user-facing applications (though product management roles suggest some exposure)"
+    ],
+    "fit_dealbreakers": [
+      "U.S. Citizenship requirement\u2014not addressed in resume and is mandatory for security clearance eligibility"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4454302982",
@@ -2354,10 +3044,33 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 35,
+    "fit_summary": "Poor match. While Vishal has strong general project management and cross-functional team leadership experience, he lacks the required 7+ years in power/utility engineering, electrical infrastructure domain knowledge, and technical foundation (degree in EE/CE) essential for this specialized role.",
+    "fit_strengths": [
+      "Extensive multi-year project management experience across full lifecycle (inception to launch)",
+      "Proven ability to manage complex, multidisciplinary teams with diverse stakeholders",
+      "Experience with project management tools (Jira, Trello) and agile methodologies",
+      "Track record delivering large-scale projects with significant scope and coordination requirements"
+    ],
+    "fit_gaps": [
+      "No power distribution, transmission, or utility engineering experience",
+      "Lacks required Bachelor's degree in Electrical Engineering or Civil Engineering (has CS degree)",
+      "No familiarity with utility standards (NERC, IEEE, NEC codes) or regulatory environment",
+      "No EPC project delivery or capital infrastructure program management in energy sector",
+      "Missing 7+ years required experience in utility/power systems domain",
+      "No demonstrated knowledge of distribution design, grid modernization, or utility operations"
+    ],
+    "fit_dealbreakers": [
+      "Educational background is Computer Science, not Engineering as required",
+      "No domain expertise in power/utility infrastructure\u2014applicant's background is software/web and general operations",
+      "Experience gap is too large (0 years utility vs. 7+ required) to bridge credibly for a technical specialist role"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4454806661",
@@ -2394,10 +3107,31 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. While Vishal has strong product management and technical leadership experience, he lacks the specialized deep infrastructure and ML inference expertise this role fundamentally requires, and the posting location is unspecified with no remote option stated.",
+    "fit_strengths": [
+      "10+ years of product management across technical and cross-functional teams",
+      "Track record managing complex, multi-year projects with diverse stakeholders including customers and technical teams",
+      "Full-stack software engineering background with modern web tech stack",
+      "Experience at growth-stage companies navigating product strategy and roadmap execution"
+    ],
+    "fit_gaps": [
+      "No demonstrated hands-on experience with LLM inference serving (vLLM, Triton, TensorRT-LLM, Ray Serve)",
+      "No infrastructure or ML platform product background; primarily consumer/recruiter SaaS and food ops",
+      "Missing networking expertise (RDMA, GPUDirect, NVMe-oF) and distributed systems depth",
+      "No production machine learning workload experience or GPU/AI infrastructure familiarity",
+      "No enterprise AI/ML customer base or infrastructure vendor partnership experience"
+    ],
+    "fit_dealbreakers": [
+      "Location unspecified with explicit 'Remote: False' suggests on-site requirement; Vishal is based in San Diego with no relocation stated",
+      "Role demands inference ecosystem depth that is not credibly bridgeable from his background\u2014this is a specialist PM role, not a generalist one"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4454538164",
@@ -2437,7 +3171,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product and project management background, though limited demonstrated experience in B2B SaaS, healthcare, or the specific technical domains Dandy emphasizes.",
+    "fit_strengths": [
+      "7+ years of product and project management experience across multiple organizations",
+      "Proven cross-functional leadership managing stakeholders across engineering, design, sales, operations, and customer-facing teams",
+      "Full-stack software engineering background enabling technical fluency with APIs, system architecture, and third-party integrations",
+      "Direct experience delivering complex, multi-year product initiatives from conception through launch and iteration"
+    ],
+    "fit_gaps": [
+      "No explicit B2B SaaS experience; most roles were in recruiting software, publishing, or freelance projects rather than pure SaaS platforms",
+      "Limited healthcare or dental domain experience; no demonstrated familiarity with healthcare compliance, tax, or regulatory frameworks",
+      "No mentioned experience with payment gateways, ERP systems, billing platforms, or PMS integrations",
+      "Unclear international expansion experience; personal projects and past roles don't clearly demonstrate building for global markets"
+    ],
+    "fit_dealbreakers": [
+      "Location vague and remote status listed as False; candidate is in Carlsbad, CA but no office location specified for Dandy, creating uncertainty about relocation expectations"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4453792965",
@@ -2477,7 +3229,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and cross-functional experience, but lacks the specific regulated industry and LIMS domain expertise that this senior role prioritizes.",
+    "fit_strengths": [
+      "5+ years technical product management experience managing complex multi-stakeholder projects",
+      "Proven ability to translate business requirements into technical specifications and manage engineering teams",
+      "Strong cross-functional collaboration across customer, sales, design, engineering, and QA teams",
+      "Experience in agile methodology and sprint-based delivery at enterprise scale"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in regulated industries (Life Sciences, pharma, or compliance-heavy sectors)",
+      "No LIMS or laboratory information systems background or domain knowledge",
+      "Missing hands-on professional services implementation experience mentioned as valuable",
+      "Limited evidence of launching/scaling B2B products in regulated manufacturing environments"
+    ],
+    "fit_dealbreakers": [
+      "Location requirement: must be in US or Canada, Eastern time zone or 1 hour offset; Vishal is in San Diego (Pacific time, 3 hours behind), which conflicts with the explicit geographic requirement"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4463399394",
@@ -2517,7 +3287,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong product and project management background with cross-functional leadership, but lacks the deep technical expertise in low-voltage switchgear, electrical standards (UL891/UL1558), and critical power infrastructure that is central to this role.",
+    "fit_strengths": [
+      "Proven product manager and technical project manager experience across multiple organizations",
+      "Track record translating customer requirements into product roadmaps and managing multi-year product lifecycles",
+      "Experience leading cross-functional teams (engineering, manufacturing, sales, stakeholders) and managing complex stakeholder relationships",
+      "Demonstrated ability to drive standardization and process improvement in technical environments"
+    ],
+    "fit_gaps": [
+      "No stated experience with low-voltage switchgear, UL891/UL1558 standards, or electrical power distribution systems",
+      "No background in electrical engineering, power infrastructure, data centers, or critical power markets",
+      "Missing deep technical knowledge of OEM breaker platforms (Schneider, Eaton, ABB, LS Electric) and their competitive positioning",
+      "No evidence of product definition work in heavily regulated or standards-driven technical domains (UL, ANSI, IEEE)"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4471016629",
@@ -2557,7 +3343,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: Strong program management and full-stack software experience, but lacks demonstrated AI/ML enablement program leadership and hands-on modern AI development skills that are core requirements.",
+    "fit_strengths": [
+      "Technical project management at scale with multi-year, multi-stakeholder projects",
+      "Full-stack software engineering background with web applications and infrastructure",
+      "Experience mentoring teams, managing sprints, and coordinating across technical and non-technical stakeholders",
+      "Proven ability to take projects from inception through launch and iterate"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience building or maturing an AI enablement program or Center of Excellence",
+      "Limited evidence of hands-on LLM/Claude application development, prompt engineering, or agentic workflows",
+      "No documented experience with modern AI development tools (Replit, Lovable, Claude API, workflow automation platforms)",
+      "Recent work (2022-present) in personal projects rather than enterprise AI initiatives; unclear depth in AI governance or data frameworks"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4463690623",
@@ -2597,7 +3399,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match: Strong technical project management and Agile background with hands-on engineering expertise align well with core responsibilities, though DevOps and cloud-specific experience are notably limited.",
+    "fit_strengths": [
+      "5+ years managing Agile teams with Jira, sprint planning, and ceremony facilitation across multiple technical environments",
+      "Proven ability to lead cross-functional teams, remove blockers, improve delivery metrics, and drive continuous improvement",
+      "Full-stack software engineering background enabling technical credibility to review code, validate estimates, and identify engineering inefficiencies",
+      "Experience preparing stakeholder reports, dashboards, and executive communications for diverse audiences"
+    ],
+    "fit_gaps": [
+      "Limited demonstrated DevOps expertise, CI/CD pipeline optimization, or cloud-based delivery environment experience",
+      "No mention of advanced analytics or metrics-driven dashboards for velocity, lead time, MTTR, and deployment frequency tracking",
+      "No stated experience with scaled Agile frameworks (SAFe), team-of-teams coordination, or multi-team dependency management",
+      "Lack of relevant certifications (CSM, SAFe, PSM, PMI-ACP) that posting lists as preferred"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4453252555",
@@ -2637,7 +3455,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match\u2014Vishal has strong technical PM and team leadership experience with multi-year data and analytics projects, but lacks explicit enterprise data platform and AI/ML portfolio leadership at this scale.",
+    "fit_strengths": [
+      "8+ years of technical PM and project delivery experience across complex, multi-stakeholder environments",
+      "Proven team leadership: managed up to 15 engineers, mentored junior staff, and owned sprint execution and prioritization",
+      "Hands-on technical acumen with software engineering background enabling credible engagement with engineers and data teams",
+      "Experience with strategic roadmapping, Jira-based delivery discipline, and cross-functional stakeholder management (executives, product, design, engineering)"
+    ],
+    "fit_gaps": [
+      "No explicit enterprise data platform, analytics, or ML portfolio management experience mentioned; roles focused on recruiting/SaaS product rather than data infrastructure",
+      "Limited demonstrated experience with data governance, model risk management, or compliance frameworks (SOX, AI governance) required for regulated environment",
+      "No mention of working with data engineers, data scientists, ML engineers, or production ML systems; background is primarily application software",
+      "Unclear exposure to LLM patterns, cloud data warehouses (Snowflake, Databricks), or ML orchestration tooling that defines much of the role"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4461195109",
@@ -2677,7 +3511,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and project leadership credentials, but lacks demonstrated AI/ML expertise and hands-on technical depth with LLMs that the role emphasizes as core.",
+    "fit_strengths": [
+      "Proven track record managing complex multi-stakeholder projects and teams at startups and scale-ups",
+      "Deep experience with product strategy, roadmapping, and owning metrics end-to-end (Riviera Partners, PLoS)",
+      "Demonstrated ability to move fast while maintaining quality; ships scrappy and iterates",
+      "Full-stack technical background enables credible collaboration with engineering and data teams on evals and systems design"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience building with LLMs or prompt engineering; AI expertise not evidenced in resume",
+      "Limited exposure to two-sided marketplace dynamics or service/trust-related product challenges",
+      "No clear examples of ownership over ML-driven features, eval frameworks, or AI quality assurance systems",
+      "Unclear depth of data science collaboration and statistical rigor required for attribution and LTV modeling"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4416264508",
@@ -2714,10 +3564,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. While Vishal has solid project management and team leadership experience, he lacks the specialized technical background in desalination/water infrastructure, engineering credentials, and domain expertise this senior role fundamentally requires.",
+    "fit_strengths": [
+      "Proven track record managing complex multidisciplinary projects from inception through delivery",
+      "Experience leading cross-functional teams including technical staff, stakeholders, and clients",
+      "Demonstrated ability to manage project scope, schedule, budget, and quality across multiple years"
+    ],
+    "fit_gaps": [
+      "No background in water infrastructure, desalination, or advanced treatment systems",
+      "No engineering degree or PE license (has CS degree, not Civil/Environmental/Chemical/Mechanical Engineering)",
+      "No experience with permitting, regulatory, or compliance-heavy infrastructure projects",
+      "No track record in municipal, utility, or industrial client environments or large-scale capital projects"
+    ],
+    "fit_dealbreakers": [
+      "Bachelor's degree in Engineering is a stated requirement; CS degree does not qualify",
+      "PE license required or ability to obtain\u2014Vishal has no engineering background to support reciprocity",
+      "15\u201330+ years in water infrastructure is a core requirement; Vishal's experience is in software/SaaS and light entrepreneurship"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4406590483",
@@ -2757,7 +3627,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match for a Principal PM with relevant project/product leadership experience, but gaps in marketplace economics expertise, SQL fluency, and travel commerce domain knowledge weigh against the fit.",
+    "fit_strengths": [
+      "7+ years of product and project management experience across multiple organizations",
+      "Proven ability to coordinate across engineering, data science, design, and cross-functional teams on complex initiatives",
+      "Experience shipping 0-to-1 products including full system redesigns and new feature launches at Riviera Partners",
+      "Demonstrated comfort with rapid prototyping and building from concept to commercial launch"
+    ],
+    "fit_gaps": [
+      "No explicit evidence of B2B marketplace or API product design experience",
+      "No stated SQL fluency or hands-on experience analyzing large-scale transactional datasets",
+      "No background in travel commerce, GDS, OTA, or related domains",
+      "Limited evidence of AI-native working style or rapid prototyping with AI tools as primary workflow"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472299447",
@@ -2794,10 +3680,29 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match: This is a generic, template-heavy job posting with critical missing details (actual title, years required, specific technologies, location/remote policy); the role description reads as project/program management rather than Python development, misaligning with the stated title and the candidate's strongest technical background.",
+    "fit_strengths": [
+      "Strong project management background with multi-year, multi-stakeholder delivery experience",
+      "Proven ability to mentor junior team members and manage technical teams",
+      "Experience with agile methodologies (Jira, Trello) and cross-functional collaboration"
+    ],
+    "fit_gaps": [
+      "Posting title says 'Python Developer' but responsibilities describe project/program management\u2014unclear if this is hands-on engineering or management",
+      "No specific technologies, tools, or domains mentioned beyond placeholder text",
+      "Missing critical details: years of experience required, actual location, remote policy, salary range all undefined",
+      "No indication of whether role requires deep Python expertise or is primarily PM-focused; candidate's Python experience is dated (last used in personal projects since 2022)"
+    ],
+    "fit_dealbreakers": [
+      "Location not specified and posting states 'Remote: False,' but no actual location given\u2014cannot verify if this conflicts with candidate's San Diego, CA base",
+      "Posting appears to be a template with unfilled placeholders ([Job Title], [X] years, [relevant domain], [specific tools, languages]), suggesting poor job posting quality or possible recruiting error"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4470753704",
@@ -2837,7 +3742,28 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match with strong product management and technical background, but lacks the specialized cyber range/DoD domain expertise, required security certification, and clearance that are central to this federal defense role.",
+    "fit_strengths": [
+      "8+ years of proven product and project management experience across startups and mid-sized organizations",
+      "Deep full-stack technical foundation (Ruby on Rails, Python, JavaScript) enables credible collaboration with engineering teams",
+      "Extensive experience translating stakeholder needs into requirements, managing backlogs, and leading multi-vendor/cross-functional coordination",
+      "Demonstrated ability to write documentation, lead sprints with Jira, and manage complex multi-year initiatives"
+    ],
+    "fit_gaps": [
+      "No stated experience with cyber ranges, cyber training platforms, simulation environments, or orchestration systems",
+      "Missing 8570 IAT Level II security certification (required)",
+      "No DoD Top Secret clearance (required) and no visible federal/defense contracting background",
+      "Limited exposure to containerized environments (Docker/Kubernetes), infrastructure automation (Terraform), or DevSecOps/CI-CD pipelines mentioned in resume",
+      "No demonstrated knowledge of RCS/ECS systems, exercise lifecycle management, or multi-vendor tool integration in training contexts"
+    ],
+    "fit_dealbreakers": [
+      "8570 IAT Level II certification is mandatory and not held",
+      "DoD Top Secret clearance is listed as required; resume shows no security clearance history",
+      "Location vague but company HQ in McLean, VA with federal contracting focus suggests on-site or significant travel expectations that may conflict with CA-based candidate"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4453533084",
@@ -2877,7 +3803,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and cross-functional experience, though lacking direct payments/fintech domain expertise and recent dedicated PM tenure.",
+    "fit_strengths": [
+      "3+ years technical project/product management at scale (Riviera Partners, PLoS)",
+      "Proven ability to ship end-to-end projects with engineering, design, and stakeholder coordination",
+      "Data-driven approach to measuring success and sprint-based execution (Jira expertise)",
+      "Full-stack technical background enables credible partnership with engineering on platform complexity"
+    ],
+    "fit_gaps": [
+      "No demonstrated payments, fintech, or financial services industry experience",
+      "Limited recent AI/LLM product exposure in current role (personal projects only)",
+      "Most recent PM work ended 2022; personal projects are technical, not PM-focused",
+      "No stated experience with payment rails (ACH, check, wire) or SMB financial platforms"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4434669495",
@@ -2917,7 +3859,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management and multi-stakeholder experience, but lacks domain expertise in State benefits programs and PMP certification.",
+    "fit_strengths": [
+      "4+ years managing complex multi-year projects with cross-functional teams and stakeholders",
+      "Proven experience coordinating multiple concurrent projects and managing schedules, budgets, and deliverables",
+      "Demonstrated ability to lead training, drive process improvements, and manage sprint cycles in Agile environments",
+      "Remote-capable with 3+ years recent remote work experience at Riviera Partners"
+    ],
+    "fit_gaps": [
+      "No stated experience with State benefit programs (Medicaid, SNAP), eligibility determination, CMS, or FNA systems",
+      "Lacks PMP certification (required qualification)",
+      "Limited evidence of direct team supervision or people management at scale",
+      "No background in public sector or government consulting work"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4471672265",
@@ -2957,7 +3915,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with proven product/project management experience at the right level, but lacks specific data analytics platform expertise and finance partnership background that the role emphasizes.",
+    "fit_strengths": [
+      "5+ years of product management and project ownership experience managing enterprise solutions",
+      "Demonstrated ability to manage stakeholder alignment across technical and non-technical teams at scale",
+      "Experience with agile delivery models, sprint management, and roadmap/backlog prioritization",
+      "Track record translating business needs into technical requirements and driving cross-functional collaboration"
+    ],
+    "fit_gaps": [
+      "No stated experience with data analytics platforms (Power BI, Azure, reporting tools) or enterprise reporting",
+      "Limited evidence of Finance partnership or data-driven reporting/metrics work",
+      "No background in 'single source of truth' or enterprise analytics initiatives",
+      "Salary range appears to be stated monthly ($8.5K-$14.8K/month ~$102K-$178K annually) with unclear compensation structure"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4463654701",
@@ -2994,10 +3968,29 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. This is a specialized Workday consulting role requiring deep expertise in Workday implementations and higher education/government verticals that Vishal lacks entirely; his background is in general software project management and web engineering, not enterprise ERP consulting.",
+    "fit_strengths": [
+      "Multi-year project management experience with large cross-functional teams",
+      "Proven ability to lead complex projects from inception through deployment",
+      "Experience mentoring junior team members and managing stakeholder communication"
+    ],
+    "fit_gaps": [
+      "No Workday platform experience or Workday project management certification",
+      "No enterprise resource planning (ERP) or enterprise software implementation background",
+      "No higher education or state/local government consulting experience",
+      "No demonstrated financial acumen for large enterprise budget management"
+    ],
+    "fit_dealbreakers": [
+      "Requires 40%+ travel; resume indicates preference for remote work in San Diego area",
+      "Specialized Workday expertise is a core requirement, not a nice-to-have; Vishal's generalist project management doesn't transfer to this vertical"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4417002044",
@@ -3037,7 +4030,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match with relevant project management and technical background, but lacks the specialized domain expertise and hands-on technical skills (SQL, scripting, API specs) that are core to this role.",
+    "fit_strengths": [
+      "7+ years of technical project management and stakeholder coordination across diverse teams",
+      "Proven ability to manage end-to-end implementations and complex multi-year projects from inception through launch",
+      "Experience translating technical requirements into solutions and owning documentation/process improvements",
+      "Track record working with customers, product teams, and technical stakeholders in fast-paced environments"
+    ],
+    "fit_gaps": [
+      "No stated experience in fraud, risk, compliance, or payment domains (3+ years B2B SaaS in these areas required)",
+      "Limited evidence of hands-on SQL, JSON payload analysis, or API specification work (OpenAPI, REST API design)",
+      "No clear scripting or backend development experience in Python, Ruby, Golang, or bash (mentioned as essential)",
+      "Appears more generalist PM/product-focused rather than implementation/solutions architect-focused"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4431713901",
@@ -3074,10 +4083,29 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 35,
+    "fit_summary": "Poor match. While Vishal has solid project management experience, this role demands deep specialized expertise in electrical power systems, data center commissioning, and heavy industrial infrastructure that isn't reflected in his background.",
+    "fit_strengths": [
+      "Multi-year experience managing complex technical projects with large teams and diverse stakeholders",
+      "Proven ability to manage scope, schedule, and resources across 6-18 month initiatives",
+      "Comfortable with project management tools (Jira, Trello) and technical environments"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with power systems, electrical engineering, or data center infrastructure",
+      "Missing 7+ years of technical project management in commissioning, MEP, or critical facilities",
+      "No background in MV/LV switchgear, protective relays, SCADA, or electrical acceptance testing",
+      "No evidence of hands-on electrical field or commissioning engineering experience"
+    ],
+    "fit_dealbreakers": [
+      "Lacks required Bachelor's degree in Electrical Engineering, Power Systems, or related technical field (has CS degree)",
+      "No direct experience in data centers, critical facilities, or heavy industrial power distribution environments"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4463655615",
@@ -3117,7 +4145,22 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: strong product management and technical background, but lacks the specific MSS/MSSP/MDR/SOC domain expertise and AI/ML product shipping experience the role heavily emphasizes.",
+    "fit_strengths": [
+      "Experienced technical project and product manager with multi-year track record managing complex projects and cross-functional teams",
+      "Full-stack software engineering background enables credible technical depth for API design, platform architecture, and developer experience discussions",
+      "Proven ability to manage stakeholders across executives, engineers, customers, and partners at companies like Riviera Partners and PLoS"
+    ],
+    "fit_gaps": [
+      "No stated experience in MSS, MSSP, MDR, MXDR, EDR, SIEM, SOC automation, or cybersecurity domain\u2014the core expertise the role requires",
+      "No demonstrated track record of shipping AI/ML or automation-driven capabilities or measuring their impact on operational costs and analyst workload",
+      "Limited visibility into network and cloud security, firewall policy management, NDR, CSPM/CNAPP, or multi-cloud detection coverage",
+      "No evidence of building partner channel programs, API platforms at scale, or white-label/multi-tenant SaaS systems"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472282172",
@@ -3157,7 +4200,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project and product management experience at the right level, but lacks domain-specific payments and EMV 3DS expertise that the role emphasizes.",
+    "fit_strengths": [
+      "6+ years of technical project and product management in cross-functional environments",
+      "Proven ability to manage complex, multi-year products from inception through launch",
+      "Experience translating technical requirements and working closely with engineering teams",
+      "Track record delivering for stakeholders including customers, executives, and diverse technical teams"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in payments systems, EMV, or 3DS technologies",
+      "No background in financial services or payment industry standards",
+      "Limited evidence of deep technical subject matter expertise development in specialized domains",
+      "Experience is primarily in SaaS/recruiting tech, not payments infrastructure"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4461170875",
@@ -3197,7 +4256,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong project management and stakeholder coordination experience, but lacks the specialized eDiscovery, litigation support, and Relativity platform background that is core to the role.",
+    "fit_strengths": [
+      "Extensive multi-year project management experience managing complex workstreams and cross-functional teams",
+      "Proven ability to translate technical concepts for non-technical audiences and manage diverse stakeholders",
+      "Strong experience with workflow tools (Jira, Trello) and process optimization in fast-paced environments",
+      "Demonstrated leadership mentoring junior team members and maintaining high-quality delivery standards"
+    ],
+    "fit_gaps": [
+      "No stated eDiscovery, litigation support, forensic technology, or legal technology domain experience (required 4+ years)",
+      "No Relativity platform experience or certifications (1+ required, 2+ strongly preferred)",
+      "Unfamiliar with EDRM framework, legal workflows, RelativityOne, or legal tech analytics tools (SmartSheet, PowerBI for e-discovery)",
+      "Limited background in law-adjacent or legal services industries"
+    ],
+    "fit_dealbreakers": [
+      "Location vague\u2014posting shows 'None' for location but states 'Remote: False,' unclear if candidate's San Diego location is acceptable without explicit remote option or office address"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4470509714",
@@ -3237,7 +4314,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management credentials and relevant experience, though lacking explicit healthcare IT or medical imaging background.",
+    "fit_strengths": [
+      "3+ years customer-facing project delivery and coordination experience demonstrated at Riviera Partners",
+      "Proven track record managing multiple concurrent projects with competing priorities and tight deadlines",
+      "Expert-level proficiency with project management tools (Jira, Trello, Omniplan) and documentation standards",
+      "Strong stakeholder communication skills across technical, executive, and customer-facing roles"
+    ],
+    "fit_gaps": [
+      "No stated healthcare IT implementation or medical imaging systems experience",
+      "No mention of CAPM certification or willingness to pursue it",
+      "Limited evidence of formal project management methodology training (Agile mentioned but not emphasized)",
+      "No explicit professional services or implementation delivery background in enterprise software"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470742668",
@@ -3277,7 +4370,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match for a project manager role with proven experience managing multi-year projects and teams, though healthcare revenue cycle domain is new and requires a mandatory certification within 9 months.",
+    "fit_strengths": [
+      "5+ years of direct project management experience at companies like Riviera Partners and PLoS",
+      "Demonstrated expertise in stakeholder management across technical and non-technical teams",
+      "Experience with PMO tools (Jira, Trello) and agile methodologies",
+      "Track record of delivering complex, multi-phase projects from inception through launch"
+    ],
+    "fit_gaps": [
+      "No healthcare or revenue cycle management experience mentioned in resume",
+      "No HFMA CRCR certification (though posting allows 9 months to obtain)",
+      "Limited exposure to vendor installation projects or client implementations at scale",
+      "Healthcare domain knowledge and regulatory/compliance context will require ramp-up"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4463681632",
@@ -3317,7 +4426,22 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong product management and technical foundation, but lacks the deep healthcare data expertise and analytics credentials (SQL, data modeling, Snowflake) explicitly required for this specialized data product role.",
+    "fit_strengths": [
+      "Extensive product management experience across multiple organizations managing complex projects and stakeholder ecosystems",
+      "Full-stack technical background with hands-on software engineering and data work (Python, SQL implied through Rails/web stack)",
+      "Proven ability to own products end-to-end from requirements through delivery and iteration"
+    ],
+    "fit_gaps": [
+      "No demonstrated deep analytics expertise or hands-on SQL/data modeling work\u2014resume shows software engineering and project management, not data analytics specialization",
+      "No healthcare industry background or knowledge of claims, provider, utilization, or market data",
+      "No experience with cloud data platforms (Snowflake, BigQuery, etc.) or building data products on modern analytics infrastructure",
+      "No consulting experience or track record working with advisory teams to understand how they consume analytics"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470721899",
@@ -3357,7 +4481,25 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match with relevant product and project management experience, but significant gaps in pharmaceutical/biotech domain expertise, enterprise platform knowledge, and hands-on technical product delivery at this seniority level.",
+    "fit_strengths": [
+      "Strong product and project management background with multi-year, multi-stakeholder projects",
+      "Experience translating business requirements into technical solutions and managing cross-functional teams",
+      "Track record of platform redesigns, system integrations, and sprint-based delivery",
+      "Familiarity with agile methodologies, task management tools, and stakeholder communication"
+    ],
+    "fit_gaps": [
+      "No demonstrated biotech or pharmaceutical industry experience (required 5+ years)",
+      "Limited evidence of enterprise platform product management (CRM, Veeva, Salesforce ecosystems)",
+      "No shown background in customer data management, data governance, or compliance-heavy regulated environments",
+      "Associate Director role requires deeper domain expertise and vendor/ecosystem knowledge than resume suggests"
+    ],
+    "fit_dealbreakers": [
+      "Posting emphasizes 20% travel requirement and states 'no role is 100% remote'\u2014candidate appears geographically local but may have remote work expectations"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4472216972",
@@ -3397,7 +4539,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management and strategic initiative experience, though the consulting/transformation background is less prominent than desired.",
+    "fit_strengths": [
+      "Multi-year programme and project leadership experience managing complex initiatives with diverse stakeholders",
+      "Proven expertise in agile methodologies, Jira, sprint management, and cross-functional team coordination",
+      "Demonstrated ability to influence executives and drive organizational change initiatives",
+      "Remote work and strategic operations experience aligns with role requirements"
+    ],
+    "fit_gaps": [
+      "Limited explicit consulting or business transformation experience compared to strategy-focused background",
+      "No mention of formal programme governance frameworks or large-scale transformation methodologies",
+      "Financial and budget management capabilities not clearly demonstrated in resume",
+      "No evidence of working with Microsoft Project, Smartsheet, Wrike, or similar enterprise PMO tools"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470565950",
@@ -3434,10 +4592,32 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 18,
+    "fit_summary": "Poor match. Vishal is a software/product manager without the required civil/environmental engineering degree, PE license, or water/wastewater infrastructure experience\u2014all explicit requirements for this role.",
+    "fit_strengths": [
+      "Project management across planning and delivery phases",
+      "Multi-stakeholder and client relationship experience",
+      "Budget, scope, and schedule oversight",
+      "Team leadership and cross-functional collaboration"
+    ],
+    "fit_gaps": [
+      "No civil, environmental, or chemical engineering education or background",
+      "No water and wastewater infrastructure project experience",
+      "No active California PE license (required)",
+      "No field-based engineering or construction delivery experience"
+    ],
+    "fit_dealbreakers": [
+      "Bachelor's degree in engineering discipline is required; Vishal holds a CS degree",
+      "Active California PE license is explicitly required; no indication Vishal holds one",
+      "10+ years of water/wastewater engineering experience is required; Vishal has none",
+      "Role fundamentally requires licensed professional engineer status"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4470782103",
@@ -3477,7 +4657,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014Vishal has relevant product/project management and agile experience, but lacks the required enterprise data products and financial services background that are core to this senior role.",
+    "fit_strengths": [
+      "7+ years of product and project management experience across multiple organizations",
+      "Demonstrated expertise in agile methodologies, sprint management, and cross-functional team leadership",
+      "Proven ability to manage complex multi-year projects and translate stakeholder needs into actionable priorities",
+      "Experience mentoring team members and communicating with diverse stakeholder groups"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience with enterprise data products, analytics platforms, or data governance initiatives",
+      "Lacks financial services or highly regulated industry background (required)",
+      "No mention of work with modern data platforms like Databricks, Snowflake, or Power BI",
+      "No evidence of product value measurement through business outcome metrics or operational efficiency tracking"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4470779304",
@@ -3517,7 +4713,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management background and technical expertise, but lacks explicit healthcare/mental health domain experience and some uncertainty around remote flexibility.",
+    "fit_strengths": [
+      "8+ years of product and project management experience with multi-year, cross-functional projects at scale",
+      "Proven ability to manage end-to-end product lifecycle, ship features, and coordinate engineering, design, and stakeholder teams",
+      "Strong technical foundation as full-stack engineer with hands-on software development experience",
+      "Demonstrated operational excellence with agile methodologies, sprint management via Jira, and cross-functional leadership"
+    ],
+    "fit_gaps": [
+      "No stated experience in healthcare, mental health, or regulated industries despite Lyra's clinical focus",
+      "Remote work status unclear; posting lists no location and notes 'Remote: False' creating ambiguity about work arrangement flexibility from San Diego",
+      "Limited evidence of B2B platform scaling experience or defining 0-1 features in competitive, fast-paced environments",
+      "No explicit mention of data-driven decision-making or deep quantitative analytics background"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472244647",
@@ -3557,7 +4769,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong project management and cross-functional leadership experience, though healthcare domain expertise and some specialized certifications are gaps.",
+    "fit_strengths": [
+      "6+ years of progressive PM/TPM experience managing complex, multi-stakeholder projects at scale",
+      "Proven ability to manage multiple concurrent initiatives with competing priorities and competing objectives",
+      "Strong cross-functional collaboration across matrixed teams including executives, engineers, product, design, compliance, and diverse stakeholders",
+      "Expertise in process improvement, governance frameworks, documentation, and change management through Jira-based program delivery"
+    ],
+    "fit_gaps": [
+      "No stated healthcare or regulated industry (managed care) experience; domain knowledge would require onboarding",
+      "Data analysis skills mentioned only indirectly; no explicit analytics or dashboard/KPI reporting background demonstrated",
+      "No PMP or Six Sigma Green Belt certification mentioned; certifications are preferred but not required",
+      "Limited evidence of budget ownership or financial stewardship at scale; budget management experience not clearly articulated in resume"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4454349915",
@@ -3597,7 +4825,26 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: strong project management and team leadership experience, but lacks the specialized EPC/industrial project IT infrastructure background and required seniority depth that this mega-project role demands.",
+    "fit_strengths": [
+      "Led multi-year projects with up to 15-person teams across technical and non-technical stakeholders",
+      "Managed budgets, staffing plans, and resource coordination for complex initiatives",
+      "Experience with project procedures, governance frameworks, and cross-functional automation/integration",
+      "Proven ability to communicate technical concepts and drive organizational change"
+    ],
+    "fit_gaps": [
+      "No demonstrated EPC (Engineering, Procurement, Construction) industry experience or mega-project background",
+      "Limited evidence of IT operations, infrastructure, or software portfolio management at enterprise scale",
+      "Experience managing IT staff and IS&T operations not clearly shown; background is primarily product/software engineering",
+      "Seniority gap: 13-19 years required; resume suggests ~10-12 years of relevant experience"
+    ],
+    "fit_dealbreakers": [
+      "Full-time office/project work with relocation required; candidate is based in Carlsbad, CA with no stated flexibility on remote work",
+      "No eligibility confirmation for required security clearances or certifications typical in Bechtel mega-projects"
+    ],
+    "fit_error": null
   },
   {
     "id": "li-4462339684",
@@ -3634,10 +4881,31 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. This is a specialized cybersecurity and incident response leadership role requiring deep security expertise and PSIRT experience; Vishal's background is in product/project management and full-stack engineering without demonstrated security, incident response, or compliance domain knowledge.",
+    "fit_strengths": [
+      "Multi-stakeholder program management across large organizations",
+      "Experience establishing processes, tools, and frameworks (Jira, Trello, SOPs)",
+      "Leadership of complex, multi-year cross-functional initiatives with executive visibility"
+    ],
+    "fit_gaps": [
+      "No cybersecurity, product security, or incident response experience demonstrated",
+      "No vulnerability management, threat intelligence, or PSIRT background",
+      "No experience with regulatory frameworks, compliance (CRA, ENISA), or security reporting",
+      "No mention of security certifications (CISSP, CISM, CISA) or security domain expertise",
+      "No evidence of working with security researchers, CERTs, or external regulatory bodies"
+    ],
+    "fit_dealbreakers": [
+      "Role explicitly requires 10+ years cybersecurity/incident response experience; resume shows 0 years in security",
+      "Requires previous PSIRT leadership experience; none mentioned in resume",
+      "Domain expertise in product security governance and vulnerability management is core requirement, not transferable from general project management"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4453708387",
@@ -3674,10 +4942,31 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 28,
+    "fit_summary": "Poor match. While Vishal has strong program and project management experience, this role requires deep domain expertise in grid operations, utilities, and energy flexibility that he lacks, and is clearly targeted at a US East Coast location that conflicts with his California base.",
+    "fit_strengths": [
+      "Multi-year complex program management with cross-functional stakeholder alignment",
+      "Hands-on operator comfortable bridging execution gaps and producing documentation",
+      "Commercial and business case accountability experience",
+      "Senior-level delivery leadership with external stakeholder relationship building"
+    ],
+    "fit_gaps": [
+      "No direct experience in grid modernization, demand response, DERs, VPPs, DERMS, or utility operations",
+      "No regulated utility or energy sector background",
+      "No demonstrated P&L or commercial ownership in regulated industries",
+      "Missing deep grid-operational credibility required to lead utility control-room discussions"
+    ],
+    "fit_dealbreakers": [
+      "Located in Carlsbad, CA; role strongly prefers/requires US East Coast presence (Virginia, Mid-Atlantic)",
+      "No visa sponsorship available and candidate location suggests visa may be needed",
+      "Requires deep industry expertise in niche energy/grid domain that is not credibly bridgeable from his generalist background"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4454043504",
@@ -3717,7 +5006,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match with strong product management and technical foundation, though security industry experience and hands-on security tool familiarity are notably absent.",
+    "fit_strengths": [
+      "Proven product and project management across multi-year, complex initiatives with diverse stakeholders",
+      "Technical depth as full-stack engineer enables credible conversations with engineering teams and data pipeline understanding",
+      "Experience managing cross-functional teams (Product, Design, Engineering, QA, Data Scientists, Sales) mirrors the role's collaboration requirements",
+      "Track record delivering major platform redesigns and system rebuilds demonstrates ability to own end-to-end product lifecycles"
+    ],
+    "fit_gaps": [
+      "No stated security industry experience or background\u2014role strongly prefers security practitioners with domain knowledge",
+      "Unfamiliar with security tools (EDR, SIEM, firewalls) and security stack architecture that are core to the role",
+      "No demonstrated experience with cloud platform security risks (AWS, Azure, GCP) or SIEM/data pipeline challenges",
+      "Coursework and roles predate modern security operations; unclear if current skills translate to security-specific PM context"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4441500246",
@@ -3757,7 +5062,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: Strong product and program management background, but significant gaps in sales enablement domain expertise, AI/ML systems fluency, and GTM motion experience that are core to this role.",
+    "fit_strengths": [
+      "Extensive experience managing complex multi-year projects and cross-functional teams across technical and non-technical stakeholders",
+      "Proven ability to own product roadmaps end-to-end from inception through launch and iteration",
+      "Track record of delivering measurable outcomes and managing global teams with up to 15 members",
+      "Technical background with full-stack engineering experience provides foundation for understanding AI systems"
+    ],
+    "fit_gaps": [
+      "No demonstrated experience in Sales Enablement, GTM Program Management, or Sales Operations\u2014the primary domain expertise required",
+      "Limited evidence of hands-on fluency with modern AI systems, RAG pipelines, agents, LLM workflows, or prompt design",
+      "No background in high-growth SaaS or managing field adoption motions at scale",
+      "Lacks education technology or customer training landscape experience; no mention of working with knowledge content structuring for machine consumption"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4463657389",
@@ -3797,7 +5118,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match for a strategic project manager role with strong cross-functional leadership experience, though the heavy commercialization, revenue growth, and B2B sales focus represent areas where Vishal's background is less proven.",
+    "fit_strengths": [
+      "Extensive cross-functional project management across product, engineering, sales, and stakeholders",
+      "Proven ability to lead complex, multi-year initiatives from concept through launch and iteration",
+      "Experience managing teams and driving organizational alignment in startup and growth environments",
+      "Track record delivering measurable business outcomes and project execution discipline"
+    ],
+    "fit_gaps": [
+      "Limited demonstrated experience in revenue growth, commercialization strategy, and go-to-market execution at scale",
+      "No explicit background in B2B product commercialization or new product introduction (NPI) in mature industrial markets",
+      "Automotive and industrial coatings domain expertise absent; career has focused on SaaS, recruiting tech, and publishing",
+      "Financial performance management (ROI, NPV, P&L) not highlighted; MBA or advanced degree not mentioned"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4450828519",
@@ -3837,7 +5174,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match\u2014strong product and technical leadership background, but lacks the deep cloud infrastructure and bare metal expertise this Staff PM role prioritizes, making it a meaningful stretch.",
+    "fit_strengths": [
+      "Proven technical project and product management at scale (managing 15-person teams, multi-year initiatives)",
+      "Direct experience translating technical requirements into specs and managing cross-functional stakeholders (engineering, sales, customers)",
+      "Full-stack software engineering background provides credible technical fluency to engage with infrastructure engineers",
+      "Startup adaptability and hands-on validation mindset demonstrated across multiple ventures"
+    ],
+    "fit_gaps": [
+      "No explicit experience with cloud infrastructure, bare metal provisioning, or GPU/HPC platforms\u2014core 5+ year requirement",
+      "Missing demonstrated knowledge of bare metal provisioning tools (Redfish, IPMI, PXE boot) needed for informed product tradeoffs",
+      "Limited evidence of Kubernetes depth or operator pattern familiarity beyond general software engineering",
+      "No KaaS, internal developer platform, or AI/ML infrastructure product management background"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4472283000",
@@ -3877,7 +5230,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 72,
+    "fit_summary": "Good match for an experienced product manager with technical depth and startup experience, but the adtech specialization is a notable gap given its stated importance.",
+    "fit_strengths": [
+      "4+ years of product management experience across B2B SaaS and technical platforms at Riviera Partners",
+      "Proven ability to own roadmaps, write detailed requirements, and manage complex multi-year projects with diverse stakeholders",
+      "Full-stack software engineering background enables direct investigation of technical problems and deep engineering collaboration",
+      "Startup and high-growth experience with demonstrated ability to wear multiple hats and create structure in evolving organizations"
+    ],
+    "fit_gaps": [
+      "No stated adtech or digital advertising experience; the role emphasizes this as important for day-to-day work",
+      "SQL and data analysis skills not explicitly demonstrated on resume, though technical background suggests capability",
+      "Limited explicit evidence of data-driven decision-making at the scale required for real-time ad infrastructure platforms",
+      "Unclear depth of experience with cloud platforms, APIs, distributed systems or large-scale data environments"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4463618345",
@@ -3917,7 +5286,23 @@
     "status": "new",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 52,
+    "fit_summary": "Partial match: Strong product and project management experience with proven delivery track record, but lacks the 8+ years of hands-on design/automation/BIM experience and deep domain expertise in power substation design or CAD/design authoring software that the role prioritizes.",
+    "fit_strengths": [
+      "Extensive product management and project delivery experience across multiple complex initiatives",
+      "Proven ability to manage cross-functional stakeholders, translate strategy into execution, and drive product adoption",
+      "Experience writing requirements, managing backlogs, and using agile methodologies (Jira, sprint planning)",
+      "Technical background as full-stack engineer provides credibility with engineering teams and product development understanding"
+    ],
+    "fit_gaps": [
+      "Missing 8+ years of hands-on automation, digital design, or BIM experience in engineering/construction domain",
+      "No demonstrated experience with design authoring software platforms or CAD tools used in power systems",
+      "Limited domain knowledge in power substations, electrical infrastructure, or related engineering fields",
+      "No evidence of working with design workflows, CAD systems, or automation in engineering contexts"
+    ],
+    "fit_dealbreakers": [],
+    "fit_error": null
   },
   {
     "id": "li-4461445168",
@@ -3954,10 +5339,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 18,
+    "fit_summary": "This is a specialized data center construction management role requiring 10+ years of domain-specific experience that doesn't align with Vishal's project management and software engineering background.",
+    "fit_strengths": [
+      "Multi-project concurrent management experience",
+      "Cross-functional stakeholder coordination across diverse teams",
+      "Budget, schedule, and sprint tracking using project management tools"
+    ],
+    "fit_gaps": [
+      "No data center construction or critical infrastructure project experience",
+      "No MEP (mechanical, electrical, plumbing) systems knowledge or coordination background",
+      "No OFCI equipment procurement or construction submittal review experience",
+      "No on-site construction oversight or site inspection experience for physical builds",
+      "Missing 10+ years in data center or construction domain"
+    ],
+    "fit_dealbreakers": [
+      "Location not specified in posting but remote is explicitly False, requiring relocation from San Diego; no flexibility indicated",
+      "Requires 10+ years of data center construction experience; Vishal has zero years in this domain despite strong project management skills"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4426180514",
@@ -3994,10 +5399,30 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "fit_score": 12,
+    "fit_summary": "This is a specialized biomedical device engineering role requiring 8\u201310+ years in pharmaceutical drug/device combination products; Vishal's background is in software project management and full-stack web development with no pharmaceutical, medical device, or hardware engineering experience.",
+    "fit_strengths": [
+      "Project and program management experience across multi-year initiatives",
+      "Cross-functional stakeholder coordination across technical and non-technical teams",
+      "Experience with lifecycle management and iterative delivery processes"
+    ],
+    "fit_gaps": [
+      "No mechanical, biomedical, or medical device engineering background",
+      "No drug/device combination product development or commercialization experience",
+      "No pharmaceutical or life sciences industry exposure",
+      "No design controls, cGMP, regulatory (FDA/EMA), or quality systems knowledge",
+      "No manufacturing scale-up, technology transfer, or supplier management in regulated industries"
+    ],
+    "fit_dealbreakers": [
+      "Role explicitly requires BS in Mechanical/Biomedical Engineering (or MS/PhD in same) plus 5\u201310+ years in pharmaceutical/medical device; Vishal holds a CS degree with software engineering background",
+      "Role is a specialized hardware/device engineering leadership position; Vishal is a software engineer and product/project manager with no relevant technical domain expertise"
+    ],
+    "fit_error": null,
+    "auto_rejected": true
   },
   {
     "id": "li-4472272628",
@@ -7994,6 +9419,25 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
+    "status": "new",
+    "application_status": null,
+    "resume_path": null,
+    "cover_letter_path": null
+  },
+  {
+    "id": "gh-5249853007",
+    "site": "greenhouse",
+    "job_url": "https://job-boards.greenhouse.io/scoutmotors/jobs/5249853007",
+    "title": "Senior Staff Technical Product Manager-Service Intelligence",
+    "company": "scoutmotors",
+    "location": "Fremont, California, United States; Remote",
+    "date_posted": "2026-09-25",
+    "is_remote": null,
+    "min_amount": null,
+    "max_amount": null,
+    "currency": null,
+    "department": "Commercial Operations",
+    "description": "Here at Scout Motors, we're carrying forward the heritage of one of the most iconic American vehicles in history. A vehicle dating back to 1960. One that forged the path for future generations of rugged SUVs and trucks and will do so once again.\n\nBut Scout is more than just a brand, it\u2019s a legacy steeped in a culture of exploration, caretaking, and hard work.\n\nThe Scout brand is all about respect. Respect for the past and the future by taking an iconic American brand that hasn\u2019t been around for a while, electrifying it, digitizing it, and loading it with American innovation. Respect for communities by creating a company that stands for its people and its customers. Respect for both work and play, with vehicles that are equally at home at a camp site, a job site, or on a Tuesday commute. And respect for our customers by developing two powertrains that meet their requirements \u2014 an all-electric powertrain as well as the Harvester\u2122 range extender powertrain which includes a built-in gas-powered generator with an estimated 500 miles of combined range.\n\nAt Scout Motors, we empower our talented, inclusive, and entrepreneurial teams to innovate. What makes a Scout employee? Someone who is a visionary and a leader, who seeks new paths and shares lessons learned. A knowledgeable doer who collaborates across the company to build better. A go-getter with unrivaled passion.\n\nJoin us at Scout Motors and be part of shaping the future of transportation. If you're ready to drive change and make history, apply now!\n\n#### Overview\n\nJoin an iconic brand that is redefining the pickup truck and rugged SUV marketplace. As **Senior Staff Technical Product Manager** **\u2013 Service Intelligence** for a confidential digital initiative, you will lead the strategy and execution of a foundational backend intelligence platform that powers critical decision\u2011making across Scout\u2019s direct\u2011to\u2011consumer retail and service ecosystem.\u00a0\n\nThis role focuses on designing a backend\u2011driven decisioning and orchestration system that evaluates complex, interdependent operational inputs to produce reliable, scalable outcomes in real time. The platform is being built ahead of Start of Operations and will play a central role in how Scout coordinates resources, responds to events, and enables consistent execution across locations. This role operates at a cross-domain level, shaping how multiple systems, products, and operational workflows interact through centralized decision intelligence.\u00a0\u00a0\n\nInitially, there is no end\u2011user interface or traditional UX design responsibility associated with this position; success is defined by system behavior, decision quality, and operational outcomes.\u00a0\n\nThis is a deeply technical, AI\u2011driven and analytical role requiring strong systems thinking and comfort operating in a highly ambiguous, 0\u2011to\u20111 environment. The successful candidate will help shape core capabilities from the ground up, owning both initial delivery and long\u2011term evolution of a mission\u2011critical intelligence platform while maintaining strict discretion around sensitive product details.\u00a0\n\n#### What you\u2019ll do\n\nBecome part of an iconic brand that is set to revolutionize the electric pick-up truck & rugged SUV marketplace by achieving the following:\n\nDefine and Lead Strategy\u00a0\n\n- Define, evolve, and drive the product and ecosystem strategy for a confidential, intelligence\u2011driven core platform supporting Scout\u2019s operations and service experience.\n- Define how complex operational signals, constraints, and policies are modeled into automated decision logic.\n- Lead early-stage platform definition ahead of Start of Operations, building foundational capabilities with no existing baseline.\n- Accountable for system performance across Scout\u2019s direct\u2011to\u2011consumer retail network, ensuring decisions are reliable, explainable, and scalable.\n- Influence senior leadership and align platform strategy with long-term company objectives while protecting sensitive capabilities.\n- Identify new problem spaces and expansion opportunities for decision intelligence across additional domains and systems.\n\nComplex Decisioning & Problem Solving\u00a0\n\n- Frame and solve highly ambiguous, cross-functional problems through intelligent system design and decision frameworks.\n- Model operational constraints, dependencies, and priorities as structured logic, rules, or machine\u2011assisted decision frameworks.\n- Drive solutions where \u201cmissing inputs\u201d require downstream actions to resolve constraints rather than blocking outcomes.\n- Navigate ambiguity inherent to 0\u2011to\u20111 product development, making informed tradeoffs as requirements and dependencies evolve.\n- Evaluate tradeoffs involving accuracy, speed, scalability, and explainability, including intangible system behaviors.\n- Ensure system behavior is consistent, explainable, auditable, and adaptable as business rules change.\n\nLead Product Development\u00a0\n\n- Guide product development across multiple related initiatives, teams, and domains to ensure alignment with strategic objectives.\n- Lead end\u2011to\u2011end product development for a highly complex, logic\u2011heavy platform from concept through scale.\n- Collaborate closely with Engineering, Data Analytics, AI/ML teams, IT, and Operations to:\n- Translate operational needs into system logic and technical requirements.\n- Define data models, decision flows, signal ingestion, and output generation.\n- Balance deterministic rules with AI\u2011assisted approaches where appropriate.\n- Ensure platform extensibility as new use cases and domains are added over time.\n- Establish best practices and frameworks for decisioning platforms adopted across related systems and teams.\n\nAI & Intelligence Enablement\u00a0\n\n- Champion the use of AI, machine reasoning, and advanced analytics to enable scalable decision\u2011making.\n- Define where AI augments human decision processes versus fully automated execution.\n- Ensure models and logic are transparent, testable, and continuously improvable.\n- Collaborate with data partners to ensure high\u2011quality inputs, feedback loops, and monitoring.\n\nStakeholder Leadership\u00a0\n\n- Influence and align senior leadership, engineering, and cross-functional stakeholders on strategy, priorities, and tradeoffs.\n- Serve as a trusted partner to Business, Software Engineering, fellow Digital Product Customer Experience team, and Leadership teams.\n- Translate complex, cross\u2011functional needs into a shared technical and product vision without exposing sensitive strategy externally.\n- Lead alignment across teams with differing priorities, timelines, and constraints.\n- Build long\u2011term trust in the platform through transparency, reliability, and outcomes.\n\nOperationalize a Pre\u2011Launch Platform\u00a0\n\n- Build readiness for a mission\u2011critical platform before Start of Operations.\n- Define rollout strategies, guardrails, fallback behaviors, and manual override paths.\n- Ensure the platform supports consistent execution independent of location or context.\n- Define scalable operating models for how decision intelligence is embedded across systems and workflows.\n\nDrive Technical Excellence\u00a0\n\n- Drive architectural decisions across systems, data flows, and integrations, balancing long-term scalability with short-term delivery needs.\n\n- Partner with Scrum and platform teams to deliver scalable, resilient, and secure architectures.\n\n- Define best practices for real\u2011time decisioning systems, data latency, reliability, and observability.\n\n- Proactively identify and mitigate technical risks in logic complexity, system dependencies, and edge cases.\n\n- Ensure solutions meet enterprise security, privacy, and compliance standards.\n- Treat the platform as a living system, ensuring post-launch stability and continuous evolution.\n\nOwn Live Decision Intelligence\u00a0\n\n- Own system behavior and decision quality once the platform is live, ensuring outcomes are accurate, explainable, and aligned with operational intent.\n- Monitor real-world system decisions to identify gaps, edge cases, and unintended outcomes.\n- Lead continuous tuning of logic, rules, thresholds, and AI-driven decision frameworks based on live data.\n- Define criteria for acceptable system behavior, including fallback paths, overrides, and escalation mechanisms.\n- Use system insights to influence product strategy and operational decision-making at a broader organizational level\n\n**Location & Travel Expectations**:\n\n- The role will be based out of a Scout Motors location in\u00a0**Fremont, California.**\n- This role requires 1-3 days per week in the office, with regular in-person meetings and events. Subject to change.\n- Applicants should expect that the role will require the ability to convene with Scout colleagues in person and travel to participate in events on behalf of the company\u00a0from time to time.\n\n#### What you\u2019ll bring\n\nWe expect all Scout employees to have integrity, curiosity, resourcefulness, and strive to exhibit a positive attitude, as well as a growth mindset. You\u2019ll be comfortable with change and flexible in a fast-paced, high-growth environment. You\u2019ll take a collaborative approach to achieve ambitious goals. Here's what else you'll bring:\n\n- 12+ years of product management experience with deep focus on technical platforms, complex systems, or decisioning engines.\n- Experience working with AI/ML technologies in a product, engineering, or business context\n- Proven experience leading 0\u2011to\u20111 products in pre\u2011launch, startup, or transformation environments.\n- Track record of building logic\u2011heavy or intelligence\u2011driven systems that coordinate multiple inputs and constraints.\n\nTechnical Expertise\u00a0\n\n- Strong understanding of distributed systems, APIs, data architectures, and real\u2011time processing.\n- Hands\u2011on experience working with AI/ML systems, rules engines, optimization problems, or decision frameworks.\n- Ability to reason deeply about tradeoffs between accuracy, speed, explainability, and scalability.\n- Comfort working closely with engineers and data scientists on system design.\n- Experience owning backend or platform products where value is delivered through system behavior and decision quality rather than user interfaces.\n\nSkills\u00a0\n\n- Demonstrated ability to define strategy in highly ambiguous environments.\n- Strong ability to influence senior leadership and align diverse stakeholders.\n- Exceptional analytical and structured problem\u2011solving capabilities.\n- Ability to define complex logic and decision flows with precision.\n- Strong written and verbal communication skills; able to simplify complexity without oversharing sensitive information.\n- Data\u2011driven mindset; comfortable working with metrics, experimentation, and system telemetry.\n- High tolerance for ambiguity; energized by building something new where the path is not fully defined.\n\nEducation\u00a0\n\n- Bachelor\u2019s degree in Computer Science, Engineering, Mathematics, or a related field.\n- Advanced technical degree or MBA preferred.\n- AI-related certification required.\n\n#### What you'll gain\n\nThe benefits of joining Scout include the chance to build products and a company from the ground up.\u00a0 This is a chance to create something new and lasting \u2013 with an iconic brand at its foundation.\u00a0 In addition, Scout provides competitive compensation and benefits to support your physical, mental, and financial wellbeing. Program specifics are detailed in company policies and employee benefit guides, select highlights:\n\n- Competitive insurance including:\n  - Medical, dental, vision and income protection plans\n- 401(k) program with:\n  - An employer match and immediate vesting\n- Generous Paid Time Off including:\n  - 20 days planned PTO, as accrued\n  - 40 hours of unplanned PTO and 14 company or floating holidays, annually\n  - Up to 16 weeks of paid parental leave for biological and adoptive parents of all genders\n  - Paid leave for circumstances related to bereavement, jury duty, voting time, or military leave\n\n#### Pay Transparency\n\nThis is a full-time, exempt position eligible to receive a base salary and to participate in an annual performance bonus program. Final salary offered will be determined based on factors including but not limited to the candidate's skills and experience. The annual performance bonus program is preset and not candidate dependent.\n\nInitial base salary range = $160,000.00 - $192,500.00\n\nInitial California, Washington and New York base salary range = $176,000 - $211,750\n\nInternal leveling code: IC7\n\n**Notice to applicants:**\n\n- To be considered for career opportunities at Scout Motors, applicants must be 18 years of age or older.\n- Residing in **San Francisco**:\u00a0*Pursuant to the San Francisco Fair Chance Ordinance, Scout Motors will consider for employment qualified applicants with arrest and conviction records.*\n- Residing in\u00a0**Los Angeles**:\u00a0*Scout Motors will consider for employment qualified applicants with criminal histories in a manner consistent with the Los Angeles Fair Chance Initiative for Hiring Ordinance.*\n- Residing in\u00a0**New York City**:\u00a0*This role is not eligible for remote work in New York City.*\n\n**Equal Opportunity**\n\nScout Motors is committed to employing a diverse workforce and is proud to be an Equal Opportunity Employer",
     "status": "new",
     "application_status": null,
     "resume_path": null,
