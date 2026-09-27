@@ -409,7 +409,7 @@ const APPLICATION_COLUMNS = [
   { key: "location", label: "Location" },
   { key: "date_posted", label: "Posted" },
   { key: "application_status", label: "Status" },
-  { key: "documents", label: "Resume / Cover Letter" },
+  { key: "documents", label: "Resume | Cover" },
   { key: "autofill", label: "Applied" },
 ];
 
@@ -635,7 +635,7 @@ function renderDocumentsCell(td, job) {
     const a = document.createElement("a");
     a.href = `/files/${job.cover_letter_path}`;
     a.target = "_blank";
-    a.textContent = "Cover Letter";
+    a.textContent = "Cover";
     wrap.appendChild(a);
   }
   td.appendChild(wrap);
@@ -665,7 +665,7 @@ function renderAutofillCell(td, job) {
   }
 
   const markBtn = document.createElement("button");
-  markBtn.textContent = "Mark as Applied";
+  markBtn.textContent = "Applied";
   markBtn.addEventListener("click", () => markApplied(job.id));
   td.appendChild(markBtn);
 }
