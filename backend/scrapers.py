@@ -94,37 +94,78 @@ def _matches_search(df: pd.DataFrame, title_pattern: str, location_pattern: str)
     ].str.contains(location_pattern, case=False, na=False)
 
 
-def scrape_greenhouse_jobs(
+def _scrape_dated_ats(
     client: AtsClient,
-    title_pattern: str = ATS_TITLE_PATTERN,
-    location_pattern: str = ATS_LOCATION_PATTERN,
-    hours_old: int = ATS_HOURS_OLD,
+    ats: str,
+    make_id,
+    title_pattern: str,
+    location_pattern: str,
+    hours_old: int,
 ) -> pd.DataFrame:
-    """Pull recent Greenhouse postings from the ats-scrapers hosted dataset,
-    renamed to the JobSpy column names the rest of the app expects."""
-    df = client.load(ats="greenhouse")
+    """Pull recent postings for one ATS whose hosted-dataset rows carry
+    posted_at, renamed to the JobSpy column names the rest of the app expects.
+    `make_id` maps the matching rows to stable job ids."""
+    df = client.load(ats=ats)
 
-    posted_at = pd.to_datetime(df["posted_at"], utc=True, errors="coerce")
+    # ISO8601: iCIMS mixes offset and naive timestamps, which the default
+    # parser silently turns into NaT for a large share of rows.
+    posted_at = pd.to_datetime(df["posted_at"], utc=True, errors="coerce", format="ISO8601")
     cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=hours_old)
     matches = _matches_search(df, title_pattern, location_pattern) & (posted_at >= cutoff)
     df = df[matches]
 
     return pd.DataFrame(
         {
-            "id": "gh-" + df["ats_id"].astype(str),
-            "site": "greenhouse",
+            "id": make_id(df),
+            "site": ats,
             "job_url": df["url"],
             "title": df["title"],
             "company": df["company"],
             "location": df["location"],
             "date_posted": posted_at[matches].dt.date.astype(str),
             "is_remote": df["is_remote"],
-            "min_amount": df["salary_min"],
-            "max_amount": df["salary_max"],
+            "min_amount": pd.to_numeric(df["salary_min"], errors="coerce"),
+            "max_amount": pd.to_numeric(df["salary_max"], errors="coerce"),
             "currency": df["salary_currency"],
             "department": df["department"],
             "description": df["description"],
         }
+    )
+
+
+def scrape_greenhouse_jobs(
+    client: AtsClient,
+    title_pattern: str = ATS_TITLE_PATTERN,
+    location_pattern: str = ATS_LOCATION_PATTERN,
+    hours_old: int = ATS_HOURS_OLD,
+) -> pd.DataFrame:
+    return _scrape_dated_ats(
+        client,
+        "greenhouse",
+        lambda df: "gh-" + df["ats_id"].astype(str),
+        title_pattern,
+        location_pattern,
+        hours_old,
+    )
+
+
+def scrape_icims_jobs(
+    client: AtsClient,
+    title_pattern: str = ATS_TITLE_PATTERN,
+    location_pattern: str = ATS_LOCATION_PATTERN,
+    hours_old: int = ATS_HOURS_OLD,
+) -> pd.DataFrame:
+    # ats_id is only unique within a tenant (careers-sas.icims.com -> careers-sas).
+    return _scrape_dated_ats(
+        client,
+        "icims",
+        lambda df: "ic-"
+        + df["url"].str.extract(r"^https://([^.]+)\.icims\.com", expand=False)
+        + "-"
+        + df["ats_id"].astype(str),
+        title_pattern,
+        location_pattern,
+        hours_old,
     )
 
 
@@ -193,9 +234,14 @@ def scrape_workday_jobs(
 def scrape_ats_jobs() -> pd.DataFrame:
     with AtsClient() as client:
         return pd.concat(
-            [scrape_greenhouse_jobs(client), scrape_workday_jobs(client)],
+            [
+                scrape_greenhouse_jobs(client),
+                scrape_workday_jobs(client),
+                scrape_icims_jobs(client),
+            ],
             ignore_index=True,
         )
+
 
 if __name__ == "__main__":
     jobs = scrape_daily_jobs()
