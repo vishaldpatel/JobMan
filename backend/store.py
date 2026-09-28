@@ -8,6 +8,9 @@ STORE_PATH = DATA_DIR / "jobs_store.json"
 RESUME_PATH = DATA_DIR / "resume.md"
 APPLICATIONS_DIR = DATA_DIR / "applications"
 PROFILE_PATH = DATA_DIR / "profile.json"
+# Jobs purged from the Rejected pile. Remembered so the next scrape can't bring
+# them back as "new" (and pay to score them again).
+DELETED_PATH = DATA_DIR / "deleted_jobs.json"
 
 # Guards read-modify-write access to jobs_store.json: the generation worker
 # thread and request handlers both load-mutate-save the full file.
@@ -35,11 +38,14 @@ def _dedupe_key(job: dict) -> str:
     return f"{title}|{body}"
 
 
-def merge_scraped_jobs(store: list[dict], scraped: list[dict]) -> tuple[list[dict], int]:
-    """Adds newly scraped jobs as status="new"; leaves already-known jobs untouched.
-    Also returns how many scraped jobs were skipped as duplicates of known ones."""
-    known_ids = {job["id"] for job in store}
-    known_keys = {_dedupe_key(job) for job in store}
+def merge_scraped_jobs(
+    store: list[dict], scraped: list[dict], deleted: list[dict]
+) -> tuple[list[dict], int]:
+    """Adds newly scraped jobs as status="new"; leaves already-known and
+    previously deleted jobs out. Also returns how many scraped jobs were
+    skipped as duplicates of known ones."""
+    known_ids = {job["id"] for job in store} | {d["id"] for d in deleted}
+    known_keys = {_dedupe_key(job) for job in store} | {d["key"] for d in deleted}
     new_jobs = []
     duplicates = 0
     for job in scraped:
@@ -61,6 +67,21 @@ def merge_scraped_jobs(store: list[dict], scraped: list[dict]) -> tuple[list[dic
             }
         )
     return store + new_jobs, duplicates
+
+
+def load_deleted() -> list[dict]:
+    if not DELETED_PATH.exists():
+        return []
+    return json.loads(DELETED_PATH.read_text())
+
+
+def save_deleted(deleted: list[dict]) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    DELETED_PATH.write_text(json.dumps(deleted, indent=2))
+
+
+def tombstone(job: dict, deleted_at: str) -> dict:
+    return {"id": job["id"], "key": _dedupe_key(job), "deleted_at": deleted_at}
 
 
 def has_resume() -> bool:

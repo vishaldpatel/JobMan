@@ -37,7 +37,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470792179",
@@ -74,7 +75,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4470792179/resume.pdf",
     "cover_letter_path": "applications/li-4470792179/cover_letter.pdf",
@@ -115,7 +116,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4472247196/resume.pdf",
     "cover_letter_path": "applications/li-4472247196/cover_letter.pdf",
@@ -156,7 +157,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -178,7 +179,8 @@
       "Not eligible for visa sponsorship and candidate location is San Diego, CA (aligns with requirement)",
       "No other explicit dealbreakers identified in candidate profile"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444735638",
@@ -215,7 +217,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4444735638/resume.pdf",
     "cover_letter_path": "applications/li-4444735638/cover_letter.pdf",
@@ -259,7 +261,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454390678",
@@ -319,7 +322,8 @@
       "Deep semiconductor domain expertise is a non-negotiable core requirement; software project management does not transfer credibly to this specialized technical domain"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471008435",
@@ -356,7 +360,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4471008435/resume.pdf",
     "cover_letter_path": "applications/li-4471008435/cover_letter.pdf",
@@ -397,7 +401,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -416,7 +420,8 @@
       "Unclear experience managing regulatory approval gates, audit evidence, or clinical-administrative workflows like prior authorization or discharge planning"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471031744",
@@ -453,7 +458,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4471031744/resume.pdf",
     "cover_letter_path": "applications/li-4471031744/cover_letter.pdf",
@@ -494,7 +499,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4433120847/resume.pdf",
     "cover_letter_path": "applications/li-4433120847/cover_letter.pdf",
@@ -538,7 +543,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4434369443",
@@ -575,7 +581,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -596,7 +602,8 @@
     "fit_dealbreakers": [
       "Location stated as 'None' with Remote: False\u2014posting appears incomplete on logistics, unclear if remote is negotiable or required in-office"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471057570",
@@ -633,7 +640,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4471057570/resume.pdf",
     "cover_letter_path": "applications/li-4471057570/cover_letter.pdf",
@@ -674,7 +681,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4417317565/resume.pdf",
     "cover_letter_path": "applications/li-4417317565/cover_letter.pdf",
@@ -715,10 +722,11 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4408289649/resume.pdf",
-    "cover_letter_path": "applications/li-4408289649/cover_letter.pdf"
+    "cover_letter_path": "applications/li-4408289649/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4463659773",
@@ -755,7 +763,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -774,7 +782,8 @@
       "Career gap since August 2022 with only freelance/personal projects (no consulting delivery experience)"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472289570",
@@ -811,7 +820,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -833,7 +842,8 @@
       "Location not specified in posting; candidate is San Diego-based and posting shows remote: false with no location listed\u2014unclear if remote work or relocation expected",
       "No explicit salary range stated; cannot assess compensation expectations"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4364708639",
@@ -873,7 +883,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444658791",
@@ -910,10 +921,11 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4444658791/resume.pdf",
-    "cover_letter_path": "applications/li-4444658791/cover_letter.pdf"
+    "cover_letter_path": "applications/li-4444658791/cover_letter.pdf",
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4453726628",
@@ -950,7 +962,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4453726628/resume.pdf",
     "cover_letter_path": "applications/li-4453726628/cover_letter.pdf",
@@ -994,7 +1006,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454582044",
@@ -1031,7 +1044,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1050,7 +1063,8 @@
       "Certifications (PMP, PMI-ACP, CSM) not listed; current project management maturity level unclear"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454559861",
@@ -1087,7 +1101,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1108,7 +1122,8 @@
     "fit_dealbreakers": [
       "Posting explicitly states 'Work visa sponsorship is not available'\u2014unclear if candidate requires sponsorship, but this is a hard constraint in the posting"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4422554061",
@@ -1145,7 +1160,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1167,7 +1182,8 @@
       "Role is explicitly onsite San Diego HQ; while Vishal is in Carlsbad nearby, the posting shows Remote: False which may conflict depending on his flexibility",
       "This is a principal-level strategic AI platform role requiring deep domain expertise Vishal has not developed; represents a significant level and domain jump from his core experience"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4451283073",
@@ -1207,7 +1223,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4451284673",
@@ -1244,7 +1261,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1263,7 +1280,8 @@
       "Missing enterprise cloud platform and API integration expertise at the scale required for global delivery programs"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472241224",
@@ -1300,7 +1318,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1319,7 +1337,8 @@
       "Experience is primarily with smaller teams and organizations, not large financial services enterprises"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4459853469",
@@ -1356,7 +1375,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1375,7 +1394,8 @@
       "No mention of application modernization or platform transformation initiatives"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4428120454",
@@ -1432,7 +1452,8 @@
     ],
     "fit_dealbreakers": [],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4427055858",
@@ -1469,7 +1490,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1491,7 +1512,8 @@
       "50% travel requirement may conflict with San Diego location preference, though not explicit in resume",
       "Requires US work authorization without sponsorship, which cannot be verified from resume"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4445297253",
@@ -1528,7 +1550,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1547,7 +1569,8 @@
       "Unclear if product metrics definition and tracking was a core responsibility vs. supporting function in past roles"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4441553330",
@@ -1584,10 +1607,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4441553330/resume.pdf",
+    "cover_letter_path": "applications/li-4441553330/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management experience and remote flexibility, but lacks Commercial Real Estate industry background and formal PMP certification that the role emphasizes.",
     "fit_strengths": [
@@ -1603,7 +1626,8 @@
       "No explicit experience with enterprise-level program portfolio management or large-scale change management initiatives"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4470730696",
@@ -1640,7 +1664,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1659,7 +1683,8 @@
       "No evidence of field enablement, product launch, or customer engagement strategy experience in regulated environments"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453724615",
@@ -1717,7 +1742,8 @@
       "The role explicitly requires hands-on production voice product experience; Patel's background is in web applications, SaaS, and chat-based tools, not voice AI or contact center automation"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461185293",
@@ -1754,7 +1780,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "applied",
+    "status": "submitted",
     "application_status": "resume_created",
     "resume_path": "applications/li-4461185293/resume.pdf",
     "cover_letter_path": "applications/li-4461185293/cover_letter.pdf",
@@ -1795,7 +1821,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1816,7 +1842,8 @@
     "fit_dealbreakers": [
       "Location not specified in posting but implies non-remote work; candidate is based in San Diego with no indication of willingness to relocate or travel globally"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454815141",
@@ -1853,10 +1880,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4454815141/resume.pdf",
+    "cover_letter_path": "applications/li-4454815141/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong technical project management and product ownership experience, but lacks hands-on integration platform expertise (Workato, iPaaS) and domain-specific RevOps/fintech background that the role heavily emphasizes.",
     "fit_strengths": [
@@ -1872,7 +1899,8 @@
       "Missing specific technical skills: SQL proficiency, advanced Excel, API testing tools, and data platform experience (Snowflake, etc.) not clearly demonstrated"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4472229576",
@@ -1909,7 +1937,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1928,7 +1956,8 @@
       "Unclear depth of executive presence and formal customer-facing implementation leadership at enterprise scale"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444351273",
@@ -1965,7 +1994,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -1986,7 +2015,8 @@
     "fit_dealbreakers": [
       "Posting shows 'Remote: False' with no location listed\u2014unclear if role is on-site, hybrid, or requires relocation; this ambiguity is a potential conflict for a CA-based candidate without clarity on expectations"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454570774",
@@ -2023,10 +2053,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4454570774/resume.pdf",
+    "cover_letter_path": "applications/li-4454570774/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match: strong technical product management background and full-stack engineering skills align well with the hands-on prototyping role, but limited AI/ML depth and no demonstrated experience with agentic AI systems create meaningful gaps.",
     "fit_strengths": [
@@ -2044,7 +2074,8 @@
     "fit_dealbreakers": [
       "Location: candidate is San Diego-based; role strongly prefers East Coast (New York or Charlotte) with mandatory EST hours, making timezone alignment problematic"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4472227551",
@@ -2081,10 +2112,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472227551/resume.pdf",
+    "cover_letter_path": "applications/li-4472227551/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with relevant project management experience and cross-functional leadership skills, but lacks the specific CPG industry background and Stage-Gate process expertise the role emphasizes.",
     "fit_strengths": [
@@ -2100,7 +2131,8 @@
       "No explicit mention of budget management or resource allocation at the scale this role requires"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4462361235",
@@ -2158,7 +2190,8 @@
     ],
     "fit_dealbreakers": [],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4451279684",
@@ -2217,7 +2250,8 @@
       "Role demands 5-7 years SAP-specific consulting experience; Vishal's experience is in startup/scale-up web product management and software engineering"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470552580",
@@ -2254,7 +2288,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2276,7 +2310,8 @@
       "Requires 4 days/week onsite in San Francisco; candidate is in San Diego with no indication of willingness to commute",
       "No Bachelor's degree in CS, IT, or related field stated on resume (holds diplomas from Canadian colleges, not a 4-year degree)"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453281414",
@@ -2313,7 +2348,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2335,7 +2370,8 @@
       "PMP certification is explicitly required, not stated as preferred",
       "5-6+ years construction project management is a core requirement, not a nice-to-have"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463673374",
@@ -2372,7 +2408,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2391,7 +2427,8 @@
       "Product management experience primarily in B2B/recruiting and publishing, not consumer retail or e-commerce"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4450844207",
@@ -2428,10 +2465,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4450844207/resume.pdf",
+    "cover_letter_path": "applications/li-4450844207/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and technical background, but lacks the specific Kubernetes and cloud infrastructure depth the role prioritizes.",
     "fit_strengths": [
@@ -2447,7 +2484,8 @@
       "No evidence of working with infrastructure or platform engineering customers at scale"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4471043742",
@@ -2487,7 +2525,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4466177294",
@@ -2547,7 +2586,8 @@
       "Requires advanced Adobe Experience Cloud and regulatory compliance expertise entirely absent from his background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463655964",
@@ -2607,7 +2647,8 @@
       "Career trajectory shows product/startup focus, not enterprise software consulting"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470765574",
@@ -2644,7 +2685,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2663,7 +2704,8 @@
       "No degree in Mechanical Engineering, Thermal Engineering, or related field; background is Computer Science"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470760737",
@@ -2723,7 +2765,8 @@
       "5+ years required in orthopedic/regulated-device field; Vishal's background is primarily software/web applications and general PM, not medical devices"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462898778",
@@ -2760,7 +2803,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2779,7 +2822,8 @@
       "Experience is primarily B2B SaaS and internal tools rather than patient-facing product design"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472218752",
@@ -2816,7 +2860,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2835,7 +2879,8 @@
       "No mention of security frameworks, standards (NIST, CSIRT/SOC), or security-specific tools mentioned in the role"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461192497",
@@ -2872,7 +2917,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -2891,7 +2936,8 @@
       "Unclear familiarity with data analytics and reporting tools beyond basic Excel"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472254742",
@@ -2949,7 +2995,8 @@
       "Role explicitly requires 5+ years hands-on Empower system experience; resume shows no fintech/mortgage lending background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4382166904",
@@ -2986,7 +3033,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -3007,7 +3054,8 @@
     "fit_dealbreakers": [
       "U.S. Citizenship requirement\u2014not addressed in resume and is mandatory for security clearance eligibility"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454302982",
@@ -3070,7 +3118,8 @@
       "Experience gap is too large (0 years utility vs. 7+ required) to bridge credibly for a technical specialist role"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454806661",
@@ -3131,7 +3180,8 @@
       "Role demands inference ecosystem depth that is not credibly bridgeable from his background\u2014this is a specialist PM role, not a generalist one"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454538164",
@@ -3168,7 +3218,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -3189,7 +3239,8 @@
     "fit_dealbreakers": [
       "Location vague and remote status listed as False; candidate is in Carlsbad, CA but no office location specified for Dandy, creating uncertainty about relocation expectations"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453792965",
@@ -3226,10 +3277,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4453792965/resume.pdf",
+    "cover_letter_path": "applications/li-4453792965/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and cross-functional experience, but lacks the specific regulated industry and LIMS domain expertise that this senior role prioritizes.",
     "fit_strengths": [
@@ -3247,7 +3298,8 @@
     "fit_dealbreakers": [
       "Location requirement: must be in US or Canada, Eastern time zone or 1 hour offset; Vishal is in San Diego (Pacific time, 3 hours behind), which conflicts with the explicit geographic requirement"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4463399394",
@@ -3284,7 +3336,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -3303,7 +3355,8 @@
       "No evidence of product definition work in heavily regulated or standards-driven technical domains (UL, ANSI, IEEE)"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471016629",
@@ -3340,7 +3393,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -3359,7 +3412,8 @@
       "Recent work (2022-present) in personal projects rather than enterprise AI initiatives; unclear depth in AI governance or data frameworks"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463690623",
@@ -3396,10 +3450,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4463690623/resume.pdf",
+    "cover_letter_path": "applications/li-4463690623/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match: Strong technical project management and Agile background with hands-on engineering expertise align well with core responsibilities, though DevOps and cloud-specific experience are notably limited.",
     "fit_strengths": [
@@ -3415,7 +3469,8 @@
       "Lack of relevant certifications (CSM, SAFe, PSM, PMI-ACP) that posting lists as preferred"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4453252555",
@@ -3452,10 +3507,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4453252555/resume.pdf",
+    "cover_letter_path": "applications/li-4453252555/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match\u2014Vishal has strong technical PM and team leadership experience with multi-year data and analytics projects, but lacks explicit enterprise data platform and AI/ML portfolio leadership at this scale.",
     "fit_strengths": [
@@ -3471,7 +3526,8 @@
       "Unclear exposure to LLM patterns, cloud data warehouses (Snowflake, Databricks), or ML orchestration tooling that defines much of the role"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4461195109",
@@ -3508,10 +3564,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "submitted",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4461195109/resume.pdf",
+    "cover_letter_path": "applications/li-4461195109/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and project leadership credentials, but lacks demonstrated AI/ML expertise and hands-on technical depth with LLMs that the role emphasizes as core.",
     "fit_strengths": [
@@ -3527,7 +3583,8 @@
       "Unclear depth of data science collaboration and statistical rigor required for attribution and LTV modeling"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted"
   },
   {
     "id": "li-4416264508",
@@ -3587,7 +3644,8 @@
       "15\u201330+ years in water infrastructure is a core requirement; Vishal's experience is in software/SaaS and light entrepreneurship"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4406590483",
@@ -3624,10 +3682,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4406590483/resume.pdf",
+    "cover_letter_path": "applications/li-4406590483/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match for a Principal PM with relevant project/product leadership experience, but gaps in marketplace economics expertise, SQL fluency, and travel commerce domain knowledge weigh against the fit.",
     "fit_strengths": [
@@ -3643,7 +3701,9 @@
       "Limited evidence of AI-native working style or rapid prototyping with AI tools as primary workflow"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted",
+    "submitted_at": "2026-09-27T16:21:35"
   },
   {
     "id": "li-4472299447",
@@ -3702,7 +3762,8 @@
       "Posting appears to be a template with unfilled placeholders ([Job Title], [X] years, [relevant domain], [specific tools, languages]), suggesting poor job posting quality or possible recruiting error"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470753704",
@@ -3739,7 +3800,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -3763,7 +3824,8 @@
       "DoD Top Secret clearance is listed as required; resume shows no security clearance history",
       "Location vague but company HQ in McLean, VA with federal contracting focus suggests on-site or significant travel expectations that may conflict with CA-based candidate"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453533084",
@@ -3800,10 +3862,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4453533084/resume.pdf",
+    "cover_letter_path": "applications/li-4453533084/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and cross-functional experience, though lacking direct payments/fintech domain expertise and recent dedicated PM tenure.",
     "fit_strengths": [
@@ -3819,7 +3881,9 @@
       "No stated experience with payment rails (ACH, check, wire) or SMB financial platforms"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted",
+    "submitted_at": "2026-09-27T16:29:07"
   },
   {
     "id": "li-4434669495",
@@ -3856,10 +3920,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4434669495/resume.pdf",
+    "cover_letter_path": "applications/li-4434669495/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management and multi-stakeholder experience, but lacks domain expertise in State benefits programs and PMP certification.",
     "fit_strengths": [
@@ -3875,7 +3939,9 @@
       "No background in public sector or government consulting work"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted",
+    "submitted_at": "2026-09-27T16:29:29"
   },
   {
     "id": "li-4471672265",
@@ -3912,10 +3978,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4471672265/resume.pdf",
+    "cover_letter_path": "applications/li-4471672265/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with proven product/project management experience at the right level, but lacks specific data analytics platform expertise and finance partnership background that the role emphasizes.",
     "fit_strengths": [
@@ -3931,7 +3997,9 @@
       "Salary range appears to be stated monthly ($8.5K-$14.8K/month ~$102K-$178K annually) with unclear compensation structure"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted",
+    "submitted_at": "2026-09-27T16:30:17"
   },
   {
     "id": "li-4463654701",
@@ -3990,7 +4058,8 @@
       "Specialized Workday expertise is a core requirement, not a nice-to-have; Vishal's generalist project management doesn't transfer to this vertical"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4417002044",
@@ -4027,7 +4096,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4046,7 +4115,8 @@
       "Appears more generalist PM/product-focused rather than implementation/solutions architect-focused"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4431713901",
@@ -4105,7 +4175,8 @@
       "No direct experience in data centers, critical facilities, or heavy industrial power distribution environments"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463655615",
@@ -4142,7 +4213,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4160,7 +4231,8 @@
       "No evidence of building partner channel programs, API platforms at scale, or white-label/multi-tenant SaaS systems"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472282172",
@@ -4197,10 +4269,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472282172/resume.pdf",
+    "cover_letter_path": "applications/li-4472282172/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project and product management experience at the right level, but lacks domain-specific payments and EMV 3DS expertise that the role emphasizes.",
     "fit_strengths": [
@@ -4216,7 +4288,9 @@
       "Experience is primarily in SaaS/recruiting tech, not payments infrastructure"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "autofill_status": "submitted",
+    "submitted_at": "2026-09-27T16:30:34"
   },
   {
     "id": "li-4461170875",
@@ -4253,7 +4327,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4274,7 +4348,8 @@
     "fit_dealbreakers": [
       "Location vague\u2014posting shows 'None' for location but states 'Remote: False,' unclear if candidate's San Diego location is acceptable without explicit remote option or office address"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470509714",
@@ -4311,7 +4386,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4330,7 +4405,8 @@
       "No explicit professional services or implementation delivery background in enterprise software"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470742668",
@@ -4367,7 +4443,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4386,7 +4462,8 @@
       "Healthcare domain knowledge and regulatory/compliance context will require ramp-up"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463681632",
@@ -4423,7 +4500,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4441,7 +4518,8 @@
       "No consulting experience or track record working with advisory teams to understand how they consume analytics"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470721899",
@@ -4478,7 +4556,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4499,7 +4577,8 @@
     "fit_dealbreakers": [
       "Posting emphasizes 20% travel requirement and states 'no role is 100% remote'\u2014candidate appears geographically local but may have remote work expectations"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472216972",
@@ -4536,10 +4615,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472216972/resume.pdf",
+    "cover_letter_path": "applications/li-4472216972/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management and strategic initiative experience, though the consulting/transformation background is less prominent than desired.",
     "fit_strengths": [
@@ -4617,7 +4696,8 @@
       "Role fundamentally requires licensed professional engineer status"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470782103",
@@ -4654,7 +4734,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4673,7 +4753,8 @@
       "No evidence of product value measurement through business outcome metrics or operational efficiency tracking"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470779304",
@@ -4710,7 +4791,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4729,7 +4810,8 @@
       "No explicit mention of data-driven decision-making or deep quantitative analytics background"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472244647",
@@ -4766,10 +4848,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472244647/resume.pdf",
+    "cover_letter_path": "applications/li-4472244647/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management and cross-functional leadership experience, though healthcare domain expertise and some specialized certifications are gaps.",
     "fit_strengths": [
@@ -4822,7 +4904,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -4844,7 +4926,8 @@
       "Full-time office/project work with relocation required; candidate is based in Carlsbad, CA with no stated flexibility on remote work",
       "No eligibility confirmation for required security clearances or certifications typical in Bechtel mega-projects"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462339684",
@@ -4905,7 +4988,8 @@
       "Domain expertise in product security governance and vulnerability management is core requirement, not transferable from general project management"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453708387",
@@ -4966,7 +5050,8 @@
       "Requires deep industry expertise in niche energy/grid domain that is not credibly bridgeable from his generalist background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454043504",
@@ -5003,10 +5088,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4454043504/resume.pdf",
+    "cover_letter_path": "applications/li-4454043504/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and technical foundation, though security industry experience and hands-on security tool familiarity are notably absent.",
     "fit_strengths": [
@@ -5059,7 +5144,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5078,7 +5163,8 @@
       "Lacks education technology or customer training landscape experience; no mention of working with knowledge content structuring for machine consumption"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463657389",
@@ -5115,10 +5201,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4463657389/resume.pdf",
+    "cover_letter_path": "applications/li-4463657389/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match for a strategic project manager role with strong cross-functional leadership experience, though the heavy commercialization, revenue growth, and B2B sales focus represent areas where Vishal's background is less proven.",
     "fit_strengths": [
@@ -5171,7 +5257,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5190,7 +5276,8 @@
       "No KaaS, internal developer platform, or AI/ML infrastructure product management background"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472283000",
@@ -5227,10 +5314,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472283000/resume.pdf",
+    "cover_letter_path": "applications/li-4472283000/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match for an experienced product manager with technical depth and startup experience, but the adtech specialization is a notable gap given its stated importance.",
     "fit_strengths": [
@@ -5283,7 +5370,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5302,7 +5389,8 @@
       "No evidence of working with design workflows, CAD systems, or automation in engineering contexts"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461445168",
@@ -5362,7 +5450,8 @@
       "Requires 10+ years of data center construction experience; Vishal has zero years in this domain despite strong project management skills"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4426180514",
@@ -5422,7 +5511,8 @@
       "Role is a specialized hardware/device engineering leadership position; Vishal is a software engineer and product/project manager with no relevant technical domain expertise"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472272628",
@@ -5459,7 +5549,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5480,7 +5570,8 @@
     "fit_dealbreakers": [
       "Location and remote policy mismatch: posting lists 'Remote: False' with no location specified, and candidate is in Carlsbad, CA with no indication of relocation willingness or remote work acceptance"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472230276",
@@ -5517,7 +5608,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5539,7 +5630,8 @@
       "Location not specified in posting; candidate is in Carlsbad, CA but posting shows 'Remote: False' with no location listed\u2014unclear if relocation or frequent travel is feasible",
       "Role requires regular on-site dealership travel; feasibility not stated in candidate preferences"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463379930",
@@ -5599,7 +5691,8 @@
       "This is a director-level strategic data role; Vishal's highest product/project management role was manager-level at smaller organizations"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4469537203",
@@ -5657,7 +5750,8 @@
       "Role explicitly requires deep domain expertise in healthcare MDM/MPI that Vishal has not worked with"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472413183",
@@ -5694,7 +5788,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5713,7 +5807,8 @@
       "Location not stated in posting; unclear if remote-eligible or in-person requirement would conflict with Carlsbad, CA base"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4313378827",
@@ -5773,7 +5868,8 @@
       "Specialized domain expertise is a hard requirement that his generalist background cannot credibly bridge"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471043860",
@@ -5810,10 +5906,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4471043860/resume.pdf",
+    "cover_letter_path": "applications/li-4471043860/cover_letter.pdf",
     "fit_score": 78,
     "fit_summary": "Strong match with extensive project management and cross-functional coordination experience at the right seniority level; solid technical PM background, though lacking explicit background in coaching/digital education sectors.",
     "fit_strengths": [
@@ -5866,7 +5962,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5887,7 +5983,8 @@
     "fit_dealbreakers": [
       "Visa sponsorship requirement explicitly stated as ineligible; resume does not confirm U.S. work authorization status"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4411356762",
@@ -5924,7 +6021,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -5943,7 +6040,8 @@
       "No background in Sales Operations or business operations configuration within enterprise platforms"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472293635",
@@ -6000,7 +6098,8 @@
       "Posting appears to be an unfinished template rather than a genuine job listing"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454554992",
@@ -6037,7 +6136,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6056,7 +6155,8 @@
       "No direct experience with endpoint security technologies, MDM, EDR, zero-trust architectures, or device compliance frameworks"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4436124079",
@@ -6093,10 +6193,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4436124079/resume.pdf",
+    "cover_letter_path": "applications/li-4436124079/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong product management and delivery leadership experience, though limited direct healthcare/regulated-industry background and no explicit growth/experimentation focus in recent roles.",
     "fit_strengths": [
@@ -6173,7 +6273,8 @@
       "This is fundamentally a deep technical systems engineering role, not a project management role; candidate's stated objective is product/project manager, not returning to IC engineering"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470334536",
@@ -6210,7 +6311,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6231,7 +6332,8 @@
     "fit_dealbreakers": [
       "Location not specified in posting; candidate is in Carlsbad, CA and resume shows remote work preference\u2014unclear if relocation required"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454821294",
@@ -6268,7 +6370,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6290,7 +6392,8 @@
       "Requires U.S. citizenship for U.S. Government projects; citizenship status not stated in resume",
       "Requires 10+ years in related construction/project controls experience; resume shows PM experience primarily in software/tech and recruiting domains, not construction"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4460989182",
@@ -6327,10 +6430,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4460989182/resume.pdf",
+    "cover_letter_path": "applications/li-4460989182/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project and team management experience, but lacks direct platform/infrastructure engineering depth and Kubernetes expertise required for this technical leadership role.",
     "fit_strengths": [
@@ -6383,7 +6486,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6402,7 +6505,8 @@
       "Lacks energy sector domain knowledge and established relationships in the industry"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463620904",
@@ -6439,10 +6543,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4463620904/resume.pdf",
+    "cover_letter_path": "applications/li-4463620904/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match. Vishal's extensive program/project management experience, cross-functional coordination skills, and track record managing complex initiatives align well with the core responsibilities, though he lacks explicit pre-PMF testing and customer advisory board experience.",
     "fit_strengths": [
@@ -6497,7 +6601,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6519,7 +6623,8 @@
       "Position explicitly requires 20 years of related experience and 12+ years management; Vishal falls short on tenure",
       "Not eligible for visa sponsorship; no indication Vishal requires it, but unclear if local candidate preference is firm"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4407343555",
@@ -6579,7 +6684,8 @@
       "No evidence of GxP Systems or medical device industry work"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472285046",
@@ -6616,10 +6722,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472285046/resume.pdf",
+    "cover_letter_path": "applications/li-4472285046/cover_letter.pdf",
     "fit_score": 78,
     "fit_summary": "Good match. Vishal has 3+ years of product/project management experience with cross-functional teams, shipped web applications, and strong communication skills, though government services domain is new and some tactical PM depth is unclear.",
     "fit_strengths": [
@@ -6694,7 +6800,8 @@
       "Director-level role at large healthcare organization; Vishal's background is startups and mid-size tech companies"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444051106",
@@ -6731,7 +6838,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6750,7 +6857,8 @@
       "Remote preference implied by current location (San Diego) vs. monthly Boston on-site requirement with limited flexibility noted"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461430060",
@@ -6787,7 +6895,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6808,7 +6916,8 @@
     "fit_dealbreakers": [
       "Location unspecified in posting but marked remote as false; candidate is in Carlsbad, CA and role appears tied to Horn Lake, MS headquarters with travel requirements\u2014relocation feasibility unclear"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472261012",
@@ -6845,7 +6954,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -6864,7 +6973,8 @@
       "Unfamiliar with interconnect/semiconductor/AI infrastructure ecosystems and hyperscale customer dynamics"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453758184",
@@ -6925,7 +7035,8 @@
       "Fundamentally different career path (software PM vs. hardware manufacturing operations)"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444750282",
@@ -6962,10 +7073,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4444750282/resume.pdf",
+    "cover_letter_path": "applications/li-4444750282/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match. Vishal's extensive project management and cross-functional leadership experience aligns well with the core responsibilities, though the domain (supply chain automation) and enterprise-scale financial accountability are less familiar terrain.",
     "fit_strengths": [
@@ -7041,7 +7152,8 @@
       "Role requires Workday-specific expertise that is foundational to the position, not a nice-to-have, and Vishal has no background in this domain"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461203971",
@@ -7078,10 +7190,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4461203971/resume.pdf",
+    "cover_letter_path": "applications/li-4461203971/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match. Vishal has direct program management experience at the right scale and complexity, strong cross-functional stakeholder alignment skills, and a track record delivering multi-year initiatives\u2014though he lacks explicit evidence of strategic GTM expertise and formal governance/portfolio practices.",
     "fit_strengths": [
@@ -7134,7 +7246,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7156,7 +7268,8 @@
     "fit_dealbreakers": [
       "San Diego location is home base (positive), but remote flexibility expectation unknown and role explicitly states 'Remote: False' with no flexibility mentioned"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472241122",
@@ -7216,7 +7329,8 @@
       "Posting emphasizes 'MUST POSSESS STRONG SECURITY BACKGROUND'\u2014this is a hard requirement Vishal cannot meet"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470514474",
@@ -7253,7 +7367,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7275,7 +7389,8 @@
       "Role appears to be hourly/non-exempt at $33-42/hour; Vishal's background is salaried mid-to-senior management, suggesting potential level mismatch or compensation expectation gap",
       "No remote flexibility mentioned; typical logistics implementation roles are on-site"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4459114061",
@@ -7312,10 +7427,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4459114061/resume.pdf",
+    "cover_letter_path": "applications/li-4459114061/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong program management and cross-functional execution experience, though financial services domain expertise and strategic operations depth are gaps for this high-stakes fintech role.",
     "fit_strengths": [
@@ -7368,7 +7483,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7390,7 +7505,8 @@
       "On-site 5 days/week in San Diego required; resume lists Carlsbad (nearby but explicit on-site requirement may conflict if remote flexibility is needed",
       "Active US security clearance required and explicitly stated as condition of employment; no clearance mentioned"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471060269",
@@ -7451,7 +7567,8 @@
       "Senior director level managing drug programs is fundamentally different function from his software/startup PM background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453720643",
@@ -7510,7 +7627,8 @@
       "Deep Salesforce ARM expertise is stated as the 'most critical technical qualification' and 'top priority' \u2014 Vishal has no indication of this skill"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4451274059",
@@ -7547,10 +7665,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4451274059/resume.pdf",
+    "cover_letter_path": "applications/li-4451274059/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match\u2014strong product and project management background with cross-functional stakeholder experience, but lacks explicit CRM platform and Salesforce expertise that the role emphasizes.",
     "fit_strengths": [
@@ -7603,10 +7721,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472227481/resume.pdf",
+    "cover_letter_path": "applications/li-4472227481/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management and cross-functional leadership experience, but lacks infrastructure/cloud domain expertise and PMP certification is a required gap.",
     "fit_strengths": [
@@ -7661,7 +7779,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7680,7 +7798,8 @@
       "No stated location; posting lists location as 'None' with remote 'False', creating unclear logistics"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454329657",
@@ -7717,7 +7836,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7736,7 +7855,8 @@
       "Unclear experience with stakeholder engagement strategies specific to member networks or healthcare providers"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470515568",
@@ -7795,7 +7915,8 @@
       "Director-level data engineering leadership role requires seniority and domain expertise Patel has not demonstrated; his most recent comparable role was Technical Project Manager (2019-2022), not data engineering leadership"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4413670442",
@@ -7832,7 +7953,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7856,7 +7977,8 @@
       "Location unspecified in posting; candidate is in Carlsbad, CA but hybrid arrangement not detailed",
       "7+ years Data/AI domain requirement is a hard threshold not clearly met"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470787087",
@@ -7893,7 +8015,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7912,7 +8034,8 @@
       "No mention of compliance, regulatory, or quality assurance domain knowledge"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472201989",
@@ -7949,7 +8072,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -7970,7 +8093,8 @@
     "fit_dealbreakers": [
       "Extensive BMS/controls technical knowledge is a core requirement; resume shows full-stack software engineering and product management but no building systems expertise"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454066137",
@@ -8007,7 +8131,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8028,7 +8152,8 @@
     "fit_dealbreakers": [
       "No location specified in posting; candidate is in San Diego, CA and remote is marked false\u2014geographic mismatch unresolved"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4384062981",
@@ -8089,7 +8214,8 @@
       "Requires deep hands-on telecom systems engineering domain expertise that Vishal does not possess"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472243191",
@@ -8126,7 +8252,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8145,7 +8271,8 @@
       "Lack of deal process root cause analysis or commercial problem-solving experience in a sales-oriented environment"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472259253",
@@ -8182,7 +8309,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8201,7 +8328,8 @@
       "No clear evidence of managing large-scale multi-state/multi-region compliance or regulatory documentation"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444067595",
@@ -8238,7 +8366,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8259,7 +8387,8 @@
     "fit_dealbreakers": [
       "Located in San Diego, CA (Pacific Time), which meets the time zone requirement, so no location dealbreaker"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4461177845",
@@ -8317,7 +8446,8 @@
       "Core requirement is 6+ years of eDiscovery/litigation support experience; Vishal has none in this domain"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462322216",
@@ -8377,7 +8507,8 @@
       "Requires ability to pass federal background investigation; not confirmed"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472257313",
@@ -8414,7 +8545,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8437,7 +8568,8 @@
       "25% travel requirement not addressed in preferences",
       "Organizational Change Management Lead role is a different function from product/project management focus stated in objective"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453237939",
@@ -8493,7 +8625,8 @@
     ],
     "fit_dealbreakers": [],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462309023",
@@ -8530,7 +8663,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8549,7 +8682,8 @@
       "Limited evidence of managing analytics projects or data governance standards"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462345018",
@@ -8586,7 +8720,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8608,7 +8742,8 @@
       "Must obtain Public Trust clearance and pass government background check (eligibility unknown)",
       "US Citizenship required (not stated in resume)"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4436135060",
@@ -8668,7 +8803,8 @@
       "Role demands technical electrical expertise (protection & control, SCADA, RTU/IED installation); Vishal has no electrical engineering background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472244612",
@@ -8726,7 +8862,8 @@
       "Role requires hands-on structural engineering expertise (composite analysis, finite element modeling, material properties) that is fundamentally different from Vishal's software engineering and project management background"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4453287643",
@@ -8763,7 +8900,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8782,7 +8919,8 @@
       "No life sciences or related degree; background is computer science and software engineering"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4406428027",
@@ -8819,7 +8957,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8840,7 +8978,8 @@
     "fit_dealbreakers": [
       "Location constraint: posting specifies West Coast with mandatory travel, and candidate's stated location is Carlsbad without indication of willingness to relocate or remote flexibility"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4415574029",
@@ -8880,7 +9019,8 @@
     "status": "rejected",
     "application_status": null,
     "resume_path": null,
-    "cover_letter_path": null
+    "cover_letter_path": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462308800",
@@ -8917,7 +9057,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8939,7 +9079,8 @@
       "Location and remote policy not specified in posting but resume shows Carlsbad, CA with no indication of willingness to relocate",
       "Contract rate ($60-70/hr W2) may be significantly below market for senior TPM role depending on total compensation expectations; unclear if acceptable"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4446427446",
@@ -8976,7 +9117,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -8998,7 +9139,8 @@
     "fit_dealbreakers": [
       "Posting explicitly states 'not a remote position' with up to 5 days onsite; Vishal's recent background is remote-first (Riviera Partners remote, personal projects), and location alone is insufficient to override the significant experience gaps"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4407855830",
@@ -9057,7 +9199,8 @@
       "Technical requirements (furnace design, combustion expertise, dross processing) are core to the role, not nice-to-haves, and represent a completely different field from candidate's software and business experience"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472238196",
@@ -9094,10 +9237,10 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
-    "application_status": null,
-    "resume_path": null,
-    "cover_letter_path": null,
+    "status": "applied",
+    "application_status": "resume_created",
+    "resume_path": "applications/li-4472238196/resume.pdf",
+    "cover_letter_path": "applications/li-4472238196/cover_letter.pdf",
     "fit_score": 72,
     "fit_summary": "Good match with strong project management background and customer-facing delivery experience, but lacks explicit infrastructure/cloud domain depth and PMP certification required for the role.",
     "fit_strengths": [
@@ -9172,7 +9315,8 @@
       "Role requires a Bachelor's degree in IT, CS, or Business Analysis; resume shows CS degree but from 2004-2006, and career trajectory is software engineering/PM, not business analysis"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4373480774",
@@ -9233,7 +9377,8 @@
       "10+ years in mission-critical projects is required; Vishal has zero years in this domain"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454860002",
@@ -9270,7 +9415,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9289,7 +9434,8 @@
       "No indication of direct customer-facing implementation or consulting delivery roles beyond internal stakeholder management"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470757229",
@@ -9326,7 +9472,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9349,7 +9495,8 @@
       "U.S. citizenship requirement not confirmed in resume",
       "Position requires 7 years in specific domains (engineering/science management, ops research, or financial/cost analysis); resume shows primarily product/project management and software engineering background"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4431981441",
@@ -9409,7 +9556,8 @@
       "No visa sponsorship available and resume doesn't explicitly state US work authorization status"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472273179",
@@ -9446,7 +9594,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9465,7 +9613,8 @@
       "No demonstrated experience developing executive-ready presentations or complex data synthesis for leadership"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472239063",
@@ -9502,7 +9651,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9521,7 +9670,8 @@
       "No background in item banking systems, digital authoring tools, or test development lifecycle"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4451269598",
@@ -9580,7 +9730,8 @@
       "Location not specified in posting; Vishal is in Carlsbad, CA and willing to work remote, but posting shows 'Remote: False' suggesting on-site requirement without location clarity"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4435810509",
@@ -9637,7 +9788,8 @@
     ],
     "fit_dealbreakers": [],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4463716354",
@@ -9674,7 +9826,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9693,7 +9845,8 @@
       "Missing deep understanding of privacy-safe audience targeting, consent architecture (OneTrust), or cross-brand identity resolution"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470545155",
@@ -9730,7 +9883,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9753,7 +9906,8 @@
       "Requires current or past TSA vetting; no mention in resume",
       "75% travel requirement may conflict with stated San Diego location preference, though not explicit conflict"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462300537",
@@ -9815,7 +9969,8 @@
       "No sponsorship available; unclear if Vishal requires it but this is an explicit constraint"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454313370",
@@ -9852,7 +10007,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9871,7 +10026,8 @@
       "Salary range ($50\u201365k) is at junior end; unclear if level matches a coordinator vs. more senior role"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470575130",
@@ -9908,7 +10064,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9926,7 +10082,8 @@
       "Product ownership focus has been primarily in non-marketing domains (recruiting, publishing, internal tools)"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470520069",
@@ -9963,7 +10120,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -9982,7 +10139,8 @@
       "Limited evidence of operating as strategic thought partner to VPs/Directors on emerging technical domains"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4454485747",
@@ -10019,7 +10177,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10038,7 +10196,8 @@
       "Missing deep quantitative analytics and cost modeling experience for infrastructure tradeoffs"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472207508",
@@ -10075,7 +10234,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10094,7 +10253,8 @@
       "Posting lists location as 'None' and remote as 'False'\u2014unclear if this is Virginia-based or hybrid; candidate is in San Diego, CA"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470512193",
@@ -10131,7 +10291,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10153,7 +10313,8 @@
       "Must be US Citizen requirement (citizenship status not stated in resume)",
       "Location not specified in posting; Vishal is in Carlsbad, CA and post shows Remote: False with no location given, creating uncertainty about on-site requirements"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470520007",
@@ -10190,7 +10351,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10213,7 +10374,8 @@
       "Required travel up to 20% not addressed in preferences",
       "Role location ambiguous (posting shows 'None'); potential conflict if on-site elsewhere"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4471453067",
@@ -10250,7 +10412,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10269,7 +10431,8 @@
       "No explicit experience with MS Project or enterprise-level PMO tool administration"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4444019842",
@@ -10306,7 +10469,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10325,7 +10488,8 @@
       "Minimal mention of data querying, metrics definition, or quantitative business case building"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470726043",
@@ -10362,7 +10526,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10381,7 +10545,8 @@
       "No background managing CDMOs, CROs, testing laboratories, or U.S. Government contract reporting requirements"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470734073",
@@ -10418,7 +10583,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10440,7 +10605,8 @@
       "On-site requirement (Tuesdays\u2013Thursdays Cupertino) conflicts with San Diego location; relocation would be necessary",
       "Role demands hands-on hardware/systems engineering knowledge that his software engineering and PM background don't clearly provide"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4464219585",
@@ -10477,7 +10643,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10499,7 +10665,8 @@
       "Candidate is in California (Carlsbad), which is in the approved state list, so location is not a dealbreaker",
       "No visa sponsorship available; candidate citizenship/work authorization status not stated in resume"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472093905",
@@ -10536,7 +10703,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10555,7 +10722,8 @@
       "No clear evidence of executive presence or external-facing reference story packaging for sales teams"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470734347",
@@ -10592,7 +10760,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10611,7 +10779,8 @@
       "Limited exposure to the construction and field-execution phases of project delivery"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472097949",
@@ -10648,7 +10817,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10667,7 +10836,8 @@
       "Vendor and external partner coordination experience not emphasized in resume"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4470356312",
@@ -10726,7 +10896,8 @@
       "Lacks the specialized certifications, regulatory compliance experience (OSHA 1910 Subpart T, USCG), and maritime industry standards required for this senior technical PM position"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4464641693",
@@ -10763,7 +10934,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10782,7 +10953,8 @@
       "Location vague in posting (none stated); Carlsbad, CA is a reasonable distance from typical Bay Area roles if on-site becomes required"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4462750947",
@@ -10819,7 +10991,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10838,7 +11010,8 @@
       "Unclear comfort level translating statistical concepts to C-suite audiences, though communication skills are strong in other domains"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472205706",
@@ -10875,7 +11048,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10894,7 +11067,8 @@
       "Center of Excellence and capability-development program experience not shown"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472210315",
@@ -10931,7 +11105,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -10950,7 +11124,8 @@
       "No explicit mention of working with external agents or customer-facing distribution channels"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472216171",
@@ -11009,7 +11184,8 @@
       "Requires 5+ years of sports venue ecosystem experience; Vishal has zero documented experience in this sector"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472207814",
@@ -11046,7 +11222,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11067,7 +11243,8 @@
     "fit_dealbreakers": [
       "Location stated as 'None' with Remote: False\u2014unclear if this is remote-eligible or requires relocation; no location given to assess feasibility"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472207592",
@@ -11104,7 +11281,7 @@
     "company_reviews_count": null,
     "vacancy_count": null,
     "work_from_home_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11123,7 +11300,8 @@
       "No prior experience with Fineos, claims systems migrations, or insurance-specific technology platforms"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "li-4472213344",
@@ -11183,7 +11361,8 @@
       "Specialized domain knowledge (excise/fuel taxation) is a core requirement, not a nice-to-have, and Vishal has no indicated experience here"
     ],
     "fit_error": null,
-    "auto_rejected": true
+    "auto_rejected": true,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "gh-5249853007",
@@ -11199,7 +11378,7 @@
     "currency": null,
     "department": "Commercial Operations",
     "description": "Here at Scout Motors, we're carrying forward the heritage of one of the most iconic American vehicles in history. A vehicle dating back to 1960. One that forged the path for future generations of rugged SUVs and trucks and will do so once again.\n\nBut Scout is more than just a brand, it\u2019s a legacy steeped in a culture of exploration, caretaking, and hard work.\n\nThe Scout brand is all about respect. Respect for the past and the future by taking an iconic American brand that hasn\u2019t been around for a while, electrifying it, digitizing it, and loading it with American innovation. Respect for communities by creating a company that stands for its people and its customers. Respect for both work and play, with vehicles that are equally at home at a camp site, a job site, or on a Tuesday commute. And respect for our customers by developing two powertrains that meet their requirements \u2014 an all-electric powertrain as well as the Harvester\u2122 range extender powertrain which includes a built-in gas-powered generator with an estimated 500 miles of combined range.\n\nAt Scout Motors, we empower our talented, inclusive, and entrepreneurial teams to innovate. What makes a Scout employee? Someone who is a visionary and a leader, who seeks new paths and shares lessons learned. A knowledgeable doer who collaborates across the company to build better. A go-getter with unrivaled passion.\n\nJoin us at Scout Motors and be part of shaping the future of transportation. If you're ready to drive change and make history, apply now!\n\n#### Overview\n\nJoin an iconic brand that is redefining the pickup truck and rugged SUV marketplace. As **Senior Staff Technical Product Manager** **\u2013 Service Intelligence** for a confidential digital initiative, you will lead the strategy and execution of a foundational backend intelligence platform that powers critical decision\u2011making across Scout\u2019s direct\u2011to\u2011consumer retail and service ecosystem.\u00a0\n\nThis role focuses on designing a backend\u2011driven decisioning and orchestration system that evaluates complex, interdependent operational inputs to produce reliable, scalable outcomes in real time. The platform is being built ahead of Start of Operations and will play a central role in how Scout coordinates resources, responds to events, and enables consistent execution across locations. This role operates at a cross-domain level, shaping how multiple systems, products, and operational workflows interact through centralized decision intelligence.\u00a0\u00a0\n\nInitially, there is no end\u2011user interface or traditional UX design responsibility associated with this position; success is defined by system behavior, decision quality, and operational outcomes.\u00a0\n\nThis is a deeply technical, AI\u2011driven and analytical role requiring strong systems thinking and comfort operating in a highly ambiguous, 0\u2011to\u20111 environment. The successful candidate will help shape core capabilities from the ground up, owning both initial delivery and long\u2011term evolution of a mission\u2011critical intelligence platform while maintaining strict discretion around sensitive product details.\u00a0\n\n#### What you\u2019ll do\n\nBecome part of an iconic brand that is set to revolutionize the electric pick-up truck & rugged SUV marketplace by achieving the following:\n\nDefine and Lead Strategy\u00a0\n\n- Define, evolve, and drive the product and ecosystem strategy for a confidential, intelligence\u2011driven core platform supporting Scout\u2019s operations and service experience.\n- Define how complex operational signals, constraints, and policies are modeled into automated decision logic.\n- Lead early-stage platform definition ahead of Start of Operations, building foundational capabilities with no existing baseline.\n- Accountable for system performance across Scout\u2019s direct\u2011to\u2011consumer retail network, ensuring decisions are reliable, explainable, and scalable.\n- Influence senior leadership and align platform strategy with long-term company objectives while protecting sensitive capabilities.\n- Identify new problem spaces and expansion opportunities for decision intelligence across additional domains and systems.\n\nComplex Decisioning & Problem Solving\u00a0\n\n- Frame and solve highly ambiguous, cross-functional problems through intelligent system design and decision frameworks.\n- Model operational constraints, dependencies, and priorities as structured logic, rules, or machine\u2011assisted decision frameworks.\n- Drive solutions where \u201cmissing inputs\u201d require downstream actions to resolve constraints rather than blocking outcomes.\n- Navigate ambiguity inherent to 0\u2011to\u20111 product development, making informed tradeoffs as requirements and dependencies evolve.\n- Evaluate tradeoffs involving accuracy, speed, scalability, and explainability, including intangible system behaviors.\n- Ensure system behavior is consistent, explainable, auditable, and adaptable as business rules change.\n\nLead Product Development\u00a0\n\n- Guide product development across multiple related initiatives, teams, and domains to ensure alignment with strategic objectives.\n- Lead end\u2011to\u2011end product development for a highly complex, logic\u2011heavy platform from concept through scale.\n- Collaborate closely with Engineering, Data Analytics, AI/ML teams, IT, and Operations to:\n- Translate operational needs into system logic and technical requirements.\n- Define data models, decision flows, signal ingestion, and output generation.\n- Balance deterministic rules with AI\u2011assisted approaches where appropriate.\n- Ensure platform extensibility as new use cases and domains are added over time.\n- Establish best practices and frameworks for decisioning platforms adopted across related systems and teams.\n\nAI & Intelligence Enablement\u00a0\n\n- Champion the use of AI, machine reasoning, and advanced analytics to enable scalable decision\u2011making.\n- Define where AI augments human decision processes versus fully automated execution.\n- Ensure models and logic are transparent, testable, and continuously improvable.\n- Collaborate with data partners to ensure high\u2011quality inputs, feedback loops, and monitoring.\n\nStakeholder Leadership\u00a0\n\n- Influence and align senior leadership, engineering, and cross-functional stakeholders on strategy, priorities, and tradeoffs.\n- Serve as a trusted partner to Business, Software Engineering, fellow Digital Product Customer Experience team, and Leadership teams.\n- Translate complex, cross\u2011functional needs into a shared technical and product vision without exposing sensitive strategy externally.\n- Lead alignment across teams with differing priorities, timelines, and constraints.\n- Build long\u2011term trust in the platform through transparency, reliability, and outcomes.\n\nOperationalize a Pre\u2011Launch Platform\u00a0\n\n- Build readiness for a mission\u2011critical platform before Start of Operations.\n- Define rollout strategies, guardrails, fallback behaviors, and manual override paths.\n- Ensure the platform supports consistent execution independent of location or context.\n- Define scalable operating models for how decision intelligence is embedded across systems and workflows.\n\nDrive Technical Excellence\u00a0\n\n- Drive architectural decisions across systems, data flows, and integrations, balancing long-term scalability with short-term delivery needs.\n\n- Partner with Scrum and platform teams to deliver scalable, resilient, and secure architectures.\n\n- Define best practices for real\u2011time decisioning systems, data latency, reliability, and observability.\n\n- Proactively identify and mitigate technical risks in logic complexity, system dependencies, and edge cases.\n\n- Ensure solutions meet enterprise security, privacy, and compliance standards.\n- Treat the platform as a living system, ensuring post-launch stability and continuous evolution.\n\nOwn Live Decision Intelligence\u00a0\n\n- Own system behavior and decision quality once the platform is live, ensuring outcomes are accurate, explainable, and aligned with operational intent.\n- Monitor real-world system decisions to identify gaps, edge cases, and unintended outcomes.\n- Lead continuous tuning of logic, rules, thresholds, and AI-driven decision frameworks based on live data.\n- Define criteria for acceptable system behavior, including fallback paths, overrides, and escalation mechanisms.\n- Use system insights to influence product strategy and operational decision-making at a broader organizational level\n\n**Location & Travel Expectations**:\n\n- The role will be based out of a Scout Motors location in\u00a0**Fremont, California.**\n- This role requires 1-3 days per week in the office, with regular in-person meetings and events. Subject to change.\n- Applicants should expect that the role will require the ability to convene with Scout colleagues in person and travel to participate in events on behalf of the company\u00a0from time to time.\n\n#### What you\u2019ll bring\n\nWe expect all Scout employees to have integrity, curiosity, resourcefulness, and strive to exhibit a positive attitude, as well as a growth mindset. You\u2019ll be comfortable with change and flexible in a fast-paced, high-growth environment. You\u2019ll take a collaborative approach to achieve ambitious goals. Here's what else you'll bring:\n\n- 12+ years of product management experience with deep focus on technical platforms, complex systems, or decisioning engines.\n- Experience working with AI/ML technologies in a product, engineering, or business context\n- Proven experience leading 0\u2011to\u20111 products in pre\u2011launch, startup, or transformation environments.\n- Track record of building logic\u2011heavy or intelligence\u2011driven systems that coordinate multiple inputs and constraints.\n\nTechnical Expertise\u00a0\n\n- Strong understanding of distributed systems, APIs, data architectures, and real\u2011time processing.\n- Hands\u2011on experience working with AI/ML systems, rules engines, optimization problems, or decision frameworks.\n- Ability to reason deeply about tradeoffs between accuracy, speed, explainability, and scalability.\n- Comfort working closely with engineers and data scientists on system design.\n- Experience owning backend or platform products where value is delivered through system behavior and decision quality rather than user interfaces.\n\nSkills\u00a0\n\n- Demonstrated ability to define strategy in highly ambiguous environments.\n- Strong ability to influence senior leadership and align diverse stakeholders.\n- Exceptional analytical and structured problem\u2011solving capabilities.\n- Ability to define complex logic and decision flows with precision.\n- Strong written and verbal communication skills; able to simplify complexity without oversharing sensitive information.\n- Data\u2011driven mindset; comfortable working with metrics, experimentation, and system telemetry.\n- High tolerance for ambiguity; energized by building something new where the path is not fully defined.\n\nEducation\u00a0\n\n- Bachelor\u2019s degree in Computer Science, Engineering, Mathematics, or a related field.\n- Advanced technical degree or MBA preferred.\n- AI-related certification required.\n\n#### What you'll gain\n\nThe benefits of joining Scout include the chance to build products and a company from the ground up.\u00a0 This is a chance to create something new and lasting \u2013 with an iconic brand at its foundation.\u00a0 In addition, Scout provides competitive compensation and benefits to support your physical, mental, and financial wellbeing. Program specifics are detailed in company policies and employee benefit guides, select highlights:\n\n- Competitive insurance including:\n  - Medical, dental, vision and income protection plans\n- 401(k) program with:\n  - An employer match and immediate vesting\n- Generous Paid Time Off including:\n  - 20 days planned PTO, as accrued\n  - 40 hours of unplanned PTO and 14 company or floating holidays, annually\n  - Up to 16 weeks of paid parental leave for biological and adoptive parents of all genders\n  - Paid leave for circumstances related to bereavement, jury duty, voting time, or military leave\n\n#### Pay Transparency\n\nThis is a full-time, exempt position eligible to receive a base salary and to participate in an annual performance bonus program. Final salary offered will be determined based on factors including but not limited to the candidate's skills and experience. The annual performance bonus program is preset and not candidate dependent.\n\nInitial base salary range = $160,000.00 - $192,500.00\n\nInitial California, Washington and New York base salary range = $176,000 - $211,750\n\nInternal leveling code: IC7\n\n**Notice to applicants:**\n\n- To be considered for career opportunities at Scout Motors, applicants must be 18 years of age or older.\n- Residing in **San Francisco**:\u00a0*Pursuant to the San Francisco Fair Chance Ordinance, Scout Motors will consider for employment qualified applicants with arrest and conviction records.*\n- Residing in\u00a0**Los Angeles**:\u00a0*Scout Motors will consider for employment qualified applicants with criminal histories in a manner consistent with the Los Angeles Fair Chance Initiative for Hiring Ordinance.*\n- Residing in\u00a0**New York City**:\u00a0*This role is not eligible for remote work in New York City.*\n\n**Equal Opportunity**\n\nScout Motors is committed to employing a diverse workforce and is proud to be an Equal Opportunity Employer",
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11221,7 +11400,8 @@
       "Role requires AI-related certification (not mentioned in resume)",
       "Requires 1-3 days/week in Fremont office; resume shows remote preference from past roles but doesn't explicitly state current constraints"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "gh-5216214007",
@@ -11238,7 +11418,7 @@
     "department": "Trase Systems",
     "description": "### About Us\n\nCo-founded in 2023 by [Joe Laws](https://www.redcellpartners.com/member/joe-laws/) and [Grant Verstandig](https://www.redcellpartners.com/member/grant-verstandig/), Trase Systems is AI, Uncomplicated. Trase empowers enterprise leaders to harness the full potential of AI without the associated complexity and risks. We are an end-to-end solution for deploying, managing, and optimizing AI in the enterprise. Our platform specializes in bridging the \u201clast mile\u201d of AI adoption, unlocking AI's full potential while driving efficiency and significant cost savings. Trase is at the forefront of *AI Agent* innovation, topping the Hugging Face GAIA Leaderboard for Generalized AI Assistants, ahead of industry giants such as Google, Meta, Microsoft, and OpenAI. We are leveraging our cutting-edge technologies to develop mission-critical agentic applications in complex industries such as Healthcare, Oil & Gas, and National Security.\n\n### About the Role\n\nWe are hiring a Staff Technical Program Manager (L6) to lead the delivery of complex AI-enabled products and customer programs across our healthcare portfolio.\n\nAs a Staff TPM, you will independently own end-to-end delivery of multi-team, multi-stakeholder healthcare AI programs with significant customer and regulatory complexity. This is a senior individual-contributor role expected to set program standards, coach other program managers, and influence portfolio-level sequencing.\n\nYou will sit at the intersection of healthcare operations, product development, engineering, customer delivery, and governance. You will work directly with health systems and healthcare partners to understand their workflows, establish executable delivery plans, and guide programs from discovery and validation through production launch and expansion.\n\nYou will create a structure where requirements are incomplete, surface risks before they become blockers, drive decisions across multiple teams, and maintain a clear source of truth for scope, ownership, dependencies, milestones, and readiness. You will also turn lessons from the programs you lead into reusable practices that make subsequent healthcare implementations faster and more predictable.\n\n### What You\u2019ll Do\n\n- Independently lead complex healthcare programs from customer discovery and use-case definition through technical implementation, validation, production launch, and operational transition.\n- Partner directly with clinical, operational, IT, security, and executive stakeholders to understand workflows, pain points, data environments, integration constraints, and success measures.\n- Translate ambiguous customer needs into clear program scope, requirements, milestones, ownership, dependencies, decision points, and measurable exit criteria.\n- Coordinate delivery across product, engineering, AI/ML, platform, infrastructure, security, legal, compliance, and customer teams.\n- Establish and maintain an authoritative source of truth for plans, risks, decisions, dependencies, validation status, launch readiness, and customer commitments.\n- Manage complex dependencies involving EHR systems, customer APIs, identity and access management, clinical protocols, data access, cloud/on-premises infrastructure, and third-party systems.\n- Drive healthcare AI-governance readiness, including use-case registration, risk classification, validation planning, audit evidence, customer reviews, approval gates, and production sign-off.\n- Define and execute phased validation approaches (de-identified testing, sandbox, shadow mode, controlled rollout, and formal production acceptance) with explicit quality, safety, reliability, privacy, observability, and rollback criteria.\n- Prepare and lead customer program reviews, executive readouts, technical working sessions, governance reviews, and go-live readiness assessments.\n- Convert deployment lessons into reusable playbooks, onboarding checklists, validation standards, templates, and program-management mechanisms for the healthcare portfolio.\n- Surface cross-program conflicts, capacity constraints, and sequencing decisions, and drive the appropriate leaders to resolution.\n\n### Qualifications\n\n- 8+ years of experience in technical program management, product delivery, engineering program management, healthcare implementation, or a related role.\n- Demonstrated success leading complex, cross-functional software or platform programs from ambiguous discovery through production adoption.\n- Experience delivering technology in healthcare, life sciences, or another highly regulated environment involving sensitive data and formal approval processes.\n- Experience working directly with enterprise customers and communicating effectively with engineers, product leaders, executives, operational teams, and domain experts.\n- Strong technical fluency across software architecture, APIs, integrations, data flows, cloud infrastructure, identity, security, testing, deployment, and production operations.\n- Ability to engage deeply with engineering teams, understand technical constraints, challenge assumptions, and translate engineering decisions into program and customer impact.\n- Experience managing programs with external dependencies, long lead-time approvals, customer-controlled systems, and competing organizational priorities.\n- Strong judgment in balancing delivery speed, customer value, technical quality, security, regulatory obligations, and long-term product maintainability.\n- Proven ability to influence decisions and drive accountability across multiple teams without relying on direct authority.\n- Strong written and verbal communication skills, including concise executive reporting, decision documentation, risk framing, and customer-facing facilitation.\n- Willingness to travel periodically to customer locations for discovery, validation, governance reviews, and production launches.\n\n### Preferred\n\n- Experience delivering software or AI capabilities within health systems, academic medical centers, clinical research organizations, healthcare technology companies, or provider operations.\n- Experience with EHR implementations or integrations (e.g., Epic, Oracle Health/Cerner).\n- Familiarity with healthcare interoperability standards and patterns such as FHIR, SMART on FHIR, HL7 v2, CDS Hooks, interface engines, and healthcare APIs.\n- Experience managing healthcare privacy, security, and contracting dependencies (PHI, HIPAA, BAAs, audit logging, customer-managed environments).\n- Experience with clinical or operational AI-governance processes, model validation, human-in-the-loop workflows, shadow-mode testing, and controlled production rollout.\n- Familiarity with AI agents, LLM applications, RAG, guardrails, evaluations, workflow orchestration, and model observability.\n- Experience with Kubernetes, cloud platforms (AWS, Azure, or GCP), customer-managed deployments, and secure enterprise software delivery.\n- Experience managing programs involving clinical-administrative workflows such as document routing, scheduling, prescription renewal, prior authorization, in-basket management, discharge planning, or clinical research operations.\n- Experience building scalable delivery processes that reduce implementation time and customer-specific engineering work across multiple deployments.\n- Prior experience in a startup, forward-deployed engineering organization, professional-services environment, or other high-ownership, rapid-execution setting.\n\nIf you want to be on the cutting edge of technology, building AI solutions for the future, and are up for a challenge, let\u2019s talk!\n\n**Salary Range:** $200,000-230,000. This represents the typical salary range for this position based on experience, skills, and other factors.\n\n#LI-RCP\n\n**Our Trase Benefits:**\n\nFor full-time roles only\u00a0\n\n- Career track opportunity with potential for rapid advancement with\u00a0strong performance\u00a0as the firm grows\n- 100% employer paid, comprehensive health care including medical, dental, and vision for you and your family.\n- Paid maternity and paternity for 14 weeks at employees' normal pay.\n- Unlimited PTO, with management approval.\n- Opportunities for professional development and continued learning.\n- Optional 401K, FSA, and equity incentives available.\n- Mental health benefits are available through [Tara Mind](https://www.taramind.com/).\n\nWe\u2019re an Equal Opportunity Employer: You\u2019ll receive consideration for employment without regard to race, sex, color, religion, sexual orientation, gender identity, national origin, protected veteran status, or on the basis of disability.\n\n---\n\n***Applicant Data Disclosure*** \u00a0\u00a0\n\n*By\u00a0submitting\u00a0an application, you acknowledge that Red Cell Partners, LLC (\"Red Cell\") uses third-party service providers to\u00a0facilitate\u00a0its recruitment and hiring processes. These providers include applicant tracking systems, candidate verification platforms, and fraud detection tools (collectively, \"Hiring Platforms\"). Your application materials, including your r\u00e9sum\u00e9, cover letter, work samples, responses to application questions, and any other information you\u00a0submit, may be transmitted to and processed by these Hiring Platforms for the following purposes:*\u00a0\u00a0\n\n- *Managing and administering your application throughout the hiring process;*\n\n- *Verifying the accuracy and authenticity of application materials, including by cross-referencing information you provide against publicly available sources and proprietary databases;*\n- *Identifying\u00a0indicators of potentially fraudulent, fabricated, or materially misleading application content, including but not limited to discrepancies between\u00a0submitted\u00a0materials and publicly available professional profiles, geographic anomalies, and fabricated work histories.*\n\n*Applications that are flagged through this process as\u00a0containing\u00a0indicators of fraud or material misrepresentation may be declined from further consideration. If you have questions about the status of your application or the evaluation process, please contact**talent*[*@redcellpartners.com*](mailto:recruiting@redcellpartners.com)*.*\u00a0\n\n*Red Cell requires its Hiring Platform providers to process your information solely for the purposes described above and\u00a0in accordance with\u00a0applicable law. Your information will be\u00a0retained\u00a0only for as long as necessary to fulfill these purposes and any applicable legal obligations, after which it will be\u00a0deleted\u00a0in accordance with\u00a0Red Cell's data retention policies.*\n\n*For more information about how your data is used, please refer to our Privacy Policy and [Applicant Privacy Notice](https://www.redcellpartners.com/applicant-privacy-policy/).*",
     "job_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11257,7 +11437,8 @@
       "Minimal exposure to healthcare-specific operational workflows (prior authorization, clinical documentation, discharge planning) that inform program requirements"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "gh-8005512003",
@@ -11274,7 +11455,7 @@
     "department": "Engineering",
     "description": "Avetta is building the largest global community of hiring clients and suppliers that are Ready to Work. Its unified platform streamlines compliance, prequalification, safety and performance benchmarking in a single, integrated experience. Trusted by 360,000 businesses across more than 120 countries, Avetta blends AI-driven insights and human expertise to close risk gaps and strengthen supplier reliability so projects start on time, risks are managed proactively and operations scale with certainty.\n\nSUMMARY\n\nAvetta is seeking a highly skilled **Localization Technical Program Manager** to set technical direction and serve as an embedded partner across Product, Engineering, UX/UI, Localization, and Localization Testing. You will make Avetta\u2019s products globally ready by connecting product engineering, localization technology, and release delivery. This hands-on leadership role combines internationalization (i18n) engineering, localization-systems ownership, and technical program leadership to ensure Avetta\u2019s products are designed for global markets and its localization workflows are reliable, scalable, and integrated throughout the product development lifecycle.\n\nYou will lead technical delivery across product i18n and the localization technology ecosystem, from early design through release. This includes ownership of Phrase/TMS configuration, APIs and integrations, Avetta\u2019s central platform for AI-enabled translation, workflow automation, release readiness, and technical enablement for the localization team. You will establish standards, guide implementation, and help resolve complex technical and process issues. The role requires a highly specialized combination of deep i18n knowledge and hands-on localization systems expertise. Targeted i18n and localization quality metrics may be used to identify issues and guide improvements, but analytics and reporting are not the primary focus of the role.\n\n**If residing within commutable distance to one of our offices, a hybrid schedule would be required (3 days in office, 2 days work from home).\u00a0 Candidates within commutable distance are preferred, but those outside of an office area may be considered on a remote basis.**\n\nESSENTIAL DUTIES AND RESPONSIBILITIES:\n\n- Design and implement i18n solutions within the software development lifecycle, including string externalization, resource-file architecture, Unicode and encoding support, and scalable patterns for locale-aware product behavior.\n- Define and review locale behavior across products, including pluralization, grammatical variants, date, time, number, and currency formats, time zones, sorting, and other regional conventions.\n- Ensure product readiness for right-to-left (RTL) languages and protect variables, placeholders, markups, and other non-translatable elements throughout content and translation workflows.\n- Partner with Localization Testing to support pseudo-localization, functional validation, defect triage, and release readiness.\n- Own and administer Phrase or a comparable Translation Management System (TMS), including project and workflow configuration, translation memories, termbases, quality settings, permissions, automation, and lifecycle governance.\n- Design, maintain, and troubleshoot TMS/API workflows and integrations with product repositories, content systems, and delivery pipelines. Serve as the technical escalation point for localization systems and process issues.\n- Serve as the technical product owner for Avetta's central platform for AI-enabled translation, defining its roadmap, architecture, capabilities, and integration strategy across TMS and localization workflows. Translate localization needs into technical requirements, user stories, and scalable solutions in partnership with Product and Engineering.\n- Identify and support opportunities to streamline and automate localization workflows, including translation, review, and delivery. Lead automation of the localization defect and bug-triage process, applying AI where appropriate across these workflows.\n- Lead localization technical programs from planning through release, managing scope, dependencies, risks, priorities, and regional requirements while coordinating Product, Engineering, UX/UI, Localization, and Localization Testing.\n- Embed localization requirements and best practices early in product discovery, design, and development. Provide hands-on guidance during implementation and respond quickly to release critical issues.\n- Help localization team members resolve technical and process issues; create practical documentation and enablement. Pull and interpret targeted i18n, localization quality, or workflow-health metrics when needed to diagnose trends and guide improvements.\n\nIDEAL EDUCATION, TRAINING, AND EXPERIENCE:\n\n- Bachelor's degree in Computer Science, Engineering, a related technical field, or equivalent practical experience.\n- A minimum of 5 years of experience in internationalization engineering, localization engineering, localization technology, or a closely related discipline.\n- Fluency in a second language is preferred. In addition to English, preferred languages may include, but are not limited to, German, Japanese, Korean, French, Spanish, Portuguese, Russian, or other languages that support global collaboration and cross-cultural communication.\n- Deep knowledge of i18n fundamentals, including string externalization, locale-aware behavior, pluralization, date/number/currency formatting, RTL support, Unicode, and placeholder or markup protection.\n- Hands-on expertise configuring and administering Phrase or comparable TMS, including translation memories, termbases, workflow automation, quality controls, permissions, and troubleshooting.\n- Experience building or supporting localization APIs and integrations; familiarity with formats and technologies such as JSON, XML, XLIFF, ICU MessageFormat, REST APIs, webhooks, source control, and CI/CD is strongly preferred.\n- Experience designing AI-enabled products and workflows, including LLM and Machine Translation integrations, prompt design, API-based orchestration, evaluation methods, and human-in-the-loop quality controls.\n- Strong technical program management, problem-solving, and communication skills, with experience working in Agile software development and release environments across Product, Engineering, UX/UI, and testing teams.\n- Ability to provide timely support during releases and maintain substantial working hours overlap with Avetta's core Product and Engineering teams. Experience using i18n or localization quality metrics is helpful; dashboarding or data-visualization expertise is not required.\n- Hands-on experience using AI-assisted development tools to prototype solutions, develop workflow automations, document technical designs, or accelerate implementation is strongly preferred. Ability to contribute through APIs or scripting is beneficial; production software development is not required.\n\nAt Avetta, we are committed to salary transparency to ensure equitable hiring practices and promote trust. The salary range included in this job posting is based on internal and market data and the role's responsibilities.\u00a0**The final compensation offered to a candidate will be determined by several factors, including work location, job-related skills, experience, and relevant education or training.**\n\nThe salary range for this position is $115,000 - $149,000 USD per year.\n\nBenefits included:\n\n- Health, Dental, and Vision Insurance\n- 401(K)\n- Paid Time Off\n\nTo apply for the **Localization Technical Program Manager** position, please submit your online application by December 31, 2026, at 11:59 PM PST.\n\n#LI-REMOTE",
     "job_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11295,7 +11476,8 @@
     "fit_dealbreakers": [
       "Hybrid requirement with preference for commutable distance to office\u2014candidate is in San Diego (CA) but posting does not specify office location; ambiguous whether remote-only applicants will be seriously considered despite language suggesting a strong office preference"
     ],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "gh-8231027",
@@ -11312,7 +11494,7 @@
     "department": "Product Department",
     "description": "**About Upstart**\n\nAt Upstart, we\u2019re united by a mission that matters: to radically reduce the cost and complexity of borrowing for all Americans. Every day, we bring creativity, experimentation, and advanced AI to reshape access to credit, helping millions move forward financially with clarity and confidence.\n\nAs the leading AI lending marketplace, we partner with banks and credit unions to expand access to affordable credit through technology that\u2019s both radically intelligent and deeply human. Our platform runs over one million predictions per borrower using more than 3,000 signals, powering smarter, fairer decisions for millions of customers. But the numbers only hint at the impact. Every idea, every voice, and every contribution moves us closer to a world where credit never stands between people and their financial progress.\n\nWe\u2019re proudly digital-first, giving most Upstarters the flexibility to do their best work from wherever they thrive, alongside teammates across 80+ cities in the US and Canada. Digital-first doesn\u2019t mean distant. We\u2019re intentional about in-person connection through team onsites, planning sessions, and moments that spark creativity and trust. And whether you choose to work primarily from home or collaborate in-person from one of our offices in Columbus, Austin, the Bay Area, or New York City, you\u2019ll have the support to work in the way that works best for you.\n\nIf you\u2019re energized by tackling meaningful problems, excited to innovate with purpose, and motivated by work that truly matters, we\u2019d love to hear from you.\n\n## **The Team**\n\nUpstart\u2019s Auto Retail team is bringing Upstart\u2019s AI-powered underwriting combined with best-in-class software to help all Americans get better access, lower rates and a better process when purchasing a vehicle. Auto lending represents over $600B in annual volume across over 70K dealerships and is used by almost every household in the country yet has record low process satisfaction, transparency, and credit access. We aim to change that. The team partners across Product, Engineering, Analytics, Machine Learning, Servicing, Fraud, dealer-facing functions and more to improve the experience for lenders, dealers, and consumers.\n\nAs a Senior Technical Program Manager, you will own program planning, execution and outcomes for complex, high-impact Auto Retail initiatives. You will turn ambiguous, multi-stakeholder work into clear plans, drive decisions, manage dependencies and risks, and help teams deliver reliably and with quality. You will partner with Product Managers, who own product strategy and priorities, and Engineering Managers and engineers, who own technical design and implementation. Your leverage will come from technical judgment, cross-functional leadership, bringing clarity from ambiguity, and the practical execution systems you build.\n\nYou\u2019ll help accelerate the quality, speed, and adoption of the software and features we build by:\n\n- Surfacing operational signals and customer pain points\n- Analyzing problems and opportunities and developing clear, stack-ranked recommendations\n- Driving PM-prioritized initiatives from technical planning through launch and rollout\n- Establishing continuous feedback loops by monitoring post-launch results and identifying opportunities for iteration and improvement\n\n## **How you\u2019ll make an impact**\n\n- Lead complex, cross-functional software initiatives from alignment through delivery, coordinating across Product, Engineering, Servicing, Analytics, Machine Learning, Fraud, Legal, Compliance, Operations, and dealer-facing partners.\n- Translate ambiguous, multi-stakeholder problem spaces into actionable plans with clear milestones, dependencies, risks, decision points, and owners.\n- Partner with Product Managers on business strategy and prioritization, and with Engineering Managers and engineering teams on technical approaches and execution plans.\n- Engage meaningfully in technical discussions by evaluating software architecture, data models, data movement, data pipelines, and trade-offs among potential approaches.\n- Identify blockers, clarify ambiguous ownership, surface downstream impacts early, and help teams resolve issues before they create delivery risk.\n- Establish practical, lightweight ways of working that improve coordination and visibility across teams without creating unnecessary reporting or process overhead.\n\n## **Minimum Qualifications**\n\n- Professional experience in a Technical Program Management role, including ownership of complex, cross-functional software initiatives.\n- Experience translating ambiguous, multi-stakeholder problems into executable plans with milestones, dependencies, risks, and clear ownership.\n- Experience working in a TPM or similar role directly with product managers and engineering managers and their teams with a clear understanding of ownership, roles, and responsibilities.\n- Technical fluency in software architecture, data models, third party vendor integrations, and data pipelines, with the ability to evaluate trade-offs among technical approaches.\n- Experience delivering initiatives across Product and Engineering while connecting program execution to measurable business or customer outcomes.\n\n## **Preferred Qualifications**\n\n- Experience working in a complex industry, a multi-sided marketplace, or B2B2C environment with competing stakeholders and priorities such as speed, quality, reliability, and scale.\n- Experience partnering with teams in financial services, auto retail, servicing, fraud, analytics, Machine Learning, or other operationally complex domains.\n- Experience establishing and scaling practical program-management processes in an environment where ownership and ways of working are still evolving.\n- Experience in a growth-stage technology company or other environment where teams must move quickly while managing execution risk.\n\n**Position location** This role is available in the following locations: Remote\n\n**Travel requirements** As a digital first company, the majority of your work can be accomplished remotely. The majority of our employees can live and work anywhere in the U.S but are encouraged to to still spend high quality time in-person collaborating via regular onsites. The in-person sessions\u2019 cadence varies depending on the team and role; most teams meet once or twice per quarter for 2-4 consecutive days at a time.\n\nAt Upstart, your base pay is one part of your total compensation package.\u00a0 The anticipated base salary for this position is expected to be within the below range. Your actual base pay will depend on your geographic location\u2013with our \u201cdigital first\u201d philosophy, Upstart uses compensation regions that vary depending on location. Individual pay is also determined by job-related skills, experience, and relevant education or training. Your recruiter can share more about the specific salary range for your preferred location during the hiring process.\n\nIn addition, Upstart provides employees with target bonuses, equity compensation, and generous benefits packages (including medical, dental, vision, and 401k).\n\nUnited States | Remote - Anticipated Base Salary Range\n\n$162,100\u2014$224,500 USD\n\n**What you'll love**\n\nAt Upstart, our benefits are designed to support your health, financial well-being, family, and personal growth. Here\u2019s what you can expect:\n\n- Competitive compensation, including base pay, bonus opportunities, and annual equity grants that vest quarterly\n- Retirement benefits to help you plan for the future, including a 401(k) or Group Retirement Savings Plan with a company match of $2 for every $1 contributed, up to $15,000 annually (USD in the US, CAD in Canada)\n- Employee Stock Purchase Plan (ESPP) with discounted stock purchase options for eligible employees (US only)\n- Comprehensive health coverage designed to support you and your family, including medical, dental, vision, and wellness resources for US and supplemental health coverage for Canada.\n- Health Savings Account contributions from Upstart for eligible plans (US only)\n- Income protection benefits, including life insurance and disability coverage for added financial security\n- Paid time off, sick leave, and company holidays, in line with local requirements\n- Paid family and parental leave to support caregiving and major life moments (duration varies by country)\n- Family-centered benefits to support fertility, parenthood, and caregiving needs\n- Employee Assistance Program (EAP) offering mental health support and life-centered resources\n- Financial wellness resources, including access to financial planning tools and a financial concierge service (US Only)\n- Annual wellness allowance to support your physical and emotional well-being and personal development, based on what matters most to you\n- Annual productivity allowance to invest in relevant tools and resources you need to do your best work, no matter where you work from\n- Connection and community through team events, all-company updates, and employee resource groups (ERGs)\n- Onsite perks, including catered lunches and fully stocked micro-kitchens when working from one of our offices in the Bay Area, Austin, Columbus, and New York City\n\nFor roles based in Canada, please note that we are not currently able to hire in Quebec.\n\nUpstart is a proud Equal Opportunity Employer. Just as we are dedicated to improving access to affordable credit for all, we are committed to inclusive and fair hiring practices.\n\n*If you require reasonable accommodation in completing an application, interviewing, completing any pre-employment testing, or otherwise participating in the employee selection process, please email <candidate_accommodations@upstart.com>*\n\n<https://www.upstart.com/candidate_privacy_policy>",
     "job_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11331,7 +11513,8 @@
       "Recency gap: last formal TPM role ended in 2022; current work is primarily solo software development rather than cross-functional program leadership"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "wd-gevernova-R5052376",
@@ -11348,7 +11531,7 @@
     "department": null,
     "description": "Job Description Summary Job Description PLEASE NOTE: Location: Remote/Flexible. Global applicants encouraged to apply. Role Summary The Senior Director Technical Product Manager \u2013 Finance Stat and Tax is responsible for the delivery of highly complex, cross disciplined technology programs that span multiple finance organizations. You will be responsible for defining and executing IT programs supporting the Stat & Tax functions, and monitoring key metrics to ensure milestones are met on time and on budget. Your mission is to support large-scale transformation projects for the enterprise. They define what the system should do, why, and how it will deliver business value, working closely with application, data, governance, and business stakeholders. Roles and Responsibilities In this role, you will: Leadership & Influence Successfully navigate a matrixed organization to drive alignment and adoption across disparate business units ERP teams without direct line authority over those teams. Demonstrate the ability to engage, advise, and present to senior leadership. You must be able to translate complex technical/experience metrics into clear, actionable business narratives that resonate with executive decision-makers. Leverage your domain expertise; you are expected to further the knowledge and improve productivity of your colleagues with activities such as creating learning content, giving presentations, and supporting a continuous learning culture. Own relationships with DT managed services provides and software provides that support the Tax applications, ensuring operations SLA\u2019s are met and product roadmaps are understood while influencing product roadmaps that benefit GEV. Mentor, coach, and develop a high-performing team of product managers and analysts. Foster an inclusive, high-trust team culture that prioritizes psychological safety and continuous growth. Strategy & Prioritization Establish a long-term vision for the Tax ecosystem and maintain product roadmap prioritization, ensuring it remains aligned with the Tax team\u2019s evolving business objectives Foster collaboration for business-case development to justify the investment in automation and AI capabilities. Orchestrate cross-functional alignment between DT and business unit ERP teams, ensuring proper planning and communication for needed ERP changes due to tax initiatives or compliance. Champion lean principles to identify and eliminate manual process bottlenecks, ensuring the tax ecosystem is scalable and agile. Oversee data architecture strategy for tax reporting to ensure compliance, accuracy, and auditability in a global, multi-regulatory environment. Proactively identify and prioritize the elimination of technical debt within the tax stack to ensure system agility and long-term maintainability, rather than solely focusing on new feature delivery. Adoption & Enablement Lead change management and adoption of Tax tools Partner with ERP teams on their ERP simplification roadmap, ensuring Tax needs are met and the process is being simplified when appropriate. Push standard tools and processes that help streamline and simplify the Tax DT systems. Customer Engagement & Experience Own the end-to-end Tax DT communication strategy, engaging various stakeholders across Tax to ensure cohesive messaging. Identify and evangelize high-impact AI use cases, institutionalizing success stories to scale effective AI usage across the tax team. Act as the voice of the Tax business stakeholder; conduct regular empathy-led discovery sessions to understand \"pain points\" rather than just \"requirements.\" Measurement & Insights Provide Production Lifecyle Management by tracking program and run KPI\u2019s leading and developing action plans that fix issues when they arise. Surface insights from application usage and industry trends and offer recommendations for improvements to existing systems. Track and monitor program status and metrics to ensure milestones are met, and internal and external delivery commitments are met. Manage the entire product lifecycle\u2014from strategy and inception to retirement\u2014ensuring that the tax ecosystem is maintained, optimized, or sunsetted based on data-backed performance metrics. Leadership Reporting & Governance Act as a trusted advisor to senior management on the health, productivity and risks of Tax systems. Synthesize complex issues into executive briefings that drive leadership decision-making and support high-level DT system strategy shifts. Lead high-visibility, cross-organizational projects, demonstrating the ability to manage complex internal politics and achieve buy-in without direct authority Education Qualification Bachelor's Degree, or equivalent knowledge or experience in Computer Science or \u201cSTEM\u201d majors (Science, Technology, Engineering and Math) with significant experience. Desired Characteristics 12+ years of experience in IT/DT, with at least 5 years in complex Finance systems, Tax technology, or ERP transformation programs (e.g., SAP, Oracle, or Tax engine implementations). Proven track record of setting targets, executing a plan, and delivering results Ability to plan and provide structure and organization in a fast paced, changing environment Effectively manages risk and uncertainty for self and team. Strong business analysis and problem-solving skills Ability to decompose problems and make decisions when problems or solutions are not 100% defined Evaluates products & processes to assure compliance. Measures the impact of trends (cyclical or a shift) and takes action . Ability to interact at all levels of the organization, and with other GE businesses and partners Demonstrated experience leading and influencing across a complex, global matrix organization. Proactively identifies and removes project obstacles or barriers on behalf of the team Uses critical thinking skills and disciplined approaches to help leaders and leadership teams resolve issues and define solutions Proactively engages with cross-functional teams to resolve issues and design solutions using critical thinking and analytical skills and best practices Excellent written and oral communication skills and the ability to interface with senior leadership with confidence and clarity I nfluences and energizes others toward the common vision and goal. Drives to new directions of meeting the goal in the face of unfavorable odds and setbacks Additional Information GE Vernova offers a great work environment, professional development, challenging careers, and competitive compensation. GE Vernova is an Equal Opportunity Employer . Employment decisions are made without regard to race, color, religion, national or ethnic origin, sex, sexual orientation, gender identity or expression, age, disability, protected veteran status or other characteristics protected by law. GE Vernova will only employ those who are legally authorized to work in the United States for this opening. Any offer of employment is conditioned upon the successful completion of a drug screen (as applicable). Relocation Assistance Provided: No #LI-Remote - This is a remote position Application Deadline: For candidates applying to a U.S. based position, the pay range for this position is between $152,600.00 and $254,400.00. The Company pays a geographic differential of 110%, 120% or 130% of salary in certain areas. The specific pay offered may be influenced by a variety of factors, including the candidate\u2019s experience, education, and skill set. Bonus eligibility: discretionary annual bonus. This posting is expected to remain open for at least seven days after it was posted on September 18, 2026. Available benefits include medical, dental, vision, and prescription drug coverage; access to Health Coach from GE Vernova, a 24/7 nurse-based resource; and access to the Employee Assistance Program, providing 24/7 confidential assessment, counseling and referral services. Retirement benefits include the GE Vernova Retirement Savings Plan, a tax-advantaged 401(k) savings opportunity with company matching contributions and company retirement contributions, as well as access to Fidelity resources and financial planning consultants. Other benefits include tuition assistance, adoption assistance, paid parental leave, disability benefits, life insurance, 12 paid holidays, and permissive time off. GE Vernova Inc. or its affiliates (collectively or individually, \u201cGE Vernova\u201d) sponsor certain employee benefit plans or programs GE Vernova reserves the right to terminate, amend, suspend, replace, or modify its benefit plans and programs at any time and for any reason, in its sole discretion. No individual has a vested right to any benefit under a GE Vernova welfare benefit plan or program. This document does not create a contract of employment with any individual.",
     "job_type": "FULL_TIME",
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11367,7 +11550,8 @@
       "No explicit experience with change management or adoption programs at enterprise scale"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   },
   {
     "id": "wd-greystar-R0180918",
@@ -11384,7 +11568,7 @@
     "department": null,
     "description": "ABOUT GREYSTAR Greystar is a leading, fully integrated global real estate platform offering expertise in property management, investment management, development, and construction services in institutional-quality rental housing. Headquartered in Charleston, South Carolina, Greystar manages and operates over $300 billion of real estate in more than 265 markets globally with offices throughout North America, Europe, South America, and the Asia-Pacific region. Greystar is the largest operator of apartments in the United States, managing over one million units/beds globally. Across its platforms, Greystar has nearly $79 billion of assets under management, including over $35 billion of development assets and over $36.5 billion of regulatory assets under management. Greystar was founded by Bob Faith in 1993 to become a provider of world-class service in the rental residential real estate business. To learn more, visit <www.greystar.com> . JOB DESCRIPTION SUMMARY Greystar is seeking an experienced, highly technical, hands-on, and mission-driven Technical Program Manager (TPM) to lead engineering initiatives within our Digital, Data & AI team. A TPM on the team will have a strong sense of ownership, aid in identifying and resolving dependencies, track progress across different teams, and ensure the work progresses, while clearly communicating progress and risks to project stakeholders. JOB DESCRIPTION KEY RESPONSIBILITIES: Collaborate across team and functional boundaries to deliver outcomes for key engineering-led initiatives. Increase team productivity by removing obstacles and keeping processes lean. Maintain urgency by ensuring there is strong collaboration within multiple parts of the organization that may have competing priorities. Regularly assess risks and opportunities; understand best practices, drive for process improvements, and find new ways of operating, with a focus on simplification and productivity. Manage the Linear project management system and hybrid process across multiple product teams. Work closely with each product manager to plan roadmap sessions and execute product strategy. BASIC KNOWLEDGE & QUALIFICATIONS: Proven track record of managing large-scale, complex technical initiatives for product development & software engineering. Demonstrated ability to work through ambiguity to detailed solutions. You can take a vague problem, crisply frame the challenge, identify a path forward, and drive an initiative over the finish line. Self-motivated, proactive, and proven ability to adapt well and work with teams having different operating cadences. Experience developing processes where little exists, and demonstrated flexibility to get things done. Detail-oriented and able to understand the bigger picture by using your technical expertise and problem-solving abilities to prioritize and manage blocking issues. Experience working in a highly cross-functional environment where communication with multiple groups is imperative. Ability to ramp up quickly and learn new technologies with minimal lag time. Excellent written and oral business communication and people skills, with the ability to influence stakeholders. Experience with the Linear project management system or similar (Jira, Asana, etc). BA/BS degree, minimum 12 years of technical project or program management experience. TRAVEL / PHYSICAL DEMANDS: Team members work in an office or remote work environment. No special physical demands are required. Rare or occasional travel may be required to attend business meetings, training programs, or other situations necessary for the accomplishment of some or all of the daily responsibilities of this position. #LI-BB1 The salary range for this position is $115,000-$140,000 USD Annually. Additional Compensation : Many factors go into determining employee pay within the posted range including business requirements, prior experience, current skills and geographical location. Corporate Positions : In addition to the base salary, this role may be eligible to participate in a quarterly or annual bonus program based on individual and company performance. Onsite Property Positions : In addition to the base salary, this role may be eligible to participate in weekly, monthly, and/or quarterly bonus programs. Robust Benefits Offered*: Competitive Medical, Dental, Vision, and Disability & Life insurance benefits. Low (free basic) employee Medical costs for employee-only coverage; costs discounted after 3 and 5 years of service. Generous Paid Time off. All new hires start with 15 days of vacation, 4 personal days, 10 sick days, and 11 paid holidays. Plus your birthday off after 1 year of service! Additional vacation accrued with tenure. For onsite team members, onsite housing discount at Greystar-managed communities are available subject to discount and unit availability. 6-Week Paid Sabbatical after 10 years of service (and every 5 years thereafter). 401(k) with Company Match up to 6% of pay after 6 months of service. Paid Parental Leave and lifetime Fertility Benefit reimbursement up to $10,000 (includes adoption or surrogacy). Employee Assistance Program. Critical Illness, Accident, Hospital Indemnity, Pet Insurance and Legal Plans. Charitable giving program and benefits. *Benefits offered for full-time employees. For Union and Prevailing Wage roles, compensation and benefits may vary from the listed information above due to Collective Bargaining Agreements and/or local governing authority. Greystar will consider for employment qualified applicants with arrest and conviction records. This position may be performed remotely anywhere within the United States except the state of Alaska. Important Notice: Greystar will never request your banking details or other sensitive personal information during the interview process. Greystar does not conduct any interviews via text or messaging, and all communication will come from official Greystar email addresses (@greystar.com). If you receive suspicious requests, please report them immediately to <AskHR@greystar.com>. ANTICIPATED CLOSING DATE August 24, 2026 This date may be subject to change due to evolving business needs.",
     "job_type": null,
-    "status": "new",
+    "status": "rejected",
     "application_status": null,
     "resume_path": null,
     "cover_letter_path": null,
@@ -11403,6 +11587,7 @@
       "No clear track record of managing hybrid processes across multiple product teams at enterprise scale"
     ],
     "fit_dealbreakers": [],
-    "fit_error": null
+    "fit_error": null,
+    "rejected_at": "2026-09-27T15:46:20"
   }
 ]

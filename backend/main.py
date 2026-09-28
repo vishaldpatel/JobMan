@@ -1,6 +1,8 @@
 import asyncio
 import queue
 import threading
+import time
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -15,6 +17,13 @@ from scorer import AUTO_REJECT_BELOW, score_job
 from scrapers import apply_prefilters, scrape_ats_jobs, scrape_daily_jobs
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+
+# Rejected jobs are permanently deleted this long after being rejected.
+DELETE_REJECTED_AFTER = timedelta(hours=48)
+# Deleted jobs are remembered this long so scrapes don't re-add them; scrapes
+# only look back a couple of days, so this is generous.
+FORGET_DELETED_AFTER = timedelta(days=30)
+HOUSEKEEPING_INTERVAL_SECONDS = 600
 
 store.DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -197,8 +206,7 @@ def _score(job_id: str) -> None:
             job.update(updates)
             score = job.get("fit_score")
             if job["status"] == "new" and score is not None and score < AUTO_REJECT_BELOW:
-                job["status"] = "rejected"
-                job["auto_rejected"] = True
+                _reject(job, auto=True)
         store.save_jobs(jobs)
     notify_jobs_changed()
 
@@ -222,8 +230,74 @@ def _enqueue_unscored_jobs() -> None:
             scoring_queue.put(job["id"])
 
 
+def _now() -> str:
+    return datetime.now().isoformat(timespec="seconds")
+
+
+def _reject(job: dict, auto: bool = False) -> None:
+    job["status"] = "rejected"
+    job["rejected_at"] = _now()
+    if auto:
+        job["auto_rejected"] = True
+
+
+def _housekeep() -> None:
+    """Applies the time- and threshold-based moves:
+    - new jobs scoring under AUTO_REJECT_BELOW -> Rejected (catches jobs scored
+      before the threshold was raised)
+    - rejected jobs older than DELETE_REJECTED_AFTER -> permanently deleted
+    - jobs marked as applied before today -> the Applied tab (status "submitted")
+    """
+    now = datetime.now()
+    changed = False
+    with store.LOCK:
+        jobs = store.load_jobs()
+        deleted = store.load_deleted()
+        kept = []
+        for job in jobs:
+            score = job.get("fit_score")
+            if job["status"] == "new" and score is not None and score < AUTO_REJECT_BELOW:
+                _reject(job, auto=True)
+                changed = True
+
+            if job["status"] == "rejected":
+                if not job.get("rejected_at"):
+                    # Rejected before timestamps existed: start the clock now.
+                    job["rejected_at"] = _now()
+                    changed = True
+                elif now - datetime.fromisoformat(job["rejected_at"]) > DELETE_REJECTED_AFTER:
+                    deleted.append(store.tombstone(job, _now()))
+                    changed = True
+                    continue
+
+            if job["status"] == "applied" and job.get("autofill_status") == "submitted":
+                # Marked before submitted_at existed -> necessarily before today.
+                submitted = job.get("submitted_at")
+                if not submitted or datetime.fromisoformat(submitted).date() < date.today():
+                    job["status"] = "submitted"
+                    changed = True
+            kept.append(job)
+
+        forget_before = now - FORGET_DELETED_AFTER
+        fresh = [d for d in deleted if datetime.fromisoformat(d["deleted_at"]) > forget_before]
+        changed = changed or len(fresh) != len(deleted)
+        if changed:
+            store.save_jobs(kept)
+            store.save_deleted(fresh)
+    if changed:
+        notify_jobs_changed()
+
+
+def _housekeeping_worker() -> None:
+    while True:
+        time.sleep(HOUSEKEEPING_INTERVAL_SECONDS)
+        _housekeep()
+
+
+_housekeep()
 threading.Thread(target=_generation_worker, daemon=True).start()
 threading.Thread(target=_scoring_worker, daemon=True).start()
+threading.Thread(target=_housekeeping_worker, daemon=True).start()
 _enqueue_pending_jobs()
 _enqueue_unscored_jobs()
 
@@ -234,7 +308,7 @@ def _store_scraped(jobs_df: pd.DataFrame) -> dict:
 
     with store.LOCK:
         jobs = store.load_jobs()
-        jobs, duplicates = store.merge_scraped_jobs(jobs, scraped)
+        jobs, duplicates = store.merge_scraped_jobs(jobs, scraped, store.load_deleted())
         store.save_jobs(jobs)
     notify_jobs_changed()
     _enqueue_unscored_jobs()
@@ -272,7 +346,7 @@ def reject_jobs(body: JobIds):
         jobs = store.load_jobs()
         for job in jobs:
             if job["id"] in ids:
-                job["status"] = "rejected"
+                _reject(job)
         store.save_jobs(jobs)
     notify_jobs_changed()
     return {"rejected": len(ids)}
@@ -327,6 +401,7 @@ def mark_applied(body: JobIds):
         selected = [job for job in jobs if job["id"] in ids]
         for job in selected:
             job["autofill_status"] = "submitted"
+            job["submitted_at"] = _now()
             job.pop("autofill_message", None)
         store.save_jobs(jobs)
     notify_jobs_changed()

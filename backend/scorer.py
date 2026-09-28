@@ -4,7 +4,7 @@ from pydantic import BaseModel
 MODEL = "claude-haiku-4-5"
 
 # Jobs scoring below this are moved to Rejected automatically (still reviewable there).
-AUTO_REJECT_BELOW = 40
+AUTO_REJECT_BELOW = 70
 
 client = anthropic.Anthropic()
 

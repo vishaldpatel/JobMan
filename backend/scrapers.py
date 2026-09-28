@@ -1,14 +1,18 @@
 import csv
+import hashlib
 import re
-from datetime import date
 from pathlib import Path
 
 import httpx
 import pandas as pd
-from ats_scrapers import Client as AtsClient
+import pyarrow as pa
+import pyarrow.compute as pc
+import pyarrow.parquet as pq
+from ats_scrapers.manifest import DEFAULT_MANIFEST_URL
 from jobspy import scrape_jobs
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
+ATS_CACHE_DIR = OUTPUT_DIR / "ats_cache"
 SEARCH_TERM = "Technical Project Manager or Technical Product Manager, on-site or hybrid or remote in San Diego County, CA or Carlsbad, CA or Hawaii, United States"
 LOCATION = "San Diego County, CA"
 HOURS_OLD = 24
@@ -40,10 +44,6 @@ EXCLUDE_DESCRIPTION_PATTERN = (
 # Only applied when a posting lists a yearly salary; unlisted salaries pass.
 MIN_SALARY = 130_000
 
-WORKDAY_URL_PATTERN = re.compile(
-    r"^https://(?P<tenant>[^.]+)\.(?P<instance>wd\d+)\.myworkdayjobs\.com/(?P<site>[^/?#]+)(?P<path>/job/.*)$"
-)
-
 def scrape_daily_jobs(
     search_term: str = SEARCH_TERM,
     location: str = LOCATION,
@@ -64,6 +64,62 @@ def scrape_daily_jobs(
     return jobs
 
 
+class AtsDataset:
+    """Reads ats-scrapers' hosted per-ATS Parquet files through an on-disk cache.
+
+    The hosted dataset is republished once a day, so every scrape after the
+    first on a given day would otherwise re-download identical bytes (~130 MB
+    for Greenhouse). Files are keyed by the manifest's sha256: a new
+    snapshot has a new hash, so it's fetched once and replaces the old file.
+    """
+
+    def __init__(self, http: httpx.Client):
+        self.http = http
+        response = http.get(DEFAULT_MANIFEST_URL)
+        response.raise_for_status()
+        self.manifest = response.json()
+
+    def _parquet_path(self, ats: str) -> Path:
+        entry = self.manifest["by_ats"][ats]
+        sha256 = entry["parquet_sha256"]
+        path = ATS_CACHE_DIR / f"{ats}-{sha256[:16]}.parquet"
+        if path.exists():
+            return path
+
+        ATS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        partial = path.with_suffix(".part")
+        digest = hashlib.sha256()
+        with self.http.stream("GET", entry["parquet"]) as response, partial.open("wb") as f:
+            response.raise_for_status()
+            for chunk in response.iter_bytes(1 << 20):
+                digest.update(chunk)
+                f.write(chunk)
+        if digest.hexdigest() != sha256:
+            partial.unlink()
+            raise RuntimeError(f"Checksum mismatch downloading the {ats} dataset")
+
+        for stale in ATS_CACHE_DIR.glob(f"{ats}-*.parquet"):
+            stale.unlink()
+        partial.rename(path)
+        return path
+
+    def load(self, ats: str, title_pattern: str) -> pd.DataFrame:
+        """Returns only rows whose title matches. Row groups are read one at a
+        time and skipped entirely when no title matches, since descriptions make
+        up most of each file and would otherwise all be decompressed at once
+        (Greenhouse's are ~950 MB uncompressed)."""
+        parquet = pq.ParquetFile(self._parquet_path(ats))
+        matching = []
+        for i in range(parquet.num_row_groups):
+            titles = parquet.read_row_group(i, columns=["title"]).column("title")
+            mask = pc.match_substring_regex(titles, pattern=title_pattern, ignore_case=True)
+            if pc.any(mask).as_py():
+                matching.append(parquet.read_row_group(i).filter(mask))
+        if not matching:
+            return parquet.schema_arrow.empty_table().to_pandas()
+        return pa.concat_tables(matching).to_pandas()
+
+
 def _contains(series: pd.Series, pattern: str) -> pd.Series:
     return series.fillna("").astype(str).str.contains(pattern, case=False, regex=True)
 
@@ -76,7 +132,7 @@ def apply_prefilters(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
 
     # Hourly/monthly LinkedIn salaries would look tiny next to a yearly floor.
     yearly = df["interval"].isna() | (df["interval"] == "yearly") if "interval" in df else True
-    max_amount = pd.to_numeric(df.get("max_amount"), errors="coerce")
+    max_amount = pd.to_numeric(df.get("max_amount", pd.Series(index=df.index)), errors="coerce")
     underpaid = yearly & max_amount.notna() & (max_amount < MIN_SALARY)
 
     drop = (
@@ -95,7 +151,7 @@ def _matches_search(df: pd.DataFrame, title_pattern: str, location_pattern: str)
 
 
 def _scrape_dated_ats(
-    client: AtsClient,
+    dataset: AtsDataset,
     ats: str,
     make_id,
     title_pattern: str,
@@ -105,10 +161,10 @@ def _scrape_dated_ats(
     """Pull recent postings for one ATS whose hosted-dataset rows carry
     posted_at, renamed to the JobSpy column names the rest of the app expects.
     `make_id` maps the matching rows to stable job ids."""
-    df = client.load(ats=ats)
+    df = dataset.load(ats, title_pattern)
 
-    # ISO8601: iCIMS mixes offset and naive timestamps, which the default
-    # parser silently turns into NaT for a large share of rows.
+    # ISO8601: some sources mix offset and naive timestamps, which the
+    # default parser silently turns into NaT.
     posted_at = pd.to_datetime(df["posted_at"], utc=True, errors="coerce", format="ISO8601")
     cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=hours_old)
     matches = _matches_search(df, title_pattern, location_pattern) & (posted_at >= cutoff)
@@ -134,13 +190,13 @@ def _scrape_dated_ats(
 
 
 def scrape_greenhouse_jobs(
-    client: AtsClient,
+    dataset: AtsDataset,
     title_pattern: str = ATS_TITLE_PATTERN,
     location_pattern: str = ATS_LOCATION_PATTERN,
     hours_old: int = ATS_HOURS_OLD,
 ) -> pd.DataFrame:
     return _scrape_dated_ats(
-        client,
+        dataset,
         "greenhouse",
         lambda df: "gh-" + df["ats_id"].astype(str),
         title_pattern,
@@ -149,98 +205,9 @@ def scrape_greenhouse_jobs(
     )
 
 
-def scrape_icims_jobs(
-    client: AtsClient,
-    title_pattern: str = ATS_TITLE_PATTERN,
-    location_pattern: str = ATS_LOCATION_PATTERN,
-    hours_old: int = ATS_HOURS_OLD,
-) -> pd.DataFrame:
-    # ats_id is only unique within a tenant (careers-sas.icims.com -> careers-sas).
-    return _scrape_dated_ats(
-        client,
-        "icims",
-        lambda df: "ic-"
-        + df["url"].str.extract(r"^https://([^.]+)\.icims\.com", expand=False)
-        + "-"
-        + df["ats_id"].astype(str),
-        title_pattern,
-        location_pattern,
-        hours_old,
-    )
-
-
-def _workday_start_date(http: httpx.Client, job_url: str) -> str | None:
-    """The hosted dataset has no posting date for Workday, so ask the tenant's
-    job-detail endpoint -- its `startDate` is the posting date (YYYY-MM-DD)."""
-    m = WORKDAY_URL_PATTERN.match(job_url)
-    if not m:
-        return None
-    detail_url = (
-        f"https://{m['tenant']}.{m['instance']}.myworkdayjobs.com"
-        f"/wday/cxs/{m['tenant']}/{m['site']}{m['path']}"
-    )
-    try:
-        response = http.get(detail_url)
-        response.raise_for_status()
-        return response.json().get("jobPostingInfo", {}).get("startDate")
-    except (httpx.HTTPError, ValueError):
-        return None  # posting taken down or tenant unreachable -- skip it
-
-
-def scrape_workday_jobs(
-    client: AtsClient,
-    title_pattern: str = ATS_TITLE_PATTERN,
-    location_pattern: str = ATS_LOCATION_PATTERN,
-    hours_old: int = ATS_HOURS_OLD,
-) -> pd.DataFrame:
-    """Like scrape_greenhouse_jobs, but posting dates come from one live
-    request per title/location match, since the dataset doesn't carry them."""
-    df = client.load(ats="workday")
-    df = df[_matches_search(df, title_pattern, location_pattern)]
-
-    with httpx.Client(
-        timeout=20, headers={"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
-    ) as http:
-        start_dates = df["url"].map(lambda url: _workday_start_date(http, url))
-
-    # startDate has day granularity only, so compare whole days.
-    cutoff = (pd.Timestamp.now() - pd.Timedelta(hours=hours_old)).date()
-    recent = start_dates.map(lambda d: d is not None and date.fromisoformat(d) >= cutoff)
-    df = df[recent]
-
-    return pd.DataFrame(
-        {
-            # ats_id is only unique within a tenant, so prefix the tenant.
-            "id": "wd-"
-            + df["url"].str.extract(WORKDAY_URL_PATTERN)["tenant"]
-            + "-"
-            + df["ats_id"].astype(str),
-            "site": "workday",
-            "job_url": df["url"],
-            "title": df["title"],
-            "company": df["company"],
-            "location": df["location"],
-            "date_posted": start_dates[recent],
-            "is_remote": df["is_remote"],
-            "min_amount": df["salary_min"],
-            "max_amount": df["salary_max"],
-            "currency": df["salary_currency"],
-            "job_type": df["employment_type"],
-            "description": df["description"],
-        }
-    )
-
-
 def scrape_ats_jobs() -> pd.DataFrame:
-    with AtsClient() as client:
-        return pd.concat(
-            [
-                scrape_greenhouse_jobs(client),
-                scrape_workday_jobs(client),
-                scrape_icims_jobs(client),
-            ],
-            ignore_index=True,
-        )
+    with httpx.Client(timeout=120, follow_redirects=True) as http:
+        return scrape_greenhouse_jobs(AtsDataset(http))
 
 
 if __name__ == "__main__":

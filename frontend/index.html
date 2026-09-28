@@ -170,14 +170,6 @@
   .greenhouse-title a {
     color: #3eb489;
   }
-  .workday-title,
-  .workday-title a {
-    color: #ffb570;
-  }
-  .icims-title,
-  .icims-title a {
-    color: aliceblue;
-  }
   .fit-score {
     display: inline-block;
     min-width: 2.2rem;
@@ -265,6 +257,7 @@
   <button id="nav-rejected" title="Rejected">🗑️</button>
   <button id="nav-new" class="active">New Jobs</button>
   <button id="nav-applications">Applications</button>
+  <button id="nav-applied">Applied</button>
   <button id="nav-profile">Profile</button>
 </nav>
 
@@ -435,9 +428,15 @@ const HIDDEN_DETAIL_KEYS = new Set([
   "fit_error", "auto_rejected",
 ]);
 
-const STATUS_FOR_VIEW = { new: "new", applications: "applied", rejected: "rejected" };
+// "applied" (the Applied tab) holds jobs marked as applied before today.
+const STATUS_FOR_VIEW = {
+  new: "new",
+  applications: "applied",
+  applied: "submitted",
+  rejected: "rejected",
+};
 
-let view = "new"; // "new" | "applications" | "rejected"
+let view = "new"; // "new" | "applications" | "applied" | "rejected"
 let jobs = [];
 let sortKey = "fit_score";
 let sortAsc = false;
@@ -461,6 +460,7 @@ const scrapeAtsBtn = document.getElementById("scrape-ats-btn");
 const resumeInput = document.getElementById("resume-input");
 const navNewBtn = document.getElementById("nav-new");
 const navApplicationsBtn = document.getElementById("nav-applications");
+const navAppliedBtn = document.getElementById("nav-applied");
 const navRejectedBtn = document.getElementById("nav-rejected");
 const navProfileBtn = document.getElementById("nav-profile");
 const newJobsToolbar = document.getElementById("new-jobs-toolbar");
@@ -486,7 +486,7 @@ function updateStickyOffsets() {
 window.addEventListener("resize", updateStickyOffsets);
 
 function currentColumns() {
-  return view === "applications" ? APPLICATION_COLUMNS : NEW_JOB_COLUMNS;
+  return view === "applications" || view === "applied" ? APPLICATION_COLUMNS : NEW_JOB_COLUMNS;
 }
 
 function renderHeader() {
@@ -540,7 +540,7 @@ function renderFitCell(td, job) {
   span.className = "fit-score";
   if (job.fit_score != null) {
     span.textContent = job.fit_score;
-    span.classList.add(job.fit_score >= 65 ? "fit-high" : job.fit_score >= 40 ? "fit-mid" : "fit-low");
+    span.classList.add(job.fit_score >= 85 ? "fit-high" : job.fit_score >= 70 ? "fit-mid" : "fit-low");
     if (job.fit_summary) span.title = job.fit_summary;
   } else if (job.fit_error) {
     span.textContent = "!";
@@ -722,8 +722,6 @@ function renderRows() {
       const value = job[col.key];
       if (col.key === "title") {
         if (job.site === "greenhouse") td.className = "greenhouse-title";
-        else if (job.site === "workday") td.className = "workday-title";
-        else if (job.site === "icims") td.className = "icims-title";
         const externalUrl = job.job_url_direct || job.job_url;
         if (externalUrl) {
           const a = document.createElement("a");
@@ -931,6 +929,7 @@ function setView(newView) {
   view = newView;
   navNewBtn.classList.toggle("active", view === "new");
   navApplicationsBtn.classList.toggle("active", view === "applications");
+  navAppliedBtn.classList.toggle("active", view === "applied");
   navRejectedBtn.classList.toggle("active", view === "rejected");
   navProfileBtn.classList.toggle("active", view === "profile");
 
@@ -940,7 +939,7 @@ function setView(newView) {
   newJobsToolbar.style.display = view === "new" ? "flex" : "none";
 
   selectedKeys.clear();
-  sortKey = view === "applications" ? null : "fit_score";
+  sortKey = currentColumns() === APPLICATION_COLUMNS ? null : "fit_score";
   sortAsc = false;
   expandedKeys.clear();
 
@@ -955,6 +954,7 @@ scrapeBtn.addEventListener("click", () => triggerScrape("/api/scrape"));
 scrapeAtsBtn.addEventListener("click", () => triggerScrape("/api/scrape/ats"));
 navNewBtn.addEventListener("click", () => setView("new"));
 navApplicationsBtn.addEventListener("click", () => setView("applications"));
+navAppliedBtn.addEventListener("click", () => setView("applied"));
 navRejectedBtn.addEventListener("click", () => setView("rejected"));
 navProfileBtn.addEventListener("click", () => setView("profile"));
 rejectBtn.addEventListener("click", rejectSelected);
