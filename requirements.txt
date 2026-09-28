@@ -1,25 +1,27 @@
-I would like to make use of Claude to build a new service that I will run on my computer which will make use of one or more of the following tools:
-* https://github.com/kalil0321/ats-scrapers
-* https://github.com/speedyapply/JobSpy
-and
-* https://github.com/browser-use/browser-use
+# Install from the repo root (the -e paths below are relative to it):
+#   uv pip install --python .venv/bin/python -r requirements.txt
+# WeasyPrint also needs the Pango system library -- see README.md.
 
-* Trigger job scraping for the day from the main interface.
+# Scraping libraries, installed from local clones in Tools/ (not in git):
+#   git clone https://github.com/speedyapply/JobSpy Tools/JobSpy
+#   git clone https://github.com/kalil0321/ats-scrapers Tools/ats-scrapers
+-e ./Tools/JobSpy
+-e ./Tools/ats-scrapers
 
-in order to automate the following tasks:
-* Find jobs that have been posted within the past 24 hours.
-* Rate them based on how well they would fit with my current resume.
+# Web server ([standard] adds the WebSocket support the live updates use)
+fastapi>=0.141
+uvicorn[standard]>=0.54
+python-multipart>=0.0.32
 
-Then, I would like to for the service to:
+# Claude API (scoring, resume and cover letter generation)
+anthropic>=1.8,<2
 
-* Allow me to review them (company, job title, description, location, requirements, and responsibilities,  salary range, remote / hybrid / on-site, etc.)
-* Allow me to sort the roles by best match jobs for the day.
-* Allow me to select jobs that I would like to  apply to.
+# Data handling and the Greenhouse dataset cache
+pandas>=2.3,<3
+pyarrow>=25
+httpx>=0.28
+pydantic>=2.13,<3
 
-Then, I would like the service to:
-
-* Create tailored resumes and cover letters for each job.
-* Apply for the job, possibly using browser-use.
-
-
-To implement this project, how should I get started? I have a Linux workstation with Firefox and Claude code installed.
+# Markdown -> PDF rendering
+markdown>=3.11
+weasyprint>=70

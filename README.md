@@ -81,17 +81,13 @@ uv venv --python 3.12 .venv
 mkdir -p Tools
 git clone https://github.com/speedyapply/JobSpy Tools/JobSpy
 git clone https://github.com/kalil0321/ats-scrapers Tools/ats-scrapers
-uv pip install --python .venv/bin/python -e Tools/JobSpy -e Tools/ats-scrapers
 
-# 3. Everything else
-uv pip install --python .venv/bin/python \
-    fastapi uvicorn python-multipart anthropic pandas pyarrow httpx \
-    markdown weasyprint
+# 3. Install everything, including those two clones (run from the repo root)
+uv pip install --python .venv/bin/python -r requirements.txt
 ```
 
-> `requirements.txt` currently holds the original project brief rather than a
-> dependency list, so use the commands above instead of
-> `pip install -r requirements.txt`.
+With plain pip instead of uv: `python3.12 -m venv .venv` and then
+`.venv/bin/pip install -r requirements.txt`.
 
 ## Running it
 
@@ -243,6 +239,8 @@ frontend/
 data/            Your jobs, resume, profile and generated documents
 Tools/           Local clones of JobSpy and ats-scrapers (not in git)
 start.sh         Starts the server
+requirements.txt Python dependencies
+PROJECT_BRIEF.md The original project brief
 ```
 
 ## Troubleshooting
