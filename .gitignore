@@ -2,3 +2,5 @@ Tools/
 data/applications/
 *.pyc
 data/ats_cache/
+data/resume.md
+data/profile.json
