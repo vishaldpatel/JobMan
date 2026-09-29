@@ -75,6 +75,11 @@ class JobIds(BaseModel):
     ids: list[str]
 
 
+class ApplyRequest(JobIds):
+    # False starts the application without a tailored resume / cover letter.
+    generate_documents: bool = True
+
+
 class Profile(BaseModel):
     full_name: str | None = None
     email: str | None = None
@@ -357,19 +362,19 @@ def reject_jobs(body: JobIds):
 
 
 @app.post("/api/jobs/apply")
-def apply_to_jobs(body: JobIds):
+def apply_to_jobs(body: ApplyRequest):
     ids = set(body.ids)
     with store.LOCK:
         jobs = store.load_jobs()
         selected = [job for job in jobs if job["id"] in ids]
         for job in selected:
             job["status"] = "applied"
-            job["application_status"] = "started"
+            job["application_status"] = "started" if body.generate_documents else "no_documents"
             job.pop("generation_error", None)
         store.save_jobs(jobs)
     notify_jobs_changed()
 
-    if store.has_resume():
+    if body.generate_documents and store.has_resume():
         for job in selected:
             generation_queue.put(job["id"])
 

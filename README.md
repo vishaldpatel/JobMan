@@ -31,7 +31,10 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
    Rejected automatically.
 4. **Review.** The **New Jobs** tab lists the remaining jobs sorted best-fit
    first. Expand a row to see the full description and why it scored the way it
-   did. Select jobs and click **Start Application** or **Reject**.
+   did. Select jobs and click **Start Application** or **Reject**. To skip
+   generating a tailored resume and cover letter (e.g. an application you'll
+   fill in with your regular resume), click **Start App Without Resume / Cover**
+   instead.
 5. **Generate.** For each job you start an application for, Claude Sonnet 5
    writes a tailored resume and cover letter from your real resume (it's told
    never to invent experience). Both are saved as PDFs in

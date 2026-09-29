@@ -264,6 +264,7 @@
 <div class="toolbar" id="new-jobs-toolbar">
   <button id="reject-btn" disabled>Reject</button>
   <button id="apply-btn" disabled>Start Application</button>
+  <button id="apply-no-docs-btn" disabled>Start App Without Resume / Cover</button>
   <span id="selection-status"></span>
 </div>
 
@@ -410,6 +411,7 @@ const APPLICATION_STATUS_LABELS = {
   started: "Started",
   resume_created: "Resume and Cover Letter Created",
   error: "Generation Failed",
+  no_documents: "Started (No Resume / Cover)",
 };
 
 const AUTOFILL_STATUS_LABELS = {
@@ -469,6 +471,7 @@ const profileForm = document.getElementById("profile-form");
 const profileStatusEl = document.getElementById("profile-status");
 const rejectBtn = document.getElementById("reject-btn");
 const applyBtn = document.getElementById("apply-btn");
+const applyNoDocsBtn = document.getElementById("apply-no-docs-btn");
 const selectionStatusEl = document.getElementById("selection-status");
 const pageHeaderEl = document.querySelector("header");
 
@@ -651,7 +654,7 @@ async function markApplied(jobId) {
 }
 
 function renderAutofillCell(td, job) {
-  if (job.application_status !== "resume_created") {
+  if (job.application_status !== "resume_created" && job.application_status !== "no_documents") {
     td.textContent = "—";
     return;
   }
@@ -799,6 +802,7 @@ function updateToolbar() {
   const count = selectedKeys.size;
   rejectBtn.disabled = count === 0;
   applyBtn.disabled = count === 0;
+  applyNoDocsBtn.disabled = count === 0;
   selectionStatusEl.textContent = count > 0 ? `${count} selected` : "";
 }
 
@@ -889,16 +893,19 @@ async function rejectSelected() {
   await loadJobs();
 }
 
-async function applySelected() {
+async function applySelected(generateDocuments = true) {
   const ids = [...selectedKeys];
   if (ids.length === 0) return;
   applyBtn.disabled = true;
-  statusEl.textContent = "Starting application(s)… generating tailored resumes/cover letters can take a minute";
+  applyNoDocsBtn.disabled = true;
+  statusEl.textContent = generateDocuments
+    ? "Starting application(s)… generating tailored resumes/cover letters can take a minute"
+    : "Starting application(s)…";
   selectedKeys.clear();
   const res = await fetch("/api/jobs/apply", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ids }),
+    body: JSON.stringify({ ids, generate_documents: generateDocuments }),
   });
   const data = await res.json();
   statusEl.textContent = `${data.applied} job(s) moved to Applications`;
@@ -958,7 +965,8 @@ navAppliedBtn.addEventListener("click", () => setView("applied"));
 navRejectedBtn.addEventListener("click", () => setView("rejected"));
 navProfileBtn.addEventListener("click", () => setView("profile"));
 rejectBtn.addEventListener("click", rejectSelected);
-applyBtn.addEventListener("click", applySelected);
+applyBtn.addEventListener("click", () => applySelected(true));
+applyNoDocsBtn.addEventListener("click", () => applySelected(false));
 profileForm.addEventListener("submit", saveProfile);
 document.getElementById("resume-btn").addEventListener("click", () => resumeInput.click());
 resumeInput.addEventListener("change", () => {
