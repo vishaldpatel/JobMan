@@ -100,6 +100,10 @@ class Profile(BaseModel):
 
 
 def _jobs_from_df(df: pd.DataFrame) -> list[dict]:
+    # JobSpy returns date_posted as datetime.date, which json.dumps rejects.
+    # Converted before the None fill, since map() re-infers dtypes and would
+    # turn None back into NaN.
+    df = df.map(lambda v: v.isoformat() if isinstance(v, date) and pd.notnull(v) else v)
     # astype(object) first: on a numeric column, pandas casts None from
     # .where() back into NaN to preserve dtype, which json.dumps rejects.
     return df.astype(object).where(pd.notnull(df), None).to_dict(orient="records")
