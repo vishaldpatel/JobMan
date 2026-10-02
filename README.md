@@ -21,6 +21,12 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
      published by [ats-scrapers](https://github.com/kalil0321/ats-scrapers),
      keeping jobs posted in the last 48 hours whose title and location match.
      Greenhouse job titles are shown in mint green.
+   - **Scan HN Thread** takes a Hacker News "Who is hiring?" link (e.g.
+     `https://news.ycombinator.com/item?id=49922569`). Top-level comments that
+     mention a project/product/program manager or PM role are sent to Claude
+     Haiku 4.5, which pulls out each role's title, company, location, salary and
+     apply link; roles with a matching title are kept. A job's title links to its
+     apply URL, and its HN comment is kept as the description.
 2. **Stage 1 filters (rules, free).** Drops jobs with excluded title words
    (Intern, Junior, VP, …), non-US locations, security-clearance requirements, a
    listed salary below your floor, and duplicates of jobs you already have

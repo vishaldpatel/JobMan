@@ -245,6 +245,10 @@
   <h1>JobMan</h1>
   <button id="scrape-btn">Scrape LinkedIn</button>
   <button id="scrape-ats-btn">Scrape ATS's</button>
+  <form id="hn-form" style="display:flex; gap:0.5rem;">
+    <input type="text" id="hn-url" placeholder="HN “Who is hiring?” link" size="32" required>
+    <button type="submit" id="scrape-hn-btn">Scan HN Thread</button>
+  </form>
   <label for="resume-input" style="cursor:pointer;">
     <button type="button" id="resume-btn">Attach resume</button>
   </label>
@@ -459,6 +463,9 @@ const bodyEl = document.getElementById("jobs-body");
 const headerRowEl = document.getElementById("header-row");
 const scrapeBtn = document.getElementById("scrape-btn");
 const scrapeAtsBtn = document.getElementById("scrape-ats-btn");
+const hnForm = document.getElementById("hn-form");
+const hnUrlInput = document.getElementById("hn-url");
+const scrapeHnBtn = document.getElementById("scrape-hn-btn");
 const resumeInput = document.getElementById("resume-input");
 const navNewBtn = document.getElementById("nav-new");
 const navApplicationsBtn = document.getElementById("nav-applications");
@@ -846,13 +853,19 @@ async function loadResumeStatus() {
   resumeStatusEl.textContent = data.uploaded ? "Resume attached" : "No resume attached";
 }
 
-async function triggerScrape(endpoint) {
+async function triggerScrape(endpoint, body) {
   scrapeBtn.disabled = true;
   scrapeAtsBtn.disabled = true;
+  scrapeHnBtn.disabled = true;
   statusEl.textContent = "Scraping… this can take a minute";
   try {
-    const res = await fetch(endpoint, { method: "POST" });
+    const res = await fetch(endpoint, body === undefined ? { method: "POST" } : {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
     const data = await res.json();
+    if (!res.ok) throw data.detail || res.statusText;
     if (view === "new") {
       jobs = data.jobs;
       renderRows();
@@ -868,6 +881,7 @@ async function triggerScrape(endpoint) {
   } finally {
     scrapeBtn.disabled = false;
     scrapeAtsBtn.disabled = false;
+    scrapeHnBtn.disabled = false;
   }
 }
 
@@ -959,6 +973,10 @@ function setView(newView) {
 
 scrapeBtn.addEventListener("click", () => triggerScrape("/api/scrape"));
 scrapeAtsBtn.addEventListener("click", () => triggerScrape("/api/scrape/ats"));
+hnForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  triggerScrape("/api/scrape/hn", { url: hnUrlInput.value });
+});
 navNewBtn.addEventListener("click", () => setView("new"));
 navApplicationsBtn.addEventListener("click", () => setView("applications"));
 navAppliedBtn.addEventListener("click", () => setView("applied"));

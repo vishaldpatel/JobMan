@@ -6,7 +6,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
-from fastapi import FastAPI, UploadFile, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, UploadFile, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -14,6 +14,7 @@ import store
 from generator import generate_cover_letter, generate_resume
 from pdf import markdown_to_pdf
 from scorer import AUTO_REJECT_BELOW, score_job
+from hn import scrape_hn_thread, thread_id
 from scrapers import apply_prefilters, scrape_ats_jobs, scrape_daily_jobs
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
@@ -78,6 +79,10 @@ class JobIds(BaseModel):
 class ApplyRequest(JobIds):
     # False starts the application without a tailored resume / cover letter.
     generate_documents: bool = True
+
+
+class HnThread(BaseModel):
+    url: str
 
 
 class Profile(BaseModel):
@@ -339,6 +344,15 @@ def trigger_scrape():
 @app.post("/api/scrape/ats")
 def trigger_ats_scrape():
     return _store_scraped(scrape_ats_jobs())
+
+
+@app.post("/api/scrape/hn")
+def trigger_hn_scrape(body: HnThread):
+    try:
+        thread_id(body.url)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc))
+    return _store_scraped(scrape_hn_thread(body.url))
 
 
 @app.get("/api/jobs")
