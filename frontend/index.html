@@ -813,12 +813,21 @@ function updateToolbar() {
   selectionStatusEl.textContent = count > 0 ? `${count} selected` : "";
 }
 
+// Scrapes and scoring push a refresh per job, so loads overlap; only the
+// latest one is rendered, so a slow earlier response can't overwrite it.
+let loadSeq = 0;
+// True while a scrape request is running, so refreshes keep saying so.
+let scraping = false;
+
 async function loadJobs() {
+  const seq = ++loadSeq;
   const res = await fetch(`/api/jobs?status=${STATUS_FOR_VIEW[view]}`);
   const data = await res.json();
+  if (seq !== loadSeq) return;
   jobs = data.jobs;
   selectedKeys = new Set([...selectedKeys].filter((k) => jobs.some((j) => jobKey(j) === k)));
-  statusEl.textContent = `${data.count} job(s)`;
+  statusEl.textContent =
+    scraping && view === "new" ? `Scraping… ${data.count} job(s) so far` : `${data.count} job(s)`;
   renderHeader();
   renderRows();
   updateToolbar();
@@ -857,7 +866,8 @@ async function triggerScrape(endpoint, body) {
   scrapeBtn.disabled = true;
   scrapeAtsBtn.disabled = true;
   scrapeHnBtn.disabled = true;
-  statusEl.textContent = "Scraping… this can take a minute";
+  scraping = true;
+  statusEl.textContent = "Scraping… jobs appear as they're found";
   try {
     const res = await fetch(endpoint, body === undefined ? { method: "POST" } : {
       method: "POST",
@@ -865,8 +875,10 @@ async function triggerScrape(endpoint, body) {
       body: JSON.stringify(body),
     });
     const data = await res.json();
+    scraping = false;
     if (!res.ok) throw data.detail || res.statusText;
     if (view === "new") {
+      loadSeq++; // supersede any refresh still in flight
       jobs = data.jobs;
       renderRows();
     }
@@ -879,6 +891,7 @@ async function triggerScrape(endpoint, body) {
   } catch (err) {
     statusEl.textContent = "Scrape failed: " + err;
   } finally {
+    scraping = false;
     scrapeBtn.disabled = false;
     scrapeAtsBtn.disabled = false;
     scrapeHnBtn.disabled = false;

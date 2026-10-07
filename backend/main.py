@@ -2,6 +2,7 @@ import asyncio
 import queue
 import threading
 import time
+from collections.abc import Iterable
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -235,8 +236,9 @@ def _scoring_worker() -> None:
 
 
 def _enqueue_unscored_jobs() -> None:
-    """Enqueues every new job without a score -- used after a scrape, on server
-    start (resuming a run cut short by a restart), and after a resume upload."""
+    """Enqueues every new job without a score -- used on server start (resuming
+    a run cut short by a restart) and after a resume upload. Scrapes enqueue
+    the jobs they add themselves."""
     with store.LOCK:
         jobs = store.load_jobs()
     for job in jobs:
@@ -316,18 +318,32 @@ _enqueue_pending_jobs()
 _enqueue_unscored_jobs()
 
 
-def _store_scraped(jobs_df: pd.DataFrame) -> dict:
-    kept_df, filtered_out = apply_prefilters(jobs_df)
-    scraped = _jobs_from_df(kept_df)
+def _store_scraped(batches: Iterable[pd.DataFrame]) -> dict:
+    """Stores each batch of scraped jobs as soon as the scraper produces it, so
+    the jobs show up (over the WebSocket) and start scoring while the rest of
+    the scrape is still running."""
+    filtered_out = duplicates = 0
+    for jobs_df in batches:
+        if jobs_df.empty:
+            continue
+        kept_df, dropped = apply_prefilters(jobs_df)
+        filtered_out += dropped
+        scraped = _jobs_from_df(kept_df)
+
+        with store.LOCK:
+            jobs = store.load_jobs()
+            merged, skipped = store.merge_scraped_jobs(jobs, scraped, store.load_deleted())
+            added = merged[len(jobs):]
+            if added:
+                store.save_jobs(merged)
+        duplicates += skipped
+        if added:
+            notify_jobs_changed()
+            for job in added:
+                scoring_queue.put(job["id"])
 
     with store.LOCK:
-        jobs = store.load_jobs()
-        jobs, duplicates = store.merge_scraped_jobs(jobs, scraped, store.load_deleted())
-        store.save_jobs(jobs)
-    notify_jobs_changed()
-    _enqueue_unscored_jobs()
-
-    new_jobs = [job for job in jobs if job["status"] == "new"]
+        new_jobs = [job for job in store.load_jobs() if job["status"] == "new"]
     return {
         "count": len(new_jobs),
         "jobs": new_jobs,
@@ -343,7 +359,7 @@ def trigger_scrape():
 
 @app.post("/api/scrape/ats")
 def trigger_ats_scrape():
-    return _store_scraped(scrape_ats_jobs())
+    return _store_scraped([scrape_ats_jobs()])
 
 
 @app.post("/api/scrape/hn")

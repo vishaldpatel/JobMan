@@ -7,7 +7,8 @@ filters, scoring) then treats them like any other scraped job.
 
 import html
 import re
-from concurrent.futures import ThreadPoolExecutor
+from collections.abc import Iterator
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 import anthropic
@@ -98,9 +99,40 @@ def _extract(text: str) -> list[Posting]:
     return response.parsed_output.postings
 
 
-def scrape_hn_thread(url_or_id: str) -> pd.DataFrame:
-    """Returns the matching roles posted in the thread's top-level comments,
-    with the JobSpy column names the rest of the app expects."""
+def _rows(comment: dict, text: str, postings: list[Posting]) -> pd.DataFrame:
+    """One comment's matching roles, with the JobSpy column names the rest of
+    the app expects."""
+    posted = datetime.fromisoformat(comment["created_at"].replace("Z", "+00:00"))
+    rows = []
+    for n, posting in enumerate(postings):
+        if not re.search(TITLE_PATTERN, posting.title, re.I):
+            continue
+        rows.append(
+            {
+                # Rescanning a thread can number a comment's roles differently;
+                # the title+description dedupe key still catches those repeats.
+                "id": f"hn-{comment['id']}-{n}",
+                "site": "hackernews",
+                "job_url": COMMENT_URL.format(id=comment["id"]),
+                "job_url_direct": posting.apply_url,
+                "title": posting.title,
+                "company": posting.company,
+                "location": posting.location,
+                "date_posted": posted.date().isoformat(),
+                "is_remote": posting.is_remote,
+                "min_amount": posting.min_salary,
+                "max_amount": posting.max_salary,
+                "currency": "USD" if posting.max_salary else None,
+                "description": text,
+            }
+        )
+    return pd.DataFrame(rows, columns=COLUMNS)
+
+
+def scrape_hn_thread(url_or_id: str) -> Iterator[pd.DataFrame]:
+    """Yields the matching roles posted in the thread's top-level comments, one
+    comment at a time as each extraction finishes, so they can be stored and
+    scored without waiting for the rest of the thread."""
     response = httpx.get(ITEM_API.format(id=thread_id(url_or_id)), timeout=60)
     response.raise_for_status()
     comments = [
@@ -108,34 +140,12 @@ def scrape_hn_thread(url_or_id: str) -> pd.DataFrame:
         for c in response.json().get("children", [])
         if c.get("text") and re.search(COMMENT_PATTERN, c["text"], re.I)
     ]
-    texts = [comment_text(c["text"]) for c in comments]
 
     with ThreadPoolExecutor(EXTRACT_WORKERS) as pool:
-        extracted = list(pool.map(_extract, texts))
-
-    rows = []
-    for comment, text, postings in zip(comments, texts, extracted):
-        posted = datetime.fromisoformat(comment["created_at"].replace("Z", "+00:00"))
-        for n, posting in enumerate(postings):
-            if not re.search(TITLE_PATTERN, posting.title, re.I):
-                continue
-            rows.append(
-                {
-                    # Rescanning a thread can number a comment's roles differently;
-                    # the title+description dedupe key still catches those repeats.
-                    "id": f"hn-{comment['id']}-{n}",
-                    "site": "hackernews",
-                    "job_url": COMMENT_URL.format(id=comment["id"]),
-                    "job_url_direct": posting.apply_url,
-                    "title": posting.title,
-                    "company": posting.company,
-                    "location": posting.location,
-                    "date_posted": posted.date().isoformat(),
-                    "is_remote": posting.is_remote,
-                    "min_amount": posting.min_salary,
-                    "max_amount": posting.max_salary,
-                    "currency": "USD" if posting.max_salary else None,
-                    "description": text,
-                }
-            )
-    return pd.DataFrame(rows, columns=COLUMNS)
+        futures = {}
+        for comment in comments:
+            text = comment_text(comment["text"])
+            futures[pool.submit(_extract, text)] = (comment, text)
+        for future in as_completed(futures):
+            comment, text = futures[future]
+            yield _rows(comment, text, future.result())

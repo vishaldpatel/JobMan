@@ -16,7 +16,9 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
 
 1. **Scrape.** Two buttons in the header:
    - **Scrape LinkedIn** uses [JobSpy](https://github.com/speedyapply/JobSpy) to
-     search LinkedIn for jobs posted in the last 24 hours.
+     search LinkedIn for jobs posted in the last 24 hours. Results are fetched
+     one page (10 jobs) at a time, and each page appears in the New Jobs tab
+     and starts scoring while the next page loads.
    - **Scrape ATS's** reads Greenhouse postings from the free hosted dataset
      published by [ats-scrapers](https://github.com/kalil0321/ats-scrapers),
      keeping jobs posted in the last 48 hours whose title and location match.
@@ -26,7 +28,8 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
      mention a project/product/program manager or PM role are sent to Claude
      Haiku 5.5, which pulls out each role's title, company, location, salary and
      apply link; roles with a matching title are kept. A job's title links to its
-     apply URL, and its HN comment is kept as the description.
+     apply URL, and its HN comment is kept as the description. Each comment's
+     roles appear and start scoring as soon as they're extracted.
 2. **Stage 1 filters (rules, free).** Drops jobs with excluded title words
    (Intern, Junior, VP, …), non-US locations, security-clearance requirements, a
    listed salary below your floor, and duplicates of jobs you already have

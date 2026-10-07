@@ -1,6 +1,9 @@
 import csv
 import hashlib
+import random
 import re
+import time
+from collections.abc import Iterator
 from pathlib import Path
 
 import httpx
@@ -16,6 +19,11 @@ ATS_CACHE_DIR = OUTPUT_DIR / "ats_cache"
 SEARCH_TERM = "Technical Project Manager or Technical Product Manager, on-site or hybrid or remote in San Diego County, CA or Carlsbad, CA or Hawaii, United States"
 LOCATION = "San Diego County, CA"
 HOURS_OLD = 24
+# LinkedIn's guest search returns 10 results per page. Scraping a page per call
+# lets each page be stored and scored while the next one loads; the pause
+# between pages matches the one JobSpy makes within a single call.
+LINKEDIN_PAGE_SIZE = 10
+LINKEDIN_PAGE_DELAY_SECONDS = (3, 7)
 
 # ats-scrapers' hosted dataset is a daily snapshot whose newest postings are
 # already ~1 day old when published, so a 24h window usually comes back empty.
@@ -49,19 +57,26 @@ def scrape_daily_jobs(
     location: str = LOCATION,
     hours_old: int = HOURS_OLD,
     results_wanted: int = 200,
-):
-    """Scrape jobs posted within the last `hours_old` hours across supported sites."""
-    jobs = scrape_jobs(
-        site_name=["linkedin"],
-        search_term=search_term,
-        google_search_term=f"{search_term} jobs near {location} since yesterday",
-        location=location,
-        results_wanted=results_wanted,
-        hours_old=hours_old,
-        country_indeed="USA",
-        linkedin_fetch_description=True,
-    )
-    return jobs
+) -> Iterator[pd.DataFrame]:
+    """Yields jobs posted within the last `hours_old` hours, one LinkedIn
+    results page at a time."""
+    for offset in range(0, results_wanted, LINKEDIN_PAGE_SIZE):
+        if offset:
+            time.sleep(random.uniform(*LINKEDIN_PAGE_DELAY_SECONDS))
+        jobs = scrape_jobs(
+            site_name=["linkedin"],
+            search_term=search_term,
+            google_search_term=f"{search_term} jobs near {location} since yesterday",
+            location=location,
+            results_wanted=LINKEDIN_PAGE_SIZE,
+            offset=offset,
+            hours_old=hours_old,
+            country_indeed="USA",
+            linkedin_fetch_description=True,
+        )
+        if jobs.empty:
+            return  # past the last page, or LinkedIn blocked us
+        yield jobs
 
 
 class AtsDataset:
@@ -211,7 +226,7 @@ def scrape_ats_jobs() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    jobs = scrape_daily_jobs()
+    jobs = pd.concat(scrape_daily_jobs(), ignore_index=True)
     print(f"Found {len(jobs)} jobs")
     print(jobs.head())
 
