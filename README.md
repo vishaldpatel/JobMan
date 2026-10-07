@@ -24,7 +24,7 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
    - **Scan HN Thread** takes a Hacker News "Who is hiring?" link (e.g.
      `https://news.ycombinator.com/item?id=49922569`). Top-level comments that
      mention a project/product/program manager or PM role are sent to Claude
-     Haiku 4.5, which pulls out each role's title, company, location, salary and
+     Haiku 5.5, which pulls out each role's title, company, location, salary and
      apply link; roles with a matching title are kept. A job's title links to its
      apply URL, and its HN comment is kept as the description.
 2. **Stage 1 filters (rules, free).** Drops jobs with excluded title words
@@ -32,7 +32,7 @@ Scrape ──▶ Stage 1 filters ──▶ Stage 2 Claude scoring ──▶ You 
    listed salary below your floor, and duplicates of jobs you already have
    (including the same role posted on more than one board).
 3. **Stage 2 scoring (Claude).** A background worker sends each new job, with your
-   resume and job preferences, to Claude Haiku 4.5. It gets back a 0–100 fit
+   resume and job preferences, to Claude Haiku 5.5. It gets back a 0–100 fit
    score plus strengths, gaps and dealbreakers. Jobs scoring under 70 move to
    Rejected automatically.
 4. **Review.** The **New Jobs** tab lists the remaining jobs sorted best-fit
@@ -182,14 +182,13 @@ description.
 
 | Setting | Default | What it does |
 |---|---|---|
-| `MODEL` | `"claude-haiku-4-5"` | The Claude model used to score jobs. |
+| `MODEL` | `"claude-haiku-5-5"` | The Claude model used to score jobs. |
 | `AUTO_REJECT_BELOW` | `70` | New jobs scoring below this move to Rejected automatically. |
 | `RUBRIC` | — | The scoring instructions and score bands. Edit this to change what counts as a good fit. |
 
-The prompt uses prompt caching on your resume and preferences. Haiku 4.5 only
-caches prompts of 4096 tokens or more, so with a typical resume the cache won't
-kick in. That's harmless, just not a saving. Scoring costs roughly half a cent
-per job.
+The prompt uses prompt caching on your resume and preferences. Haiku 5.5 caches
+prompts of 512 tokens or more, so after the first job in a run the resume and
+rubric are read from cache. Scoring costs well under a tenth of a cent per job.
 
 ### Resume and cover letter generation — `backend/generator.py`
 

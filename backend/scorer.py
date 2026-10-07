@@ -1,7 +1,7 @@
 import anthropic
 from pydantic import BaseModel
 
-MODEL = "claude-haiku-4-5"
+MODEL = "claude-haiku-5-5"
 
 # Jobs scoring below this are moved to Rejected automatically (still reviewable there).
 AUTO_REJECT_BELOW = 70
@@ -62,7 +62,8 @@ def score_job(resume_text: str, preferences: str | None, job: dict) -> FitScore:
     # cached prefix; only the job posting in the user turn changes per request.
     response = client.messages.parse(
         model=MODEL,
-        max_tokens=1024,
+        max_tokens=4096,
+        output_config={"effort": "low"},
         system=[
             {
                 "type": "text",

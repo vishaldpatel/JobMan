@@ -15,7 +15,7 @@ import httpx
 import pandas as pd
 from pydantic import BaseModel
 
-MODEL = "claude-haiku-4-5"
+MODEL = "claude-haiku-5-5"
 ITEM_API = "https://hn.algolia.com/api/v1/items/{id}"
 COMMENT_URL = "https://news.ycombinator.com/item?id={id}"
 
@@ -88,7 +88,8 @@ def comment_text(raw_html: str) -> str:
 def _extract(text: str) -> list[Posting]:
     response = client.messages.parse(
         model=MODEL,
-        max_tokens=2048,
+        max_tokens=8192,
+        output_config={"effort": "low"},
         messages=[{"role": "user", "content": EXTRACT_PROMPT.format(text=text)}],
         output_format=Postings,
     )
